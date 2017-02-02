@@ -1,7 +1,9 @@
-<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md navbar-light">
+<nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
+  <span class="navbar-brand hidden-md-up">{% if page.title %}{{ page.title }}{% else %}Navigation{% endif %}</span>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="container navbar-nav mr-auto">
