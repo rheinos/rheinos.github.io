@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md navbar-light">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="container navbar-nav mr-auto">
+      {% assign sorted_pages = site.pages | sort: "priority" %}
+      {% for nav_page in sorted_pages %}
+        {% if nav_page.url == page.url && nav_page.title %}
+          <li class="nav-item active"><a class="nav-link" href="{{ nav_page.url | prepend: site.baseurl }}">{{ nav_page.title }}</a></li>
+        {% elsif nav_page.title %}
+          <li class="nav-item"><a class="nav-link" href="{{ nav_page.url | prepend: site.baseurl }}">{{ nav_page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      <li class="nav-item"><a class="nav-link disabled" href="#">Merch</a></li>
+    </ul>
+  </div>
+</nav>
