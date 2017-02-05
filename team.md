@@ -2,6 +2,7 @@
 layout: page
 title: Team
 permalink: /team/
+inmenu: true
 priority: 2
 ---
 

@@ -2,16 +2,17 @@
 layout: default
 title: Home
 permalink: /
+inmenu: true
 priority: 0
 ---
 
 <div class="text-center">
-  <img class="avatar" src="//www.gravatar.com/blavatar/ee5e4443557da33079a666949dc370c0?s=200" alt="Rheinos Bonn Logo"/>
+  <img class="avatar" src="/img/logo.png" alt="Rheinos Bonn Logo"/>
 </div>
 
 <div class="row justify-content-center">
   <div class="col-lg-8" ng-controller="NewsfeedCtrl">
-    <h1 class="display-4">Rheinos – Quidditch in Bonn</h1>
+    <h1 class="sr-only">Rheinos – Quidditch in Bonn</h1>
 
     <article data-ng-repeat="n in news" class="mb-5">
       <h2 class="mb-2"><a data-ng-href="[[ n.permalink_url ]]" target="_blank">[[ n.created_time | date:'dd.MM.yyyy HH:mm' ]]</a></h2>

@@ -2,7 +2,7 @@
 layout: page
 title: Impressum
 permalink: /impressum/
-priority: 99
+inmenu: false
 ---
 
 ### Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:

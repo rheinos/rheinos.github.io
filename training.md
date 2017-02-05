@@ -2,6 +2,7 @@
 layout: page
 title: Training
 permalink: /training/
+inmenu: true
 priority: 3
 ---
 

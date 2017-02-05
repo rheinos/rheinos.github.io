@@ -7,7 +7,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="container navbar-nav mr-auto">
-      {% assign sorted_pages = site.pages | sort: "priority" %}
+      {% assign sorted_pages = site.pages | where: "inmenu", "true" | sort: "priority" %}
       {% for nav_page in sorted_pages %}
         {% if nav_page.url == page.url && nav_page.title %}
           <li class="nav-item active"><a class="nav-link" href="{{ nav_page.url | prepend: site.baseurl }}">{{ nav_page.title }}</a></li>
@@ -15,7 +15,7 @@
           <li class="nav-item"><a class="nav-link" href="{{ nav_page.url | prepend: site.baseurl }}">{{ nav_page.title }}</a></li>
         {% endif %}
       {% endfor %}
-      <li class="nav-item"><a class="nav-link disabled" href="#">Merch</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://www.redbubble.com/people/rheinos/shop" target="_blank">Merch</a></li>
     </ul>
   </div>
 </nav>
