@@ -9,7 +9,7 @@ app.controller('NewsfeedCtrl', ['$scope', '$http', function($scope, $http) {
 
   $scope.news = [];
 
-  $http.get('https://api.cryptomator.org/fb/RheinosBonn/latestPosts.php')
+  $http.get('https://api.skymatic.de/fb/RheinosBonn/latestPosts.php')
   .then(function(successResponse) {
     $scope.news = successResponse.data;
   }, function(errorResponse) {
