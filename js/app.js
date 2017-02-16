@@ -6,7 +6,6 @@ app.config(['$interpolateProvider', function($interpolateProvider) {
 }]);
 
 app.controller('NewsfeedCtrl', ['$scope', '$http', function($scope, $http) {
-
   $scope.news = [];
 
   $http.get('https://api.skymatic.de/fb/RheinosBonn/latestPosts.php')
@@ -18,3 +17,5 @@ app.controller('NewsfeedCtrl', ['$scope', '$http', function($scope, $http) {
   });
 
 }]);
+
+angular.bootstrap(document, ['rheinosApp'], {strictDi: true});
