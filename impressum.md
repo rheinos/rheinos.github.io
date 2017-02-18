@@ -17,12 +17,7 @@ Leander Troll, Anneke Müller, Sebastian Stenzel
 
 #### Registereintrag:
 
-Eintragung im Vereinsregister ausstehend
-
-#### Umsatzsteuer-ID:
-
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:
-beantragt
+Eingetragen im Vereinsregister des Amtsgerichts Bonn unter der Nummer VR 10175
 
 Quelle: *Impressumgenerator, [http://www.e-recht24.de](http://www.e-recht24.de)*
 
