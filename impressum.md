@@ -6,9 +6,10 @@ inmenu: false
 ---
 
 ### Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
-Rheinos Bonn
+Rheinos Bonn e.V.,
 Reuterstr. 57,
 53115 Bonn
+
 eMail: vorstand [at] rheinos-bonn [dot] de
 
 #### Vertreten durch:
