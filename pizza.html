@@ -1,0 +1,41 @@
+---
+layout: page
+title: Logarithmic Rheino Pizza Reduction
+permalink: /pizza/
+inmenu: false
+priority: 99
+---
+
+<article>
+  <p>Wer als Erstes eingetragen wird, zahlt die Rechnung. Alle weiteren Rheinos können in beliebiger Reihenfolge hinzugefügt werden. Jeder Rheino erhält eine klare Zuordnung, wem er Geld zahlen muss und von welchen max. 2 Rheinos er Geld erhält. Monatelanges hinterherrennen war gestern!</p>
+  <p>Das Ergebnis wird im dot-Format ausgegeben und kann mit GraphViz, z.B. durch einfügen auf <a href="http://viz-js.com/" target="_blank">viz-js.com</a>, gerendert werden.</p>
+</article>
+
+<section class="mb-5" data-ng-controller="PizzaCtrl">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Rheino</h4>
+      </div>
+      <div class="col-sm-6">
+        <h4>Kosten</h4>
+      </div>
+    </div>
+    <div class="row mb-1" data-ng-repeat="rheino in rheinos">
+      <div class="col-sm-6">
+        <input class="form-control" type="text" name="rheino[[$index]]" data-ng-model="rheino.name">
+      </div>
+      <div class="col-sm-6">
+        <input class="form-control" type="number" name="amount[[$index]]" step="0.01" min="0.00" data-ng-model="rheino.amount">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary" data-ng-click="add()">Rheino hinzufügen</button>
+        <button type="button" class="btn btn-primary" data-ng-click="generate()">Graph generieren</button>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <textarea class="form-control" rows="10" data-ng-value="result"></textarea>
+    </div>
+</section>
