@@ -20,7 +20,7 @@ Unsere regelmäßigen Trainingszeiten sind normalerweise folgende:
 * Weitere Tage nach vorheriger Ankündigung auf Facebook
 
 Im Sommer findet immer öfter auch am Dienstag ein Training von 18:00 bis 20:00 statt. Hier solltet du jedoch auf jeden Fall nachfragen, ob dies auch an diesem Dienstag so ist.
-
+<br>
 Falls du das erste mal mitmachen willst, kontaktier uns lieber vorher, damit du über abweichende Trainingszeiten und -orte Bescheid weißt.
 
 ### Wo?
