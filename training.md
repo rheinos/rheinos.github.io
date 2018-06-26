@@ -13,12 +13,13 @@ Wenn du Lust hast, vorbeizukommen, schreibe uns einfach an [mitspielen@rheinos-b
 Alles was du brauchst sind Outdoor-Trainingsklamotten, falls vorhanden Fußballschuhe. Alles weitere ergibt sich im Laufe der Zeit, wenn dir der Sport zusagt :wink:
 
 ### Wann?
-Unsere regelmäßigen Winter-Trainingszeiten sind normalerweise folgende:
+Unsere regelmäßigen Trainingszeiten sind normalerweise folgende:
 
-* Montags 19:00 - 21:00 Uhr
+* Montags 18:00 - 20:00 Uhr
 * Donnerstags 18:00 - 20:00 Uhr
 * Weitere Tage nach vorheriger Ankündigung auf Facebook
 
+Im Sommer findet immer öfter auch am Dienstag ein Training von 18:00 bis 20:00 statt. Hier solltet du jedoch auf jeden Fall nachfragen, ob dies auch an diesem Dienstag so ist.
 Falls du das erste mal mitmachen willst, kontaktier uns lieber vorher, damit du über abweichende Trainingszeiten und -orte Bescheid weißt.
 
 ### Wo?
