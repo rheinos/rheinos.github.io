@@ -14,7 +14,7 @@ eMail: vorstand [at] rheinos-bonn [dot] de
 
 #### Vertreten durch:
 
-Leander Troll, Anneke Müller, Sebastian Stenzel
+Anneke Müller, Paulina Schröder, Philipp Wagner
 
 #### Registereintrag:
 
