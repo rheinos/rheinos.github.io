@@ -7,8 +7,8 @@ inmenu: false
 
 ### Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 Rheinos Bonn e.V.,
-Reuterstr. 57,
-53115 Bonn
+Grabenstraße 32,
+53225 Bonn
 
 eMail: vorstand [at] rheinos-bonn [dot] de
 
