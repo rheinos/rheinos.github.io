@@ -1,0 +1,14 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<div ng-controller="NewsfeedCtrl">
+
+  <article data-ng-repeat="n in news" class="mb-5">
+    <h2 class="mb-2"><a data-ng-href="[[ n.permalink_url ]]" target="_blank">[[ n.created_time | date:'dd.MM.yyyy HH:mm' ]]</a></h2>
+    <img data-ng-show="n.full_picture" data-ng-src="[[n.full_picture]]" class="img-fluid rounded img-thumbnail mb-2" />
+    <p class="pre" data-ng-show="n.message">[[ n.message ]]</p>
+  </article>
+</div>

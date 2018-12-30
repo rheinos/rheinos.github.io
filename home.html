@@ -2,22 +2,69 @@
 layout: default
 title: Home
 permalink: /
-inmenu: true
-priority: 0
 ---
 
-<div class="text-center">
-  <img class="img-fluid" src="/img/logo.png" width="40%" alt="Rheinos Bonn Logo"/>
+<div class="container mb-4">
+  <div id="home-picture-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block img-fluid w-100" src="/img/team.jpg" alt="Team Foto">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid w-100" src="/img/team.jpg" alt="Training Foto">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid w-100" src="/img/team.jpg" alt="Social Foto">
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="row justify-content-center">
-  <div class="col-lg-8" ng-controller="NewsfeedCtrl">
-    <h1 class="sr-only">Rheinos – Quidditch in Bonn</h1>
-
-    <article data-ng-repeat="n in news" class="mb-5">
-      <h2 class="mb-2"><a data-ng-href="[[ n.permalink_url ]]" target="_blank">[[ n.created_time | date:'dd.MM.yyyy HH:mm' ]]</a></h2>
-      <img data-ng-show="n.full_picture" data-ng-src="[[n.full_picture]]" class="img-fluid rounded img-thumbnail mb-2" />
-      <p class="pre" data-ng-show="n.message">[[ n.message ]]</p>
-    </article>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4 col-6 pb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Aktuelles</h4>
+          <p class="card-text">Aktuelle Informationen gibts in unserem Blog.</p>
+          <a href="/blog/" class="btn btn-primary">Zum Blog</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 pb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Was ist Quidditch?</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 pb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Training</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 pb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Verein</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 pb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Unterstützung</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 pb-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Merch</h4>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

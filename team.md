@@ -2,8 +2,6 @@
 layout: page
 title: Team
 permalink: /team/
-inmenu: true
-priority: 2
 ---
 
 <img src="/img/team.jpg" class="img-fluid" alt="Die Rheinos bei der NRW-Liga 2016" />

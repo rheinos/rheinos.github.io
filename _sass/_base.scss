@@ -11,6 +11,11 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+nav {
+  background-color: $background-color;
+  border-bottom: 1px solid $brand-color;
+}
+
 /**
  * Headings
  */
