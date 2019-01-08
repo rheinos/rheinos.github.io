@@ -1,7 +1,4 @@
 # Site settings
-title: Rheinos - Quidditch in Bonn
-description: >
-  Homepage of the Rheinos Bonn Quidditch club
 url: "https://rheinos-bonn.de" # the base hostname & protocol for your site
 
 # Plugins
@@ -14,6 +11,3 @@ permalink: /blog/:year/:month/:day/:title.html
 # Github Flavoured Markdown
 kramdown:
   input: GFM
-  # syntax_highlighter: rouge
-  # enable_coderay: true
-  coderay_line_numbers: nil
