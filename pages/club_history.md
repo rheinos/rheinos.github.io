@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Geschichte
-permalink: /team/history/
+permalink: /club/history/
 ---
 
 ## Wie Quidditch in Bonn gestartet ist.
