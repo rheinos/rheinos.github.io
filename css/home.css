@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+.carousel-caption {
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: .5rem;
+}
