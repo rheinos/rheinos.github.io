@@ -6,7 +6,7 @@ permalink: /quidditch/
 
 ## Quidditch!? Was steckt da eigentlich hinter?
 {: #what-is-it}
-Quidditch ist eine gemischtgeschlechtliche Sportart und wird als Mischung aus Rugby, Handball und Dodgeball gespielt. Quidditch ist eine noch sehr junge Sportart und manche Regeln werden noch weiter entwickelt.
+Quidditch ist eine gemischtgeschlechtliche Vollkontakt-Sportart und wird als Mischung aus Rugby, Handball und Dodgeball gespielt. Quidditch ist eine noch sehr junge Sportart und manche Regeln werden noch weiter entwickelt.
 
 > „Spieler\*innen müssen während des Spiels die gesamte Zeit über einen 'Besen' zwischen den Beinen behalten. Aerodynamisch an den Sport und die Sicherheitsansprüche des Körperkontakts angepasst handelt es sich hierbei in der Regel um leichte PVC-Stangen. Jedes Team schickt sieben Spieler\*innen aufs Feld: Drei Chaser passen sich den Quaffel, eine Volleyball, zu, und versuchen, durch einen der drei Ringe des gegnerischen Teams zu werfen, um 10 Punkte pro Tor zu gewinnen. Der Keeper verteidigt die eigenen Ringe des Teams. Zwei Beater spielen mit Bludgern (Dodgebälle), die sie nach gegnerischen Spieler\*innen werfen, um diese abzuwerfen. Wer von einem Bludger getroffen wurde, muss vom eigenen Besen absteigen und darf nicht ins Spiel eingreifen, ehe er\*sie die Ringe des eigenen Teams berührt hat. Der Seeker des Teams versucht, den Schnatz zu fangen. Der Schnatz ist Teil des Schiedsrichter-Teams und ist in gelb gekleidet und hat einen am Hosenbund befestigten Tennisball in einer Socke. Wird der Schnatz gefangen, d.h. die Socke herausgezogen, endet das Spiel und bringt 30 Punkte.
 > 
@@ -28,7 +28,7 @@ Im englischsprachigen Wikipedia ist Quidditch als Sportart sehr gut erklärt: [w
 
 ## Quidditch in Deutschland
 {: #germany}
-Es gibt in Deutschland aktuell über 40 Teams. Damit stellt Deutschland neben Großbritannien die meisten Teams in Europa. An großen Turnieren gibt es die Deutsche Meisterschaft und seit 2017 sechs verschiedene Ligen: NRW-Liga, Nord-Liga, Ost-Liga, Rhein-Main-Liga, Baden-Württemberg-Liga, Bayern-Liga.
+Es gibt in Deutschland aktuell über 40 Teams. Damit stellt Deutschland neben Großbritannien die meisten Teams in Europa. Jährlich gibt es zwei große Turniere: Die Deutsche Meisterschaft und das Qualifizierungsturnier für den European Quidditch Cup. Zusätzlich gibt es seit 2017 sechs verschiedene Ligen: NRW-Liga, Nord-Liga, Ost-Liga, Rhein-Main-Liga, Baden-Württemberg-Liga, Bayern-Liga. Die Deutschen Teams werden über den Deutschen Quidditchbund organisiert und vertreten.
 
 ## Quidditch international
 {: #international}
@@ -38,7 +38,7 @@ In Europa findet seit 2012 der European Quidditch Cup (EQC) statt. Für den EQC 
 
 Die weltweite Quidditchszene wird über die IQA, die International Quidditch Association organisiert.
 
-## Weiterführende Links
+## Nützliche Links
 {: #links}
 * [Wikipedia Quidditch Weltmeisterschaft](https://de.wikipedia.org/wiki/Quidditch-Weltmeisterschaft)
 * [Wikipedia European Quidditch Cup](https://en.wikipedia.org/wiki/European_Quidditch_Cup)
