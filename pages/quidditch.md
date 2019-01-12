@@ -32,7 +32,7 @@ Es gibt in Deutschland aktuell über 40 Teams. Damit stellt Deutschland neben Gr
 
 ## Quidditch international
 {: #international}
-Es gibt mittlerweile über 30 Nationalmannschaften weltweit. 2012 gab es die erste Weltmeisterschaft in Oxford. Die Deutsche Nationalmannschaft nahm 2016 das erste Mal an der Weltmeisterschaft in Frankfurt teil (11. Platz). Das Jahr danach war geprägt von einem „Boom“ an neuen Teams in Deutschland. Ein Jahr später fand die Europameisterschaft in Oslo (Platz 5) statt und 2018 wieder die Weltmeisterschaft in Florenz (Platz 7).
+Es gibt mittlerweile über 30 Nationalmannschaften weltweit. 2012 gab es die erste Weltmeisterschaft in Oxford. Die deutsche Nationalmannschaft nahm bei der ersten Europameisterschaft im Juli 2015 in Sarteano, Italien das erste Mal an einem internationalem Turnier teil. Ein Jahr später belegte sie bei der Weltmeisterschaft in Frankfurt 2016 den 11. Platz. Das Jahr danach war geprägt von einem „Boom“ an neuen Teams in Deutschland. Ein Jahr später fand die Europameisterschaft in Oslo (Platz 5) statt und 2018 wieder die Weltmeisterschaft in Florenz (Platz 7).
 
 In Europa findet seit 2012 der European Quidditch Cup (EQC) statt. Für den EQC gibt es pro Land eine bestimmte Anzahl an Plätzen für die Teams, die über nationale Qualifizierungsturniere verteilt werden.
 
