@@ -6,14 +6,14 @@ permalink: /impressum/
 
 ### Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 Rheinos Bonn e.V.,
-Grabenstraße 32,
-53225 Bonn
+Alfterer Str. 15,
+53121 Bonn
 
 eMail: vorstand [at] rheinos-bonn [dot] de
 
 #### Vertreten durch:
 
-Anneke Müller, Paulina Schröder, Philipp Wagner
+Paulina Schröder, Svenja Dobbert, Tobias Weiß
 
 #### Registereintrag:
 
