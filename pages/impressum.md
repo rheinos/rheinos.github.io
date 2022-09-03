@@ -13,7 +13,7 @@ eMail: vorstand [at] rheinos-bonn [dot] de
 
 #### Vertreten durch:
 
-Paulina Schröder, Svenja Dobbert, Tobias Weiß
+Svenja Dobbert, Julian Velling
 
 #### Registereintrag:
 
