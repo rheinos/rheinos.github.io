@@ -337,6 +337,18 @@ ul.legal li {
 	padding: 0 0 2rem;
 }
 
+/* Calender /*
+	/*Calender gets imported from  Google Calender with iframe
+	It gets displayed at page Training
+	...
+	*/
+
+	.embededCalender {
+		width: 100%;
+		border: none;
+	}
+
+
 
 /* Navigation, Header, Wrapper and Footer for mobile Devices */
 
