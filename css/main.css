@@ -240,7 +240,7 @@ header picture {
 
 header picture img {
 	width: 100vw;
-	height: 50vh;
+	height: 20rem;
 	object-fit: cover;
 	position: fixed;
 	z-index: -10000;
