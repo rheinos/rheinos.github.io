@@ -148,7 +148,7 @@ nav li.open-menu {
 
 nav a:hover {
 	color: transparent;
-	-webkit-text-stroke: 0.075rem var(--secondary-font-color);
+	-webkit-text-stroke: 0.05rem var(--secondary-font-color);
 }
 
 li.drop-down-item {
