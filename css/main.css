@@ -561,7 +561,7 @@ p {
 	line-height: 1.5rem;
 }
 
-header.start+.wrapper h2+p {
+h2:first-of-type+p {
 	text-align: center;
 }
 
@@ -570,7 +570,7 @@ header.start+.wrapper h2+p {
 	padding-bottom: 1rem;
 }
 
-header.start~.wrapper article p {
+header~.wrapper article p {
 	text-align: justify;
 }
 
