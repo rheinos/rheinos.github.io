@@ -1,9 +1,11 @@
 <header class="{% if page.headerclass %}{{ page.headerclass }}{% endif %}">
   <picture>
-    <source srcset="images/{% if page.headerbg_scalable %}{{ page.headerbg_scalable }}-1080px.webp{% endif %}{% if page.headerbg_static %}{{ page.headerbg_static }}{% endif %}" media="(max-width: 1080px)">
-    <source srcset="images/{% if page.headerbg_scalable %}{{ page.headerbg_scalable }}-1920px.webp{% endif %}{% if page.headerbg_static %}{{ page.headerbg_static }}{% endif %}" media="(max-width: 1920px)">
-    <source srcset="images/{% if page.headerbg_scalable %}{{ page.headerbg_scalable }}-4096px.webp{% endif %}{% if page.headerbg_static %}{{ page.headerbg_static }}{% endif %}" media="(max-width: 4096px)">
-    <img src="images/{% if page.headerbg_scalable %}{{ page.headerbg_scalable }}.webp{% endif %}{% if page.headerbg_static %}{{ page.headerbg_static }}{% endif %}" style="object-position: 75% 50%">
+    {% if page.headerbg_scalable %}
+      <source srcset="images/{{ page.headerbg_scalable }}-1080px.webp" media="(max-width: 1080px)">
+      <source srcset="images/{{ page.headerbg_scalable }}-1920px.webp" media="(max-width: 1920px)">
+      <source srcset="images/{{ page.headerbg_scalable }}-4096px.webp" media="(max-width: 4096px)">
+    {% endif %}
+    <img src="images/{% if page.headerbg_scalable %}{{ page.headerbg_scalable }}.webp{% endif %}{% if page.headerbg_static %}{{ page.headerbg_static }}{% endif %}"{% if page.obj_position %} style="object-position: {{ page.obj_position }}{% endif %}">
   </picture>
   <h1>
     {{ page.h1 }}
