@@ -559,6 +559,11 @@ h2:first-of-type+p {
 	text-align: center;
 }
 
+section {
+	padding-top: 2rem;
+	border-top: 0.15rem solid;
+}
+
 .wrapper article {
 	width: 100%;
 	padding-bottom: 1rem;
