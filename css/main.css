@@ -618,7 +618,7 @@ button {
 
 button:hover {
 	color: transparent;
-	-webkit-text-stroke: 0.075rem var(--secondary-font-color);
+	-webkit-text-stroke: 0.05rem var(--secondary-font-color);
 }
 
 button a {
