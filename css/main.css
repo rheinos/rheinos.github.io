@@ -611,10 +611,6 @@ article .photo-credit {
 	display: inline-block;
 }
 
-.photo-credit .light {
-	color: var(--secondary-font-color);
-}
-
 button {
 	padding: 0;
 	border: none;
