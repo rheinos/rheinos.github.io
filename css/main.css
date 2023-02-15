@@ -79,6 +79,7 @@ body {
 	overflow-x: hidden;
 	width: 100vw;
 	color: var(--font-color);
+	background-color: var(--secondary-background-color);
 	font-family: var(--text-font);
 }
 
@@ -466,6 +467,7 @@ ul.legal li {
 		padding-top: 0rem;
 		font-size: 1.75rem;
 		line-height: 1.75rem;
+		background-color: transparent;
 	}
 
 	#nav li.logo {
@@ -483,19 +485,6 @@ ul.legal li {
 
 	#nav li.open-menu	a {
 		z-index: 10000;
-	}
-
-	#nav:target li.open-menu {
-		display: none;
-	}
-
-	nav#nav:target {
-		height: 100vh;
-		overflow: scroll;
-	}
-
-	#nav:target li {
-		display: block;
 	}
 
 	li.drop-down-item {
