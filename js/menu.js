@@ -3,7 +3,7 @@ function openMenu() {
   MenuOpener.style.display = "none";
 
   var MenuBG = document.getElementsByTagName("nav");
-  MenuBG[0].style = "overflow: scroll; height: 100vh; background-color : rgba(23,31,53,0.9)";
+  MenuBG[0].style = "overflow: scroll; height: 100vh; background-color : rgba(23,31,53,0.95)";
 
   var Menu = document.getElementById("nav").querySelectorAll("li");
   Menu[1].style.display = "block";
