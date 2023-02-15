@@ -496,11 +496,13 @@ ul.legal li {
 	}
 
 	header picture {
-		height: calc(100vh - 5rem);
+		top: -5rem;
+		height: 100vh;
 	}
 
 	header picture img {
-		top: 5rem;
+		top: 0;
+		height: 19rem;
 	}
 
 	header ul.socialmedia {
