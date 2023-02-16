@@ -132,7 +132,7 @@ nav li.open-menu {
 	margin: 1rem;
 }
 
-#nav li.close-menu {
+nav li.close-menu {
 	display: none;
 	position: absolute;
 	right: 0;
@@ -429,7 +429,7 @@ ul.legal li {
 		padding-top: 5rem;
 	}
 
-	nav#nav {
+	nav {
 	  width: 98vw;
 		padding: 0 1vw;
 	  position: fixed;
@@ -454,28 +454,28 @@ ul.legal li {
 		height: 0;
 	}
 
-	#nav li {
+	nav li {
 	  display: none;
 		padding-top: 2rem;
 	}
 
-	#nav li.drop-down:last-of-type {
+	nav li.drop-down:last-of-type {
 		padding-bottom: 2rem;
 	}
 
-	#nav li.drop-down-item {
+	nav li.drop-down-item {
 		padding-top: 0rem;
 		font-size: 1.75rem;
 		line-height: 1.75rem;
 		background-color: transparent;
 	}
 
-	#nav li.logo {
+	nav li.logo {
 		display: inline-block;
 		padding-top: 0;
 	}
 
-	#nav li.open-menu {
+	nav li.open-menu {
 		display: inline-block;
 		padding: 0.5rem;
 		background-repeat: no-repeat;
@@ -483,12 +483,26 @@ ul.legal li {
 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='105' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolyline points='0,100 0,20 20,0 100,0 100,100 0,100' style='fill:none%3B stroke:%23fdfdfd%3B stroke-width:0.5rem%3B' /%3E%3C/svg%3E");
 	}
 
-	#nav li.open-menu	a {
+	nav li.open-menu	a {
 		z-index: 10000;
 	}
 
 	li.drop-down-item {
 	  height: auto;
+	}
+
+	nav.opened {
+		overflow: scroll;
+		height: 100vh;
+		background-color : rgba(23,31,53,0.95);
+	}
+
+	nav.opened li.open-menu {
+		display: none;
+	}
+
+	nav.opened li {
+		display: block;
 	}
 
 	header.start {
