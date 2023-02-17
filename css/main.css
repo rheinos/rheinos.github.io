@@ -49,7 +49,7 @@ html {
 	--font-color: #171f35; /* almost all text between header and footer */
 	--secondary-font-color: #fdfdfd; /* text in navigation, footer and buttons and stroke color for h1 */
 	--background-color: #fdfdfd; /* background color for .wrapper */
-	--secondary-background-color: #171f35; /* background color for navigation, header, footer and buttons */
+	--secondary-background-color: #171f35; /* background color for navigation, header, footer and buttons; ATTENTION: since the background for the hamburger navigation menu is transparent, the color must be modified manually (search for rgba in this document) */
 
 	--dark-scheme-font-color: #fdfdfd; /* almost all text between header and footer when the device has dark mode enabled */
 	--dark-scheme-background-color: #181818; /* background color for .wrapper when the device has dark mode enabled */
@@ -616,6 +616,27 @@ article .photo-credit {
 	display: inline-block;
 }
 
+section.introduction h3 {
+	width: 10ch;
+	overflow: hidden;
+	font-size: 4rem;
+	-webkit-text-stroke: 0.1rem var(--secondary-font-color);
+	position: absolute;
+	padding: 0;
+	top: calc(50%); /* depends on the width-height-ratio of the picture */
+	cursor: vertical-text;
+}
+
+section.introduction article.right h3 {
+	left: calc(-5ch - 1rem - 1ex);
+	transform: rotate(270deg);
+}
+
+section.introduction article.left h3 {
+	right: calc(-5ch - 0.25rem - 100% + 1ex);
+	transform: rotate(90deg);
+}
+
 button {
 	padding: 0;
 	border: none;
@@ -665,14 +686,9 @@ article.left picture img {
 }
 
 article.left .article-content {
-	display: inline-block;
-	top: 0;
 	left: -50%;
-	position: relative;
 	padding-right: 0.9rem;
 	padding-left: 0;
-	padding-top: 1rem;
-	text-align: center;
 }
 
 @media screen and (max-width: 500px) {
@@ -705,7 +721,16 @@ article.left .article-content {
 
 	article.left .article-content {
 		left: 0;
-		padding: 1rem 0 0;
+	}
+
+	section.introduction div.article-content h3 {
+		width: inherit;
+		-webkit-text-stroke: 0;
+		position: static;
+		cursor: auto;
+		font-size: 1.75rem;
+		padding-bottom: 1rem;
+		transform: rotate(0deg);
 	}
 }
 
@@ -717,6 +742,11 @@ article.left .article-content {
 
 	article .photo-credit {
 		top: 0rem;
+	}
+
+	section.introduction h3 {
+		font-size: 3rem;
+		top: 37.5%;
 	}
 }
 
