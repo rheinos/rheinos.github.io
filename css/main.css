@@ -49,7 +49,8 @@ html {
 	--font-color: #171f35; /* almost all text between header and footer */
 	--secondary-font-color: #fdfdfd; /* text in navigation, footer and buttons and stroke color for h1 */
 	--background-color: #fdfdfd; /* background color for .wrapper */
-	--secondary-background-color: #171f35; /* background color for navigation, header, footer and buttons; ATTENTION: since the background for the hamburger navigation menu is transparent, the color must be modified manually (search for rgba in this document) */
+	--secondary-background-color: #171f35; /* background color for navigation, header, footer and buttons */
+	--translucent-background-color: rgba(23,31,53,0.8); /* background color for opened mobile navigation and section.introduction article; same color as --secondary-background-color but translucent */
 
 	--dark-scheme-font-color: #fdfdfd; /* almost all text between header and footer when the device has dark mode enabled */
 	--dark-scheme-background-color: #181818; /* background color for .wrapper when the device has dark mode enabled */
@@ -494,7 +495,7 @@ ul.legal li {
 	nav.opened {
 		overflow: scroll;
 		height: 100vh;
-		background-color : rgba(23,31,53,0.95);
+		background-color : var(--translucent-background-color);
 	}
 
 	nav.opened li.open-menu {
@@ -616,31 +617,73 @@ article .photo-credit {
 	display: inline-block;
 }
 
-section.introduction h3 {
+section.introduction article {
+	width: calc(35vw - 1.1rem);
+	height: calc(21.875vw - 0.6875rem);
+	overflow: hidden;
+	display: inline-block;
+	padding-bottom: 1.9rem;
+}
+
+section.introduction article:nth-of-type(odd) {
+	margin-right: 1.9rem;
+}
+
+section.introduction .article-content {
+	height: calc(21.875vw - 0.6875rem);
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	top: calc(-21.875vw + 0.6875rem);
+	left: calc(35vw - 5.1rem);
+	width: 4rem;
+	transition: all 0.75s;
+}
+
+section.introduction article:hover .article-content {
+	left: calc(13.125vw - 3.4125rem);
+	width: calc(21.875vw + 2.3125rem);
+	background-color: var(--translucent-background-color);
+}
+
+section.introduction article h3 {
 	width: calc(21.875vw - 0.6875rem);
 	overflow: hidden;
 	font-size: 4rem;
 	-webkit-text-stroke: 0.1rem var(--secondary-font-color);
 	position: absolute;
 	padding: 0;
-	top: calc((21.875vw - 0.6875rem) / 2 - 2rem);
-	cursor: vertical-text;
-}
-
-section.introduction article.right h3 {
-	left: calc((-21.875vw + 0.6875rem) / 2 - 3.1rem);
+	top: calc((21.875vw - 0.6875rem) / 2 - 0.5em);
+	left: calc((-21.875vw + 0.6875rem) / 2 + 0.5em);
 	transform: rotate(270deg);
+	cursor: vertical-text;
+	transition: all 0.75s;
 }
 
-section.introduction article.left h3 {
-	right: calc((-21.875vw + 0.6875rem) / 2 - 35vw + 2rem);
-	transform: rotate(90deg);
+section.introduction article:hover h3 {
+	color: transparent;
+}
+
+section.introduction article p {
+	padding: 1rem 1rem 1rem 0;
+	width: calc(21.875vw - 2.6875rem);
+	height: calc(21.875vw - 2.6875rem);
+	position: relative;
+	left: 4rem;
+	color: var(--secondary-font-color);
 }
 
 section.introduction article img {
 	width: calc(35vw - 1.1rem); /* width-height-ratio 16:10 */
 	height: calc(21.875vw - 0.6875rem);
 	object-fit: cover;
+}
+
+section.introduction article .photo-credit {
+	position: relative;
+	display: flex;
+	left: 0;
+	top: calc(-21.875vw - 1.0625rem);
 }
 
 button {
@@ -707,23 +750,54 @@ article.left .article-content {
 		top: 0rem;
 	}
 
-	section.introduction h3 {
+	/*section.introduction h3 {
 		font-size: 3rem;
-		top: calc((28.125vw - 0.6875rem) / 2 - 1.5rem);
+		top: calc((28.125vw - 0.6875rem) / 2 - 0.5em);
 		width: calc(28.125vw - 0.6875rem);
 	}
 
 	section.introduction article img {
 		width: calc(45vw - 1.1rem);
 		height: calc(28.125vw - 0.6875rem);
+	}*/
+
+	section.introduction article {
+		width: calc(45vw - 1.1rem);
+		height: calc(28.125vw - 0.6875rem);
 	}
 
-	section.introduction article.right h3 {
-		left: calc((-28.125vw + 0.6875rem) / 2 - 2.6rem);
+	section.introduction .article-content {
+		height: calc(28.125vw - 0.6875rem);
+		top: calc(-28.125vw + 0.6875rem);
+		left: calc(45vw - 4.1rem);
+		width: 3rem;
 	}
 
-	section.introduction article.left h3 {
-		right: calc((-28.125vw + 0.6875rem) / 2 - 45vw + 1.5rem);
+	section.introduction article:hover .article-content {
+		left: calc(16.875vw - 4.4125rem);
+		width: calc(28.125vw + 3.3125rem);
+	}
+
+	section.introduction article h3 {
+		width: calc(28.125vw - 0.6875rem);
+		font-size: 3rem;
+		top: calc((28.125vw - 0.6875rem) / 2 - 0.5em);
+		left: calc((-28.125vw + 0.6875rem) / 2 + 0.5em);
+	}
+
+	section.introduction article p {
+		width: calc(28.125vw - 0.6875rem);
+		height: calc(28.125vw - 2.6875rem);
+		left: 3rem;
+	}
+
+	section.introduction article img {
+		width: calc(45vw - 1.1rem); /* width-height-ratio 16:10 */
+		height: calc(28.125vw - 0.6875rem);
+	}
+
+	section.introduction article .photo-credit {
+		top: calc(-28.125vw - 1.0625rem);
 	}
 }
 
