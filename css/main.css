@@ -425,7 +425,7 @@ ul.legal li {
 	}
 }
 
-@media only screen and ((max-width: 1080px) or (any-hover: none) or (orientation: portrait)) {
+@media only screen and ((max-width: 1080px) and ((any-hover: none) or (orientation: portrait))) {
 	main {
 		padding-top: 5rem;
 	}
@@ -622,11 +622,12 @@ section.introduction article {
 	height: calc(21.875vw - 0.6875rem);
 	overflow: hidden;
 	display: inline-block;
-	padding-bottom: 1.9rem;
+	margin-bottom: 1.85rem;
+	padding: 0;
 }
 
 section.introduction article:nth-of-type(odd) {
-	margin-right: 1.9rem;
+	margin-right: 1.85rem;
 }
 
 section.introduction .article-content {
@@ -677,6 +678,7 @@ section.introduction article img {
 	width: calc(35vw - 1.1rem); /* width-height-ratio 16:10 */
 	height: calc(21.875vw - 0.6875rem);
 	object-fit: cover;
+	padding: 0;
 }
 
 section.introduction article .photo-credit {
@@ -750,17 +752,6 @@ article.left .article-content {
 		top: 0rem;
 	}
 
-	/*section.introduction h3 {
-		font-size: 3rem;
-		top: calc((28.125vw - 0.6875rem) / 2 - 0.5em);
-		width: calc(28.125vw - 0.6875rem);
-	}
-
-	section.introduction article img {
-		width: calc(45vw - 1.1rem);
-		height: calc(28.125vw - 0.6875rem);
-	}*/
-
 	section.introduction article {
 		width: calc(45vw - 1.1rem);
 		height: calc(28.125vw - 0.6875rem);
@@ -833,19 +824,43 @@ article.left .article-content {
 		left: 0;
 	}
 
-	section.introduction div.article-content h3 {
-		width: inherit;
-		-webkit-text-stroke: 0;
-		position: static;
-		cursor: auto;
-		font-size: 1.75rem;
-		padding-bottom: 1rem;
-		transform: rotate(0deg);
+	section.introduction article {
+		width: calc(98vw);
+		height: calc(61.25vw);
+		margin-right: 0;
+	}
+
+	section.introduction .article-content {
+		height: calc(61.25vw);
+		top: calc(-61.25vw);
+		left: calc(98vw - 3rem);
+	}
+
+	section.introduction article:hover .article-content {
+		left: calc(36.75vw - 4.5rem);
+		width: calc(61.25vw + 4.5rem);
+	}
+
+	section.introduction article h3 {
+		width: calc(61.25vw);
+		top: calc(61.25vw / 2 - 0.5em);
+		left: calc((-61.25vw) / 2 + 0.5em);
+	}
+
+	section.introduction article p {
+		width: calc(61.25vw + 1rem);
+		height: calc(61.25vw - 1rem);
+		padding: 0.5rem 0.5rem 0.5rem 0;
 	}
 
 	section.introduction article img {
-		width: 98vw;
-		height: 61.25vw;
+		width: calc(98vw); /* width-height-ratio 16:10 */
+		height: calc(61.25vw);
+	}
+
+	section.introduction article .photo-credit {
+		top: calc(-61.25vw - 1.25rem);
+		padding: 0.25rem;
 	}
 }
 
