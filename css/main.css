@@ -425,7 +425,7 @@ ul.legal li {
 	}
 }
 
-@media only screen and ((max-width: 1080px) and ((any-hover: none) or (orientation: portrait))) {
+@media only screen and (max-width: 1080px) {
 	main {
 		padding-top: 5rem;
 	}
