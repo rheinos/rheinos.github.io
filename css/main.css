@@ -532,6 +532,7 @@ ul.legal li {
 /* History Page */
 section.history {
 	padding-top: 0;
+	border: 0;
 }
 
 section.history article {
@@ -647,7 +648,7 @@ section.history article.visible:nth-of-type(even) time {
 	right: calc(100% + 2.2rem);
 }
 
-section.history .article-content p {
+section.history .article-content p:last-of-type {
 	padding: 0;
 }
 
@@ -707,6 +708,7 @@ h2:first-of-type+p {
 
 section {
 	padding-top: 2rem;
+	border-top: 0.15rem solid;
 }
 
 .wrapper article {
@@ -827,10 +829,6 @@ section.introduction article .photo-credit {
 	display: flex;
 	left: 0;
 	top: calc(-21.875vw - 1.0625rem);
-}
-
-section.introduction{
-	border-top: 0.15rem solid;
 }
 
 button {
