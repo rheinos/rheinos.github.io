@@ -1,14 +1,12 @@
- 
+
      "use strict";
 
 function qs(selector, all = false) {
   return all ? document.querySelectorAll(selector) : document.querySelector(selector);
 }
 
-const sections = qs('.section', true);
-const timeline = qs('.timeline');
-const line = qs('.line');
-line.style.bottom = `calc(100% - 20px)`;
+const sections = qs('article', true);
+const timeline = qs('.history');
 let prevScrollY = window.scrollY;
 let up, down;
 let full = false;
@@ -22,19 +20,16 @@ function scrollHandler(e) {
   up = scrollY < prevScrollY;
   down = !up;
   const timelineRect = timeline.getBoundingClientRect();
-  const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
 
   const dist = targetY - timelineRect.top;
   console.log(dist);
 
   if (down && !full) {
     set = Math.max(set, dist);
-    line.style.bottom = `calc(100% - ${set}px)`;
   }
 
   if (dist > timeline.offsetHeight + 50 && !full) {
     full = true;
-    line.style.bottom = `-5rem`;
   }
 
   sections.forEach(item => {
@@ -42,7 +37,7 @@ function scrollHandler(e) {
     const rect = item.getBoundingClientRect(); //     console.log(rect);
 
     if (rect.top + item.offsetHeight / 5 < targetY) {
-      item.classList.add('show-me');
+      item.classList.add('visible');
     }
   }); // console.log(up, down);
 
@@ -50,5 +45,4 @@ function scrollHandler(e) {
 }
 
 scrollHandler();
-line.style.display = 'block';
 window.addEventListener('scroll', scrollHandler);
