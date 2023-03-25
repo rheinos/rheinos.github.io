@@ -1,6 +1,9 @@
 <header class="{% if page.headerclass %}{{ page.headerclass }}{% endif %}">
   <picture>
     {% if page.headerbg_scalable %}
+      {% if page.headerclass != "start" %}
+        <source srcset="images/{{ page.headerbg_scalable }}-500px.webp" media="(max-width: 500px)">
+      {% endif %}
       <source srcset="images/{{ page.headerbg_scalable }}-1080px.webp" media="(max-width: 1080px)">
       <source srcset="images/{{ page.headerbg_scalable }}-1920px.webp" media="(max-width: 1920px)">
       <source srcset="images/{{ page.headerbg_scalable }}-4096px.webp" media="(max-width: 4096px)">
