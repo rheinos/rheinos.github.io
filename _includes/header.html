@@ -1,6 +1,11 @@
 <header class="{% if page.headerclass %}{{ page.headerclass }}{% endif %}">
   <picture>
     {% if page.headerbg_scalable %}
+      {% if page.headerclass == "start" %}
+        <source srcset="images/{{ page.headerbg_scalable }}-portrait-720px.webp" media="(max-height: 720px) and (orientation: portrait)">
+        <source srcset="images/{{ page.headerbg_scalable }}-portrait-1080px.webp" media="(max-height: 1080px) and (orientation: portrait)">
+        <source srcset="images/{{ page.headerbg_scalable }}-portrait-1440px.webp" media="(max-height: 1440px) and (orientation: portrait)">
+      {% endif %}
       {% if page.headerclass != "start" %}
         <source srcset="images/{{ page.headerbg_scalable }}-500px.webp" media="(max-width: 500px)">
       {% endif %}

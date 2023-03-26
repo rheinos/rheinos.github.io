@@ -5,8 +5,10 @@
 
 @font-face{
 	font-family: 'RheinosBonnCollegiate';
-	src: url('RheinosBonnCollegiate.woff') format('woff'),
+	src: url('RheinosBonnCollegiate.woff2') format('woff2'),
+		url('RheinosBonnCollegiate.woff') format('woff'),
 		url('RheinosBonnCollegiate.ttf') format('truetype');
+	font-display: block;
 }
 
 html, body, div, span, applet, object,
@@ -529,7 +531,7 @@ ul.legal li {
 
 /* History Page */
 section.history {
-	padding-top: 0;
+	padding: 0 0 2rem;
 	border: 0;
 }
 
@@ -665,8 +667,7 @@ section.history article:nth-of-type(even) .photo-credit {
 
 .skyline {
 	position: relative;
-	height: 250px;
-	left: -10rem;
+	width: 100%;
 	top: 13px;
 }
 

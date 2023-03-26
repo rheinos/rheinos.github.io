@@ -4,7 +4,7 @@ title: Geschichte
 permalink: /history
 
 headerclass: start
-headerbg_static: hofgarten.jpg
+headerbg_scalable: hofgarten
 h1: Unsere Geschichte
 photograph: Lisa Dörner Photography
 photograph_link: https://www.instagram.com/lisadoernerphotography/
@@ -82,5 +82,11 @@ obj_position: 50% 60%
 				</section>
 
 				<script src="../js/timeline.js"></script>
-				<img class="skyline" src="img/skyline.png">
+				<picture>
+					<source srcset="images/skyline-500px.webp" media="(max-width: 500px)">
+					<source srcset="images/skyline-1080px.webp" media="(max-width: 1080px)">
+					<source srcset="images/skyline-1920px.webp" media="(max-width: 1920px)">
+					<source srcset="images/skyline-4096px.webp" media="(max-width: 4096px)">
+					<img class="skyline" src="images/skyline.webp" alt="">
+				</picture>
 			</div>
