@@ -529,148 +529,6 @@ ul.legal li {
   }
 }
 
-/* History Page */
-section.history {
-	padding: 0 0 2rem;
-	border: 0;
-}
-
-section.history article {
-	position: relative;
-	width: calc(50% - 1.1rem);
-	left: calc(-15vw - 100%);
-	padding: 4rem 0 0;
-	transition: all 0.5s ease;
-}
-
-section.history article:nth-of-type(even) {
-	left: calc(150% + 1.1rem + 15vw);
-}
-
-section.history article.visible {
-	left: 0;
-}
-
-section.history article.visible:nth-of-type(even) {
-	left: calc(50% + 1.1rem);
-}
-
-section.history article::before {
-	content: '';
-	position: absolute;
-	height: 1rem;
-	width: 1rem;
-	border-radius: 0.5rem;
-	background-color: var(--font-color);
-	top: 4.375rem;
-	left: calc(100% + 0.675rem);
-}
-
-section.history article:nth-of-type(even)::before {
-	left: calc(-1.525rem);
-}
-
-section.history article::after {
-	width: 0.15rem;
-	height: 100%;
-	background-color: var(--font-color);
-	content: '';
-	position: absolute;
-	left: calc(300% + 3.3rem + 15vw);
-	top: 0;
-	transition: all 0.5s ease;
-	z-index: 2222;
-}
-
-section.history article:nth-of-type(even)::after {
-	left: calc(-200% - 3.3rem - 15vw);
-}
-
-section.history article.visible::after {
-	left: calc(100% + 1.1rem);
-}
-
-section.history article.visible:nth-of-type(even)::after {
-	left: calc(-1.1rem);
-}
-
-section.history article img {
-	padding: 0;
-	position: absolute;
-	height: calc(100% - 6.75rem);
-	width: 100%;
-	top: 6.75rem;
-	left: calc(100% + 2.2rem);
-	object-fit: cover;
-	z-index: 3333;
-}
-
-section.history article:nth-of-type(even) img {
-	left: calc(-100% - 2.2rem);
-}
-
-section.history article:nth-of-type(odd) img {
-	-webkit-clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
-	clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
-}
-
-section.history .article-content {
-	width: 100%;
-	padding: 0;
-	z-index: 4444;
-}
-
-section.history .article-content time {
-	position: absolute;
-	left: calc(400% + 4.4rem + 30vw);
-	top: 0;
-	width: 100%;
-	font-family: var(--secondary-font);
-	font-size: 1.75rem;
-	text-transform: uppercase;
-	text-align: left;
-	transition: all 0.5s ease;
-	transition-delay: 0.15s;
-}
-
-section.history article:nth-of-type(even) time {
-	left: auto;
-	right: calc(400% + 4.4rem + 30vw);
-	text-align: right;
-}
-
-section.history .visible .article-content time {
-	left: calc(100% + 2.2rem);
-}
-
-section.history article.visible:nth-of-type(even) time {
-	left: auto;
-	right: calc(100% + 2.2rem);
-}
-
-section.history .article-content p:last-of-type {
-	padding: 0;
-}
-
-section.history article .photo-credit {
-	position: absolute;
-	width: calc(100% - 1rem);
-	left: calc(100% + 2.2rem);
-	bottom: 0;
-	top: auto;
-	z-index: 4444;
-}
-
-section.history article:nth-of-type(even) .photo-credit {
-	left: calc(-100% - 2.2rem);
-}
-
-.skyline {
-	position: relative;
-	width: 100%;
-	top: 13px;
-}
-
 
 /* Page Content */
 
@@ -828,6 +686,153 @@ section.introduction article .photo-credit {
 	display: flex;
 	left: 0;
 	top: calc(-21.875vw - 1.0625rem);
+}
+
+
+/* History Page */
+section.history {
+	padding: 0 0 2rem;
+	border: 0;
+}
+
+section.history article {
+	position: relative;
+	width: calc(50% - 1.1rem);
+	left: calc(-15vw - 100%);
+	padding: 3rem 0 0;
+	transition: all 0.5s ease;
+}
+
+section.history article:nth-of-type(even) {
+	left: calc(150% + 1.1rem + 15vw);
+}
+
+section.history article.visible {
+	left: 0;
+}
+
+section.history article.visible:nth-of-type(even) {
+	left: calc(50% + 1.1rem);
+}
+
+section.history article::before {
+	content: '';
+	position: absolute;
+	height: 1rem;
+	width: 1rem;
+	border-radius: 0.5rem;
+	background-color: var(--font-color);
+	top: 3.375rem;
+	left: calc(100% + 0.675rem);
+}
+
+section.history article:nth-of-type(even)::before {
+	left: calc(-1.525rem);
+}
+
+section.history article::after {
+	width: 0.15rem;
+	height: 100%;
+	background-color: var(--font-color);
+	content: '';
+	position: absolute;
+	left: calc(300% + 3.3rem + 15vw);
+	top: 0;
+	transition: all 0.5s ease;
+	z-index: 2222;
+}
+
+section.history article:nth-of-type(even)::after {
+	left: calc(-200% - 3.3rem - 15vw);
+}
+
+section.history article.visible::after {
+	left: calc(100% + 1.1rem);
+}
+
+section.history article.visible:nth-of-type(even)::after {
+	left: calc(-1.1rem);
+}
+
+section.history article img {
+	padding: 0;
+	position: absolute;
+	height: clamp(10rem, calc(100% - 5.75rem), 25rem);
+	width: 100%;
+	top: 5.75rem;
+	left: calc(100% + 2.2rem);
+	object-fit: cover;
+	z-index: 3333;
+}
+
+section.history article:nth-of-type(even) img {
+	left: calc(-100% - 2.2rem);
+}
+
+section.history article:nth-of-type(odd) img {
+	-webkit-clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
+}
+
+section.history .article-content {
+	width: 100%;
+	padding: 0;
+	z-index: 4444;
+}
+
+section.history .article-content time {
+	position: absolute;
+	left: calc(400% + 4.4rem + 30vw);
+	top: 0;
+	width: 100%;
+	font-family: var(--secondary-font);
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	text-align: left;
+	transition: all 0.5s ease;
+	transition-delay: 0.15s;
+}
+
+section.history article:nth-of-type(even) time {
+	left: auto;
+	right: calc(400% + 4.4rem + 30vw);
+	text-align: right;
+}
+
+section.history .visible .article-content time {
+	left: calc(100% + 2.2rem);
+}
+
+section.history article.visible:nth-of-type(even) time {
+	left: auto;
+	right: calc(100% + 2.2rem);
+}
+
+section.history .article-content p {
+	min-height: 10rem;
+}
+
+section.history .article-content p:last-of-type {
+	padding: 0;
+}
+
+section.history article .photo-credit {
+	position: absolute;
+	width: calc(100% - 1rem);
+	left: calc(100% + 2.2rem);
+	bottom: 0;
+	top: auto;
+	z-index: 4444;
+}
+
+section.history article:nth-of-type(even) .photo-credit {
+	left: calc(-100% - 2.2rem);
+}
+
+.skyline {
+	position: relative;
+	width: 100%;
+	top: 13px;
 }
 
 button {
@@ -1006,7 +1011,7 @@ article.left .article-content {
 		position: relative;
 		width: calc(100% - 2.2rem);
 		left: calc(-100% - 1vw);
-		padding: 3rem 0 0;
+		padding: 2rem 0 0;
 	}
 
 	section.history article:nth-of-type(even) {
@@ -1078,6 +1083,10 @@ article.left .article-content {
 
 	section.history article.visible .article-content time {
 		left: 0;
+	}
+
+	section.history article .article-content p {
+		min-height: 0;
 	}
 
 	section.history article .photo-credit {
