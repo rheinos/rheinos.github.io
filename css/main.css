@@ -193,8 +193,6 @@ header {
 	text-align: center;
 	position: relative;
 	top: 0;
-	background-size: auto,cover;
-	background-attachment: fixed,fixed;
 }
 
 header.start {
@@ -360,7 +358,7 @@ ul.legal li {
 
 	header h1 {
 		width: 90vw;
-		font-size: 3.5rem;
+		font-size: 3.75rem;
 		padding: 3.5rem 5vw;
 	}
 
@@ -509,7 +507,13 @@ ul.legal li {
 
 @media screen and ((max-width: 1080px) and (orientation: landscape)) {
 	header.start h1 {
-  	top: 25vh;
+  	top: 35vh;
+  }
+}
+
+@media screen and ((max-width: 1080px) and (min-width: 500px) and (orientation: portrait)) {
+	header.start h1 {
+  	font-size: 6rem;
   }
 }
 
@@ -552,38 +556,45 @@ section {
 	border-top: 0.15rem solid;
 }
 
-.wrapper article {
+article {
 	width: 100%;
-	padding-bottom: 1rem;
+	padding-bottom: 3rem;
+	position: relative;
 }
 
 header~.wrapper article p {
 	text-align: justify;
 }
 
-article p:last-of-type {
-	padding-bottom: 2rem;
-}
-
 article img {
+	position: absolute;
  	width: calc(50% - 1.1rem);
-	position: relative;
+	height: calc(100% - 3rem);
 	display: inline-block;
+	object-fit: cover;
 	left: 0;
 	vertical-align: top;
-	padding-right: 0.9rem;
 	-webkit-clip-path: polygon(3rem 0, 100% 0, 100% 100%, 0 100%, 0 3rem);
 	clip-path: polygon(3rem 0, 100% 0, 100% 100%, 0 100%, 0 3rem);
+}
+
+article.left img {
+	left: calc(50% + 1.1rem);
+	-webkit-clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
 }
 
 .article-content {
 	width: calc(50% - 1.1rem);
 	display: inline-block;
-	top: 0;
+	left: calc(50% + 1.1rem);
 	position: relative;
-	padding-left: 0.9rem;
 	padding-top: 1rem;
 	text-align: center;
+}
+
+article.left .article-content {
+	left: 0;
 }
 
 mark {
@@ -593,12 +604,18 @@ mark {
 }
 
 article .photo-credit {
-	position: relative;
+	position: absolute;
 	padding: 0.5rem;
-	top: -1.875rem;
+	bottom: 3rem;
+	left: 0;
 	font-size: 0.75rem;
 	line-height: 0.75rem;
 	display: inline-block;
+}
+
+article.left .photo-credit {
+	left: auto;
+	right: 0;
 }
 
 section.introduction article {
@@ -616,10 +633,8 @@ section.introduction article:nth-of-type(odd) {
 
 section.introduction .article-content {
 	height: calc(21.875vw - 0.6875rem);
-	position: relative;
 	overflow: hidden;
 	padding: 0;
-	top: calc(-21.875vw + 0.6875rem);
 	left: calc(35vw - 5.1rem);
 	width: 4rem;
 	transition: all 0.75s;
@@ -666,10 +681,7 @@ section.introduction article img {
 }
 
 section.introduction article .photo-credit {
-	position: relative;
-	display: flex;
-	left: 0;
-	top: calc(-21.875vw - 1.0625rem);
+	bottom: 0;
 }
 
 
@@ -761,6 +773,7 @@ section.history article:nth-of-type(odd) img {
 section.history .article-content {
 	width: 100%;
 	padding: 0;
+	left: 0;
 	z-index: 4444;
 }
 
@@ -806,11 +819,13 @@ section.history article .photo-credit {
 	left: calc(100% + 2.2rem);
 	bottom: 0;
 	top: auto;
+	text-align: right;
 	z-index: 4444;
 }
 
 section.history article:nth-of-type(even) .photo-credit {
 	left: calc(-100% - 2.2rem);
+	text-align: left;
 }
 
 .skyline {
@@ -821,6 +836,8 @@ section.history article:nth-of-type(even) .photo-credit {
 
 button {
 	padding: 0;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
 	border: none;
 	background-color: transparent;
 	color: var(--secondary-font-color);
@@ -854,30 +871,27 @@ button::after {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 2000 100' preserveAspectRatio='xMaxYMid slice'%3E%3Cpolygon points='2000,0 1900,100 0,100 0,0' style='fill:%23171f35%3B' /%3E%3C/svg%3E");
 }
 
-.wrapper article.left {
-	text-align: right;
-}
-
-article.left img {
-	position: relative;
-	display: inline-block;
-	left: 50%;
-	vertical-align: top;
-	padding-left: 0.9rem;
-	padding-right: 0;
-	-webkit-clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
-	clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
-}
-
-article.left .article-content {
-	left: -50%;
-	padding-right: 0.9rem;
-	padding-left: 0;
-}
-
 @media screen and (max-width: 1080px) {
+	article {
+		padding-bottom: 2rem;
+	}
+
+	article img {
+		top: 4rem;
+		height: min(100% - 6rem, 300px);
+	}
+
+	article p:last-of-type {
+		padding-bottom: 0;
+	}
+
+	button {
+		margin-bottom: 0;
+	}
+
 	article .photo-credit {
-		top: 0rem;
+		bottom: auto;
+		top: min(100% - 3.75rem, 300px + 2.25rem);
 	}
 
 	section.introduction article {
@@ -887,7 +901,6 @@ article.left .article-content {
 
 	section.introduction .article-content {
 		height: calc(28.125vw - 0.6875rem);
-		top: calc(-28.125vw + 0.6875rem);
 		left: calc(45vw - 4.1rem);
 		width: 3rem;
 	}
@@ -911,12 +924,13 @@ article.left .article-content {
 	}
 
 	section.introduction article img {
+		top: 0;
 		width: calc(45vw - 1.1rem); /* width-height-ratio 16:10 */
 		height: calc(28.125vw - 0.6875rem);
 	}
 
 	section.introduction article .photo-credit {
-		top: calc(-28.125vw - 1.0625rem);
+		top: auto;
 	}
 }
 
@@ -960,7 +974,6 @@ article.left .article-content {
 
 	section.introduction .article-content {
 		height: calc(61.25vw);
-		top: calc(-61.25vw);
 		left: calc(98vw - 3rem);
 	}
 
@@ -1007,7 +1020,7 @@ article.left .article-content {
 	}
 
 	section.history article::before {
-		top: calc(3rem + 61.25vw);
+		top: calc(2rem + 61.25vw);
 	}
 
 	section.history article:nth-of-type(even)::before {
