@@ -967,8 +967,9 @@ button::after {
 		top: 0;
 	}
 
-	.article-content {
+	article .article-content {
 		width: 100%;
+		min-height: 0;
 		padding: 1rem 0 0;
 		position: relative;
 		left: 0;
