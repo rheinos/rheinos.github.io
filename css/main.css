@@ -47,13 +47,19 @@ html {
 
 
 /* change the color scheme here, not anywhere else (except for the pseudo elements with an SVG, e.g. drop down menu, social media; replace "171f35" in the "%23171f35%3B" string with the --font-color value and "fdfdfd" in the "%23fdfdfd%3B" string with the --secondary-font-color value) */
-	--font-color: #171f35; /* almost all text between header and footer */
-	--secondary-font-color: #fdfdfd; /* text in navigation, footer and buttons and stroke color for h1 */
-	--background-color: #fdfdfd; /* background color for .wrapper */
-	--secondary-background-color: #171f35; /* background color for navigation, header, footer and buttons */
-	--translucent-background-color: rgba(23,31,53,0.8); /* background color for opened mobile navigation and section.introduction article; same color as --secondary-background-color but translucent */
+	--dark-color: 23, 31, 53; /* #171f35 */
+	--light-color: 253, 253, 253; /* #fdfdfd */
+	--translucent-alpha: 0.8; /* alpha value for translucent elements */
+	--translucent-secondary-alpha: 0.35; /* lower alpha value */
 
-	--dark-scheme-font-color: #fdfdfd; /* almost all text between header and footer when the device has dark mode enabled */
+	--font-color: rgb(var(--dark-color)); /* almost all text between header and footer */
+	--secondary-font-color: rgb(var(--light-color)); /* text in navigation, footer and buttons and stroke color for h1 */
+	--background-color: rgb(var(--light-color)); /* background color for .wrapper */
+	--secondary-background-color: rgb(var(--dark-color)); /* background color for navigation, header, footer and buttons */
+	--translucent-color: rgba(var(--dark-color),var(--translucent-alpha)); /* background color for opened mobile navigation and section.introduction article; same color as --secondary-background-color but translucent */
+	--translucent-secondary-color: rgba(var(--light-color),var(--translucent-secondary-alpha)); /* background color for photo credit in articles */
+
+	--dark-scheme-font-color: rgb(var(--light-color)); /* almost all text between header and footer when the device has dark mode enabled */
 	--dark-scheme-background-color: #181818; /* background color for .wrapper when the device has dark mode enabled */
 
 /* change the fonts here, not anywhere else (no exceptions) */
@@ -358,8 +364,12 @@ ul.legal li {
 
 	header h1 {
 		width: 90vw;
-		font-size: 3.75rem;
+		font-size: 3.5rem;
 		padding: 3.5rem 5vw;
+	}
+
+	header.start h1 {
+		font-size: 3.75rem;
 	}
 
 	header picture img {
@@ -473,7 +483,7 @@ ul.legal li {
 		overflow: scroll;
 		height: 100vh;
 		height: 100svh;
-		background-color : var(--translucent-background-color);
+		background-color : var(--translucent-color);
 	}
 
 	nav.opened li.open-menu {
@@ -605,12 +615,12 @@ mark {
 
 article .photo-credit {
 	position: absolute;
-	padding: 0.5rem;
+	padding: 0.25rem;
 	bottom: 3rem;
 	left: 0;
 	font-size: 0.75rem;
 	line-height: 0.75rem;
-	display: inline-block;
+	background-color: var(--translucent-secondary-color);
 }
 
 article.left .photo-credit {
@@ -638,12 +648,13 @@ section.introduction .article-content {
 	left: calc(35vw - 5.1rem);
 	width: 4rem;
 	transition: all 0.75s;
+	z-index: 4444;
 }
 
 section.introduction article:hover .article-content {
 	left: calc(13.125vw - 3.4125rem);
 	width: calc(21.875vw + 2.3125rem);
-	background-color: var(--translucent-background-color);
+	background-color: var(--translucent-color);
 }
 
 section.introduction article h3 {
@@ -678,10 +689,12 @@ section.introduction article img {
 	height: calc(21.875vw - 0.6875rem);
 	object-fit: cover;
 	padding: 0;
+	z-index: 2222;
 }
 
 section.introduction article .photo-credit {
 	bottom: 0;
+	z-index: 3333;
 }
 
 
@@ -814,18 +827,17 @@ section.history .article-content p:last-of-type {
 }
 
 section.history article .photo-credit {
+	width: calc(100% - 0.5rem);
 	position: absolute;
-	width: calc(100% - 1rem);
 	left: calc(100% + 2.2rem);
 	bottom: 0;
 	top: auto;
-	text-align: right;
+	background-color: transparent;
 	z-index: 4444;
 }
 
 section.history article:nth-of-type(even) .photo-credit {
 	left: calc(-100% - 2.2rem);
-	text-align: left;
 }
 
 .skyline {
@@ -881,6 +893,10 @@ button::after {
 		height: min(100% - 6rem, 300px);
 	}
 
+	article .article-content {
+		min-height: calc(13rem);
+	}
+
 	article p:last-of-type {
 		padding-bottom: 0;
 	}
@@ -891,7 +907,7 @@ button::after {
 
 	article .photo-credit {
 		bottom: auto;
-		top: min(100% - 3.75rem, 300px + 2.25rem);
+		top: min(100% - 3.25rem, 300px + 2.75rem);
 	}
 
 	section.introduction article {
@@ -935,26 +951,32 @@ button::after {
 }
 
 @media screen and (max-width: 500px) {
+	article picture {
+		display: block;
+		height: 61.25vw;
+	}
+
 	article img {
 		width: 100%;
+		height: 61.25vw;
 		padding: 0;
+		position: relative;
+		top: 0;
 	}
 
 	.article-content {
 		width: 100%;
 		padding: 1rem 0 0;
+		position: relative;
+		left: 0;
 	}
 
 	article .photo-credit {
-		padding: 0;
+		top: calc(61.25vw - 1.25rem);
 	}
 
 	article .article-content p {
 		padding: 0 0 1rem;
-	}
-
-	.wrapper article.left {
-		text-align: left;
 	}
 
 	article.left img {
@@ -974,6 +996,7 @@ button::after {
 
 	section.introduction .article-content {
 		height: calc(61.25vw);
+		top: calc(-61.25vw);
 		left: calc(98vw - 3rem);
 	}
 
@@ -1000,8 +1023,7 @@ button::after {
 	}
 
 	section.introduction article .photo-credit {
-		top: calc(-61.25vw - 1.25rem);
-		padding: 0.25rem;
+		bottom: 0;
 	}
 
 	section.history article {
@@ -1046,6 +1068,8 @@ button::after {
 		height: calc(61.25vw - 1.375rem);
 		top: 0;
 		left: 0;
+		-webkit-clip-path: polygon(3rem 0, 100% 0, 100% 100%, 0 100%, 0 3rem);
+		clip-path: polygon(3rem 0, 100% 0, 100% 100%, 0 100%, 0 3rem);
 	}
 
 	section.history article:nth-of-type(odd) img {
@@ -1055,11 +1079,6 @@ button::after {
 
 	section.history article:nth-of-type(even) img {
 		left: 0;
-	}
-
-	section.history article img {
-		-webkit-clip-path: polygon(3rem 0, 100% 0, 100% 100%, 0 100%, 0 3rem);
-		clip-path: polygon(3rem 0, 100% 0, 100% 100%, 0 100%, 0 3rem);
 	}
 
 	section.history .article-content time {
@@ -1087,10 +1106,9 @@ button::after {
 	}
 
 	section.history article .photo-credit {
-		position: relative;
 		width: auto;
 		left: 0;
-		top: 0;
+		top: calc(61.25vw - 0.625rem);
 		bottom: auto;
 	}
 
