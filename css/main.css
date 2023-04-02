@@ -60,12 +60,29 @@ html {
 	--translucent-secondary-color: rgba(var(--light-color),var(--translucent-secondary-alpha)); /* background color for photo credit in articles */
 
 	--dark-scheme-font-color: rgb(var(--light-color)); /* almost all text between header and footer when the device has dark mode enabled */
-	--dark-scheme-background-color: #181818; /* background color for .wrapper when the device has dark mode enabled */
+	--dark-scheme-background-color: 24, 24, 24; /* #181818 background color for .wrapper when the device has dark mode enabled */
 
 /* change the fonts here, not anywhere else (no exceptions) */
 	--text-font: Arial, sans-serif; /* font for less important/long texts, e.g. paragraphs, photo credit */
 	--secondary-font: "RheinosBonnCollegiate", Graduate, sans-serif; /* font for important texts, e.g. h1 - h3, navigation */
 	/* the first font is the preferred font, the second and third font are fallback fonts in case the first font doesn't work for some reason, e.g. the RheinosBonnCollegiate font doesn't have a "§"-sign, so the Graduate font os used instead (take a look at impressum.html) */
+}
+
+/* dark mode */
+@media screen and (prefers-color-scheme: dark) {
+	html {
+		--font-color: var(--dark-scheme-font-color);
+		--background-color: rgb(var(--dark-scheme-background-color));
+		--translucent-secondary-color: rgba(var(--dark-color),var(--translucent-alpha));
+	}
+
+	main header h1 { /* more selectors => higher specificity */
+		color: rgb(var(--dark-color));
+	}
+
+	section.introduction h3 {
+		color: rgb(var(--dark-color));
+	}
 }
 
 /*
@@ -181,7 +198,8 @@ li.drop-down:hover::after {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 2000 100' preserveAspectRatio='xMinYMid slice'%3E%3Cpolygon points='0,0 100,100 2000,100 2000,0' style='fill:%23171f35%3B' /%3E%3C/svg%3E");
 }
 
-nav .logo {
+nav .logo,
+nav .logo img {
 	height: 7.5rem;
 }
 
@@ -1132,14 +1150,3 @@ button::after {
 address {
 	line-height: 1.5rem;
 }
-
-/* dark mode */
-/*@media screen and (prefers-color-scheme: dark) {
-	body {
-		color: var(--dark-scheme-font-color);
-	}
-
-	.wrapper {
-		background-color: var(--dark-scheme-background-color);
-	}
-}*/
