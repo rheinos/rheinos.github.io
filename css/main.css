@@ -83,6 +83,10 @@ html {
 	section.introduction h3 {
 		color: rgb(var(--dark-color));
 	}
+
+	img.skyline {
+		display: none;
+	}
 }
 
 /*
