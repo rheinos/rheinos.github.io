@@ -109,7 +109,6 @@ body {
 	color: var(--font-color);
 	background-color: var(--secondary-background-color);
 	font-family: var(--text-font);
-	overflow-x:hidden;
 }
 
 a {
@@ -137,7 +136,7 @@ nav {
   color: var(--secondary-font-color);
   text-align: center;
   text-transform: uppercase;
-  overflow: visible;
+  overflow-y: visible;
   font-family: var(--secondary-font);
   cursor: default;
 }
@@ -457,7 +456,6 @@ ul.legal li {
 	  color: var(--secondary-font-color);
 	  text-align: center;
 	  text-transform: uppercase;
-	  overflow: visible;
 	  font-family: var(--secondary-font);
 	  cursor: default;
 	}
@@ -727,6 +725,7 @@ section.introduction article .photo-credit {
 section.history {
 	padding: 0 0 2rem;
 	border: 0;
+	overflow-x: hidden;
 }
 
 section.history article {
@@ -883,7 +882,8 @@ button {
 	text-transform: uppercase;
 }
 
-button:hover {
+button:hover,
+button a:visited:hover {
 	color: transparent;
 	-webkit-text-stroke: 0.05rem var(--secondary-font-color);
 }
