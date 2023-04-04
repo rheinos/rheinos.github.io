@@ -544,6 +544,16 @@ ul.legal li {
 }
 
 @media screen and ((max-width: 1080px) and (min-width: 500px) and (orientation: portrait)) {
+	nav {
+		font-size: 5.5rem;
+		line-height: 5.5rem;
+	}
+
+	nav li.drop-down-item {
+		font-size: 3.5rem;
+		line-height: 3.5rem;
+	}
+
 	header.start h1 {
   	font-size: 6rem;
   }
