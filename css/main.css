@@ -227,15 +227,19 @@ header.start {
 	height: calc(100svh - 3rem);
 }
 
-header h1 {
+h1 {
 	font-size: 5rem;
 	font-family: var(--secondary-font);
 	text-transform: uppercase;
 	color: var(--font-color);
-	-webkit-text-stroke: 0.15rem var(--secondary-font-color);
 	width: 70vw;
 	margin: auto;
 	padding: 5rem;
+	text-align: center;
+}
+
+ header h1 {
+	-webkit-text-stroke: 0.15rem var(--secondary-font-color);
 }
 
 header.start h1 {
@@ -884,8 +888,12 @@ button {
 	padding: 0;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
-	border: none;
 	background-color: transparent;
+}
+
+button,
+button * {
+	border: none;
 	color: var(--secondary-font-color);
 	font-size: 1rem;
 	font-family: var(--secondary-font);
@@ -893,12 +901,13 @@ button {
 }
 
 button:hover,
+button:hover *,
 button a:visited:hover {
 	color: transparent;
 	-webkit-text-stroke: 0.05rem var(--secondary-font-color);
 }
 
-button a {
+button * {
 	 padding: 1rem 1rem 0;
 	 background-color: var(--secondary-background-color);
 }
