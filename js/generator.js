@@ -32,9 +32,9 @@ function designSelector() {
       <label for="bonn2">RheinIIs</label>
       <input type="radio" id="bonn2" name="team" value="bonn2">
 
-      <img src="images/bonn.png" width="0" />
-      <img src="images/bonn2.png" width="0" />
-      <img src="images/rheinos_kontur.png" width="0" />
+      <img src="images/bonn.png" />
+      <img src="images/bonn2.png" />
+      <img src="images/rheinos_kontur.png" />
 
       <input type="file" id="imageInput" accept = "image/*">
 
@@ -54,9 +54,9 @@ function designSelector() {
       <label for="bonn2">RheinIIs</label>
       <input type="radio" id="bonn2" name="team" value="bonn2">
 
-      <img src="images/bonn.png" width="0" />
-      <img src="images/bonn2.png" width="0" />
-      <img src="images/rheinos_kontur.png" width="0" />
+      <img src="images/bonn.png" />
+      <img src="images/bonn2.png" />
+      <img src="images/rheinos_kontur.png" />
 
       <input type="file" id="imageInput" accept = "image/*">
 
@@ -92,14 +92,14 @@ function designSelector() {
       <label for="bochum">Ruhr Phoenix</label>
       <input type="checkbox" id="bochum" name="team" value="bochum">
 
-      <img src="images/bielefeld.png" width="0" />
-      <img src="images/cologne.png" width="0" />
-      <img src="images/duesseldorf.png" width="0" />
-      <img src="images/muenster.png" width="0" />
-      <img src="images/bonn.png" width="0" />
-      <img src="images/bonn2.png" width="0" />
-      <img src="images/bochum.png" width="0" />
-      <img src="images/rheinos_kontur.png" width="0" />
+      <img src="images/bielefeld.png" />
+      <img src="images/cologne.png" />
+      <img src="images/duesseldorf.png" />
+      <img src="images/muenster.png" />
+      <img src="images/bonn.png" />
+      <img src="images/bonn2.png" />
+      <img src="images/bochum.png" />
+      <img src="images/rheinos_kontur.png" />
 
       <input type="file" id="imageInput" accept = "image/*">
 
@@ -135,14 +135,14 @@ function designSelector() {
       <label for="bochum">Ruhr Phoenix</label>
       <input type="checkbox" id="bochum" name="team" value="bochum">
 
-      <img src="images/bielefeld.png" width="0" />
-      <img src="images/cologne.png" width="0" />
-      <img src="images/duesseldorf.png" width="0" />
-      <img src="images/muenster.png" width="0" />
-      <img src="images/bonn.png" width="0" />
-      <img src="images/bonn2.png" width="0" />
-      <img src="images/bochum.png" width="0" />
-      <img src="images/rheinos_kontur.png" width="0" />
+      <img src="images/bielefeld.png" />
+      <img src="images/cologne.png" />
+      <img src="images/duesseldorf.png" />
+      <img src="images/muenster.png" />
+      <img src="images/bonn.png" />
+      <img src="images/bonn2.png" />
+      <img src="images/bochum.png" />
+      <img src="images/rheinos_kontur.png" />
 
       <input type="file" id="imageInput" accept = "image/*">
 
@@ -204,9 +204,10 @@ function league_instagram(e) {
 
         ctx.save();
         ctx.globalAlpha = 0.5;
-        let rheino = new Image();
-        rheino.src = "images/rheinos_kontur.png";
-        ctx.drawImage(rheino,0,0,rheino.width,rheino.height,(-100),(-100),1280,1280);
+        let rheino = document.querySelectorAll('img[src="images/rheinos_kontur.png"]');
+        let drawing = new Image();
+        drawing = rheino[0];
+        ctx.drawImage(drawing,0,0,drawing.width,drawing.height,(-100),(-100),1280,1280);
         ctx.restore();
 
 
@@ -251,6 +252,7 @@ function league_instagram(e) {
         let checkboxes = document.querySelectorAll('input[name="team"]:checked');
         let numberOfTeams = checkboxes.length;
         newWidth = (canvasWidth / 6);
+        let logos = document.querySelectorAll('img[src="images/' + checkboxes[0].value + '.png"]');
         let logo = new Image();
         let startX = new Number();
         if (numberOfTeams <= 5) {
@@ -263,7 +265,8 @@ function league_instagram(e) {
         }
 
         for (let i = 0; i < numberOfTeams; i++) {
-          logo.src = "images/" + checkboxes[i].value + ".png";
+          logos = document.querySelectorAll('img[src="images/' + checkboxes[i].value + '.png"]');
+          logo = logos[0];
           if (i >= 5) {
             startX = (((canvasWidth - (newWidth * (numberOfTeams - 5))) / 2) - (newWidth / 3) + ((10 - numberOfTeams) * (newWidth / 6) * 0.5));
             y = (845 + (newWidth / 12));
@@ -313,9 +316,10 @@ function league_facebook(e) {
 
         ctx.save();
         ctx.globalAlpha = 0.5;
-        let rheino = new Image();
-        rheino.src = "images/rheinos_kontur.png";
-        ctx.drawImage(rheino,0,0,rheino.width,rheino.height,0,(-400),canvasWidth,canvasWidth);
+        let rheino = document.querySelectorAll('img[src="images/rheinos_kontur.png"]');
+        let drawing = new Image();
+        drawing = rheino[0];
+        ctx.drawImage(drawing,0,0,drawing.width,drawing.height,0,(-400),canvasWidth,canvasWidth);
         ctx.restore();
 
 
@@ -361,6 +365,7 @@ function league_facebook(e) {
         let checkboxes = document.querySelectorAll('input[name="team"]:checked');
         let numberOfTeams = checkboxes.length;
         newWidth = (2832 / 15);
+        let logos = document.querySelectorAll('img[src="images/' + checkboxes[0].value + '.png"]');
         let logo = new Image();
         let startX = new Number();
         if (numberOfTeams <= 7) {
@@ -373,7 +378,8 @@ function league_facebook(e) {
         }
 
         for (let i = 0; i < numberOfTeams; i++) {
-          logo.src = "images/" + checkboxes[i].value + ".png";
+          logos = document.querySelectorAll('img[src="images/' + checkboxes[i].value + '.png"]');
+          logo = logos[0];
           if (i >= 7) {
             startX = (((canvasWidth - (newWidth * (numberOfTeams - 7))) / 2) - (newWidth / 2) + ((14 - numberOfTeams) * (newWidth / 6) * 0.5));
             y = (844 + (newWidth / 12));
@@ -449,10 +455,9 @@ function standard_instagram(e) {
 
 
         let radio = document.querySelectorAll('input[name="team"]:checked');
-        let logo = new Image();
-        logo.src = "images/" + radio[0].value + ".png";
+        let logo = document.querySelectorAll('img[src="images/' + radio[0].value + '.png"]');
         newHeight = 150;
-        ctx.drawImage(logo,81,0,918,logo.height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo.height) * newHeight),newHeight);
+        ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
 
         let imgData = canvas.toDataURL("image/jpeg",0.75);
       }
@@ -522,10 +527,9 @@ function standard_facebook(e) {
 
 
         let radio = document.querySelectorAll('input[name="team"]:checked');
-        let logo = new Image();
-        logo.src = "images/" + radio[0].value + ".png";
+        let logo = document.querySelectorAll('img[src="images/' + radio[0].value + '.png"]');
         newHeight = 150;
-        ctx.drawImage(logo,81,0,918,logo.height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo.height) * newHeight),newHeight);
+        ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
 
         let imgData = canvas.toDataURL("image/jpeg",0.75);
       }
