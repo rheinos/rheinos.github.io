@@ -324,6 +324,34 @@ header .photo-credit {
 	z-index: 1;
 }
 
+body .minimal {
+	height: calc(100vh - 3rem);
+	height: calc(100svh - 3rem);
+	padding-top: 0;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.minimal,
+.minimal * {
+	text-align: center;
+	font-size: max(1.5rem, 12px);
+}
+
+.minimal button {
+	display: block;
+	margin: 2rem auto;
+}
+
+.minimal button,
+.minimal button * {
+	font-size: max(1.5rem, 12px);
+}
+
+body .iframe {
+	height: 600px;
+}
+
 
 /* Footer */
 
@@ -365,9 +393,9 @@ ul.legal li {
 	*/
 
 	iframe {
-		width: 100%;
+		width: 99%;
 		height: 600px;
-		border: none;
+		border: 0.15rem solid var(--font-color);
 		margin-bottom: 2rem;
 	}
 
@@ -389,7 +417,7 @@ ul.legal li {
 		padding: 3rem 0 0;
 	}
 
-	header h1 {
+	h1 {
 		width: 90vw;
 		font-size: 3.5rem;
 		padding: 3.5rem 5vw;
@@ -407,6 +435,15 @@ ul.legal li {
 	.wrapper {
 		width: 90vw;
 		padding: 5vw 5vw 0;
+	}
+
+	body .minimal {
+		height: calc(100vh - 5rem);
+		height: calc(100svh - 5rem);
+	}
+
+	body .iframe {
+		height: 600px;
 	}
 
 	footer {
@@ -428,7 +465,7 @@ ul.legal li {
 		padding: 3rem 0 0;
 	}
 
-	header h1 {
+	h1 {
 		width: 98vw;
 		padding: 3.5rem 1vw;
 	}
@@ -436,6 +473,12 @@ ul.legal li {
 	.wrapper {
 		width: 98vw;
 		padding: 1rem 1vw 0;
+	}
+
+	.minimal,
+	.minimal *,
+	.minimal * * {
+		font-size: max(1rem, 12px);
 	}
 
 	footer {
@@ -1172,4 +1215,40 @@ button::after {
 
 address {
 	line-height: 1.5rem;
+}
+
+form {
+	padding: 2rem 0;
+	display: grid;
+	width: 50%;
+	left: 25%;
+	grid-template-columns: 50% 50%;
+	position: relative;
+}
+
+form * {
+	margin: 1rem;
+}
+
+form label {
+	text-align: right;
+}
+
+form img {
+	display: none;
+}
+
+form canvas {
+	position: relative;
+	left: -100%;
+	top: 3rem;
+	width: 200%;
+	margin: 0 0 3rem;
+}
+
+@media screen and (max-width: 1080px) {
+	form {
+		width: 100%;
+		left: 0;
+	}
 }
