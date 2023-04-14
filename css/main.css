@@ -378,8 +378,21 @@ footer ul.socialmedia li {
 }
 
 ul.legal li {
-	display: block;
+	display: inline;
 	padding-bottom: 2rem;
+}
+
+ul.legal li::after {
+	content: ' | ';
+}
+
+ul.legal li:first-of-type {
+	display: block;
+}
+
+ul.legal li:first-of-type::after,
+ul.legal li:last-of-type::after {
+	content: '';
 }
 
 .legal p {
@@ -630,7 +643,8 @@ h4 {
 	padding-bottom: 1rem;
 }
 
-p {
+p,
+.wrapper ul {
 	padding-bottom: 1rem;
 	text-align: justify;
 	line-height: 1.5rem;
