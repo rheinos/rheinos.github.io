@@ -324,6 +324,11 @@ header .photo-credit {
 	z-index: 1;
 }
 
+.wrapper h1 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 body .minimal {
 	height: calc(100vh - 3rem);
 	height: calc(100svh - 3rem);
