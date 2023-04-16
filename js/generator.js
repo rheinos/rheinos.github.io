@@ -273,7 +273,10 @@ function league_instagram(e) {
           }
           drawLogo(logo,(i % 5),startX,y,newWidth);
         }
-
+/*
+        let imgLink = canvas.toDataURL("image/jpeg",1.0);
+        document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
+*/
         let imgData = canvas.toDataURL("image/jpeg",0.75);
       }
     }
@@ -387,7 +390,7 @@ function league_facebook(e) {
           drawLogo(logo,(i % 7),startX,y,newWidth);
         }
 
-        let imgData = canvas.toDataURL("image/jpeg",0.75);
+        let imgData = canvas.toDataURL("image/jpeg",1.0);
       }
     }
   }
@@ -459,7 +462,7 @@ function standard_instagram(e) {
         newHeight = 150;
         ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
 
-        let imgData = canvas.toDataURL("image/jpeg",0.75);
+        let imgData = canvas.toDataURL("image/jpeg",1.0);
       }
     }
   }
@@ -531,7 +534,7 @@ function standard_facebook(e) {
         newHeight = 150;
         ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
 
-        let imgData = canvas.toDataURL("image/jpeg",0.75);
+        let imgData = canvas.toDataURL("image/jpeg",1.0);
       }
     }
   }
