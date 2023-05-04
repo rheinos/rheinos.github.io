@@ -1261,7 +1261,7 @@ form canvas {
 	position: relative;
 	left: -100%;
 	top: 3rem;
-	width: 200%;
+	height: 0;
 	margin: 0 0 3rem;
 }
 
