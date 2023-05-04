@@ -1,22 +1,24 @@
 function writeWithBackground(wWBtext,wWBx,wWBy,wWBfontSize,wWBstroke = false,wWBwideBG = false) {
   let context = document.querySelector('canvas').getContext("2d");
 
-  let wWBuppercaseText = wWBtext.toUpperCase();
-  context.font = wWBfontSize + "px RheinosBonnCollegiate";
-  context.textAlign = "center";
-  let wWBtextLength = (context.measureText(wWBuppercaseText).width + (wWBfontSize / 2));
-  if (wWBwideBG) {
-    wWBtextLength = (context.measureText(wWBuppercaseText).width + (2.5 * wWBfontSize));
-  }
-  context.fillStyle = "rgba(23, 31, 53, 0.8)";
-  context.fillRect((wWBx - (wWBtextLength / 2)),(wWBy - (7 * wWBfontSize / 12)),wWBtextLength,(7 * wWBfontSize / 6));
-  if (wWBstroke) {
-    context.strokeStyle = "rgba(253, 253, 253, 1)";
-    context.lineWidth = (wWBfontSize * 0.025);
-    context.strokeText(wWBuppercaseText, wWBx, (wWBy + (wWBfontSize / 3)));
-  } else {
-    context.fillStyle = "rgba(253, 253, 253, 1)";
-    context.fillText(wWBuppercaseText, wWBx, (wWBy + (wWBfontSize / 3)));
+  if (wWBtext != "") {
+    let wWBuppercaseText = wWBtext.toUpperCase();
+    context.font = wWBfontSize + "px RheinosBonnCollegiate";
+    context.textAlign = "center";
+    let wWBtextLength = (context.measureText(wWBuppercaseText).width + (wWBfontSize / 2));
+    if (wWBwideBG) {
+      wWBtextLength = (context.measureText(wWBuppercaseText).width + (2.5 * wWBfontSize));
+    }
+    context.fillStyle = "rgba(23, 31, 53, 0.8)";
+    context.fillRect((wWBx - (wWBtextLength / 2)),(wWBy - (7 * wWBfontSize / 12)),wWBtextLength,(7 * wWBfontSize / 6));
+    if (wWBstroke) {
+      context.strokeStyle = "rgba(253, 253, 253, 1)";
+      context.lineWidth = (wWBfontSize * 0.025);
+      context.strokeText(wWBuppercaseText, wWBx, (wWBy + (wWBfontSize / 3)));
+    } else {
+      context.fillStyle = "rgba(253, 253, 253, 1)";
+      context.fillText(wWBuppercaseText, wWBx, (wWBy + (wWBfontSize / 3)));
+    }
   }
 }
 
@@ -211,7 +213,14 @@ function league_instagram(e) {
         ctx.restore();
 
 
+        let checkboxes = document.querySelectorAll('input[name="team"]:checked');
+        let numberOfTeams = checkboxes.length;
+
+
         let y = 360;
+        if (numberOfTeams == 0) {
+          y = canvasHeight / 2;
+        }
         let fontSize = 150;
         let fontSizeRoot = fontSize;
         let text = document.getElementById('textInput1').value;
@@ -222,6 +231,9 @@ function league_instagram(e) {
 
         fontSize = 115;
         y = (360 - (7 * fontSizeRoot / 12) - (7 * fontSize / 12) - (1.5 * fontSize / 6));
+        if (numberOfTeams == 0) {
+          y = (canvasHeight / 2 - (7 * fontSizeRoot / 12) - (7 * fontSize / 12) - (1.5 * fontSize / 6));
+        }
         text = document.getElementById('textInput2').value;
         if (text != "") {
           writeWithBackground(text,(canvasWidth / 2),y,fontSize,true);
@@ -230,6 +242,9 @@ function league_instagram(e) {
 
         fontSize = 115;
         y = (360 + (7 * fontSizeRoot / 12) + (7 * fontSize / 12) + (1.5 * fontSize / 6));
+        if (numberOfTeams == 0) {
+          y = (canvasHeight / 2 + (7 * fontSizeRoot / 12) + (7 * fontSize / 12) + (1.5 * fontSize / 6));
+        }
         text = document.getElementById('textInput3').value;
         if (text != "") {
           writeWithBackground(text,(canvasWidth / 2),y,fontSize,true);
@@ -240,6 +255,9 @@ function league_instagram(e) {
         ctx.translate((canvasHeight / 2),(canvasWidth / 2));
         ctx.rotate(45 * Math.PI / 180);
         fontSize = 48;
+        if (numberOfTeams == 0) {
+          fontSize = 60;
+        }
         ctx.font = fontSize + "px RheinosBonnCollegiate";
         text = document.getElementById('textInput4').value;
         if (text != "") {
@@ -249,35 +267,33 @@ function league_instagram(e) {
         ctx.restore();
 
 
-        let checkboxes = document.querySelectorAll('input[name="team"]:checked');
-        let numberOfTeams = checkboxes.length;
-        newWidth = (canvasWidth / 6);
-        let logos = document.querySelectorAll('img[src="images/' + checkboxes[0].value + '.png"]');
-        let logo = new Image();
-        let startX = new Number();
-        if (numberOfTeams <= 5) {
-          startX = (((canvasWidth - (newWidth * numberOfTeams)) / 2) - (newWidth / 3) + ((5 - numberOfTeams) * (newWidth / 6) * 0.5));
-          y = (845 - (newWidth / 2));
-        }
-        else {
-          startX = (((canvasWidth - (newWidth * 5)) / 2) - (newWidth / 3));
-          y = (845 - (13 * newWidth / 12));
+        if (numberOfTeams > 0) {
+          newWidth = (canvasWidth / 6);
+          let logos = document.querySelectorAll('img[src="images/' + checkboxes[0].value + '.png"]');
+          let logo = new Image();
+          let startX = new Number();
+          if (numberOfTeams <= 5) {
+            startX = (((canvasWidth - (newWidth * numberOfTeams)) / 2) - (newWidth / 3) + ((5 - numberOfTeams) * (newWidth / 6) * 0.5));
+            y = (845 - (newWidth / 2));
+          }
+          else {
+            startX = (((canvasWidth - (newWidth * 5)) / 2) - (newWidth / 3));
+            y = (845 - (13 * newWidth / 12));
+          }
+
+          for (let i = 0; i < numberOfTeams; i++) {
+            logos = document.querySelectorAll('img[src="images/' + checkboxes[i].value + '.png"]');
+            logo = logos[0];
+            if (i >= 5) {
+              startX = (((canvasWidth - (newWidth * (numberOfTeams - 5))) / 2) - (newWidth / 3) + ((10 - numberOfTeams) * (newWidth / 6) * 0.5));
+              y = (845 + (newWidth / 12));
+            }
+            drawLogo(logo,(i % 5),startX,y,newWidth);
+          }
         }
 
-        for (let i = 0; i < numberOfTeams; i++) {
-          logos = document.querySelectorAll('img[src="images/' + checkboxes[i].value + '.png"]');
-          logo = logos[0];
-          if (i >= 5) {
-            startX = (((canvasWidth - (newWidth * (numberOfTeams - 5))) / 2) - (newWidth / 3) + ((10 - numberOfTeams) * (newWidth / 6) * 0.5));
-            y = (845 + (newWidth / 12));
-          }
-          drawLogo(logo,(i % 5),startX,y,newWidth);
-        }
-/*
         let imgLink = canvas.toDataURL("image/jpeg",1.0);
         document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
-*/
-        let imgData = canvas.toDataURL("image/jpeg",0.75);
       }
     }
   }
@@ -326,10 +342,17 @@ function league_facebook(e) {
         ctx.restore();
 
 
+        let checkboxes = document.querySelectorAll('input[name="team"]:checked');
+        let numberOfTeams = checkboxes.length;
+
+
         let fontSize = 175;
         let fontSizeRoot = fontSize;
         fontSize = 131;
         let y = ((7 * fontSizeRoot / 12) + (7 * fontSize / 6) + (1.5 * fontSize / 3));
+        if (numberOfTeams == 0) {
+          y = canvasHeight / 2;
+        }
         let text = document.getElementById('textInput1').value;
         if (text != "") {
           writeWithBackground(text,(canvasWidth / 2),y,fontSizeRoot);
@@ -338,6 +361,9 @@ function league_facebook(e) {
 
         fontSize = 131;
         y = ((7 * fontSize / 12) + (1.5 * fontSize / 6));
+        if (numberOfTeams == 0) {
+          y = (canvasHeight / 2 - (7 * fontSize / 6) - (1.5 * fontSize / 3));
+        }
         text = document.getElementById('textInput2').value;
         if (text != "") {
           writeWithBackground(text,(canvasWidth / 2),y,fontSize,true);
@@ -346,6 +372,9 @@ function league_facebook(e) {
 
         fontSize = 131;
         y = ((7 * fontSizeRoot / 6) + (7 * fontSize / 4) + (4.5 * fontSize / 6));
+        if (numberOfTeams == 0) {
+          y = (canvasHeight / 2 + (7 * fontSize / 6) + (3 * fontSize / 6));
+        }
         text = document.getElementById('textInput3').value;
         if (text != "") {
           writeWithBackground(text,(canvasWidth / 2),y,fontSize,true);
@@ -365,32 +394,33 @@ function league_facebook(e) {
         ctx.restore();
 
 
-        let checkboxes = document.querySelectorAll('input[name="team"]:checked');
-        let numberOfTeams = checkboxes.length;
-        newWidth = (2832 / 15);
-        let logos = document.querySelectorAll('img[src="images/' + checkboxes[0].value + '.png"]');
-        let logo = new Image();
-        let startX = new Number();
-        if (numberOfTeams <= 7) {
-          startX = (((canvasWidth - (newWidth * numberOfTeams)) / 2) - (newWidth / 2) + ((7 - numberOfTeams) * (newWidth / 6) * 0.5));
-          y = (844 - (newWidth / 2));
-        }
-        else {
-          startX = (((canvasWidth - (newWidth * 7)) / 2) - (newWidth / 2));
-          y = (844 - (13 * newWidth / 12));
-        }
-
-        for (let i = 0; i < numberOfTeams; i++) {
-          logos = document.querySelectorAll('img[src="images/' + checkboxes[i].value + '.png"]');
-          logo = logos[0];
-          if (i >= 7) {
-            startX = (((canvasWidth - (newWidth * (numberOfTeams - 7))) / 2) - (newWidth / 2) + ((14 - numberOfTeams) * (newWidth / 6) * 0.5));
-            y = (844 + (newWidth / 12));
+        if (numberOfTeams > 0) {
+          newWidth = (2832 / 15);
+          let logos = document.querySelectorAll('img[src="images/' + checkboxes[0].value + '.png"]');
+          let logo = new Image();
+          let startX = new Number();
+          if (numberOfTeams <= 7) {
+            startX = (((canvasWidth - (newWidth * numberOfTeams)) / 2) - (newWidth / 2) + ((7 - numberOfTeams) * (newWidth / 6) * 0.5));
+            y = (844 - (newWidth / 2));
           }
-          drawLogo(logo,(i % 7),startX,y,newWidth);
+          else {
+            startX = (((canvasWidth - (newWidth * 7)) / 2) - (newWidth / 2));
+            y = (844 - (13 * newWidth / 12));
+          }
+
+          for (let i = 0; i < numberOfTeams; i++) {
+            logos = document.querySelectorAll('img[src="images/' + checkboxes[i].value + '.png"]');
+            logo = logos[0];
+            if (i >= 7) {
+              startX = (((canvasWidth - (newWidth * (numberOfTeams - 7))) / 2) - (newWidth / 2) + ((14 - numberOfTeams) * (newWidth / 6) * 0.5));
+              y = (844 + (newWidth / 12));
+            }
+            drawLogo(logo,(i % 7),startX,y,newWidth);
+          }
         }
 
-        let imgData = canvas.toDataURL("image/jpeg",1.0);
+        let imgLink = canvas.toDataURL("image/jpeg",1.0);
+        document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
       }
     }
   }
@@ -462,7 +492,8 @@ function standard_instagram(e) {
         newHeight = 150;
         ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
 
-        let imgData = canvas.toDataURL("image/jpeg",1.0);
+        let imgLink = canvas.toDataURL("image/jpeg",1.0);
+        document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
       }
     }
   }
@@ -534,7 +565,8 @@ function standard_facebook(e) {
         newHeight = 150;
         ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
 
-        let imgData = canvas.toDataURL("image/jpeg",1.0);
+        let imgLink = canvas.toDataURL("image/jpeg",1.0);
+        document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
       }
     }
   }
