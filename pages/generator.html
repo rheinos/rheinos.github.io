@@ -19,9 +19,7 @@ permalink: /generator
 					<mark>Schritt 3</mark>: Guck nochmal drüber. Rechtschreibfeler sehen echt kacke aus und inhaltliche Fehler (z.B. falsches Datum) sind auch wirklich doof.
 				</p>
 				<p>
-					<mark>Schritt 4</mark>: Lade das Foto hoch. Lade erst das Foto hoch, wenn du die Daten alle eingetragen hast! Sobald das Foto hochgeladen wurde, wird das Sharepic generiert. Wenn du an den Daten nochmal etwas verändern möchtest, musst du einfach nochmal auf den Hochladen-Knopf drücken und nochmal das selbe Foto (oder ein Anderes) hochladen.<br>
-					Anmerkung: In manchen Browsern kann es sein, dass zum Aktualisieren erst eine andere Bilddatei hochgeladen werden muss und dann nochmal die Ursprüngliche.<br>
-					Noch eine Anmerkung: Aktuell kann es vorkommen, dass du die Seite neu laden musst, um etwas zu verändern. Das ist echt unpraktisch, aber immer noch besser als Canva und jetzt sollte es wenigstens auch am Handy funktionieren.
+					<mark>Schritt 4</mark>: Lade das Foto hoch. Lade erst das Foto hoch, wenn du die Daten alle eingetragen hast! Sobald das Foto hochgeladen wurde, wird das Sharepic generiert. Wenn du an den Daten oder am Bild nochmal etwas verändern möchtest, musst du die Seite einfach nochmal aktualisieren und alles neu machen.<br>
 				</p>
 				<p>
 					<mark>Schritt 5</mark>: Drücke auf Runterladen und guck dir das Foto vor dem Posten nochmal an, ob alles stimmt!
@@ -44,6 +42,8 @@ permalink: /generator
 		      <input type="radio" id="bonn" name="team" value="bonn" checked>
 		      <label for="bonn2">RheinIIs</label>
 		      <input type="radio" id="bonn2" name="team" value="bonn2">
+					<label for="none">kein Logo</label>
+		      <input type="radio" id="none" name="team" value="none">
 
 		      <img src="images/bonn.png" />
 		      <img src="images/bonn2.png" />
@@ -55,6 +55,7 @@ permalink: /generator
 		        Dein Browser unterstützt das HTML-Canva-Tag nicht. Probiere bitte einen anderen Browser.
 		      </canvas>
 				</form>
+				<img id="preview" src="" />
 
 				<script src="../js/generator.js"></script>
 			</div>

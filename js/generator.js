@@ -33,6 +33,8 @@ function designSelector() {
       <input type="radio" id="bonn" name="team" value="bonn" checked>
       <label for="bonn2">RheinIIs</label>
       <input type="radio" id="bonn2" name="team" value="bonn2">
+      <label for="none">kein Logo</label>
+      <input type="radio" id="none" name="team" value="none">
 
       <img src="images/bonn.png" />
       <img src="images/bonn2.png" />
@@ -55,6 +57,8 @@ function designSelector() {
       <input type="radio" id="bonn" name="team" value="bonn" checked>
       <label for="bonn2">RheinIIs</label>
       <input type="radio" id="bonn2" name="team" value="bonn2">
+      <label for="none">kein Logo</label>
+      <input type="radio" id="none" name="team" value="none">
 
       <img src="images/bonn.png" />
       <img src="images/bonn2.png" />
@@ -294,6 +298,7 @@ function league_instagram(e) {
 
         let imgLink = canvas.toDataURL("image/jpeg",1.0);
         document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
+        document.getElementById('preview').src = imgLink;
       }
     }
   }
@@ -421,6 +426,7 @@ function league_facebook(e) {
 
         let imgLink = canvas.toDataURL("image/jpeg",1.0);
         document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
+        document.getElementById('preview').src = imgLink;
       }
     }
   }
@@ -488,12 +494,15 @@ function standard_instagram(e) {
 
 
         let radio = document.querySelectorAll('input[name="team"]:checked');
-        let logo = document.querySelectorAll('img[src="images/' + radio[0].value + '.png"]');
-        newHeight = 150;
-        ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
+        if (radio[0].value != "none") {
+          let logo = document.querySelectorAll('img[src="images/' + radio[0].value + '.png"]');
+          newHeight = 150;
+          ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
+        }
 
         let imgLink = canvas.toDataURL("image/jpeg",1.0);
         document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
+        document.getElementById('preview').src = imgLink;
       }
     }
   }
@@ -561,12 +570,15 @@ function standard_facebook(e) {
 
 
         let radio = document.querySelectorAll('input[name="team"]:checked');
-        let logo = document.querySelectorAll('img[src="images/' + radio[0].value + '.png"]');
-        newHeight = 150;
-        ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
+        if (radio[0].value != "none") {
+          let logo = document.querySelectorAll('img[src="images/' + radio[0].value + '.png"]');
+          newHeight = 150;
+          ctx.drawImage(logo[0],81,0,918,logo[0].height,(newHeight / 10),(canvasHeight - (11 * newHeight / 10)),((918 / logo[0].height) * newHeight),newHeight);
+        }
 
         let imgLink = canvas.toDataURL("image/jpeg",1.0);
         document.querySelector('form').innerHTML += '<a href="' + imgLink + '" download>Runterladen</a>';
+        document.getElementById('preview').src = imgLink;
       }
     }
   }
