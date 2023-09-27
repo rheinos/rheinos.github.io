@@ -512,17 +512,9 @@ ul.legal li:last-of-type::after {
 	nav {
 	  width: 98vw;
 		padding: 0 1vw;
-	  position: fixed;
-		z-index: 10000;
 	  font-size: 3.5rem;
 		line-height: 3.5rem;
 	  height: 5rem;
-	  background-color: var(--secondary-background-color);
-	  color: var(--secondary-font-color);
-	  text-align: center;
-	  text-transform: uppercase;
-	  font-family: var(--secondary-font);
-	  cursor: default;
 	}
 
 	li.drop-down:hover li.drop-down-item {
@@ -970,21 +962,23 @@ button a:visited:hover {
 }
 
 button * {
-	 padding: 1rem 1rem 0;
+	 padding-top: 1rem;
+	 padding-left: 1rem;
+	 padding-right: 1rem;
 	 background-color: var(--secondary-background-color);
+	 position: relative;
 }
 
-button::after {
-	cursor: pointer;
+button *::after {
 	content: '';
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-color: transparent;
 	display: block;
 	height: 1rem;
-	position: relative;
+	position: absolute;
 	left: 0;
-	top: -1.75px;
+	bottom: calc(1.75px - 1rem);
 	width: calc(100%);
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 2000 100' preserveAspectRatio='xMaxYMid slice'%3E%3Cpolygon points='2000,0 1900,100 0,100 0,0' style='fill:%23171f35%3B' /%3E%3C/svg%3E");
 }
