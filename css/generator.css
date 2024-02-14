@@ -1,0 +1,468 @@
+/* READ ME */
+/* If you haven't worked with CSS or HTML before, please copy this file before doing any changes! If you only want to do minor changes, e.g. change the color scheme or the fonts, you can do so in the variable part which starts around line 50 */
+
+#capture {
+	position: relative;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	background-color: #171f35;
+
+	font-family: "RheinosBonnCollegiate", Graduate;
+	font-size: 12px;
+	text-transform: uppercase;
+
+	z-index: -2;
+
+	width: 1080px;
+	height: 1080px;
+	overflow: hidden;
+}
+
+main .wrapper #capture [enabled="false"] {
+	display: none;
+}
+
+#capture div {
+	color: #fdfdfd;
+}
+
+#capture svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#capture #bgimage {
+	z-index: -1;
+}
+
+
+/* STANDARD */
+#capture.standard {
+	font-size: 30px;
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+}
+
+#capture.standard .logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 125px;
+
+	z-index: 2;
+}
+
+#capture.standard #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.standard #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.standard .text-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 80px);
+	padding: 80px 40px 40px;
+
+	background: linear-gradient(#171f3500, #171f35 70%);
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+
+	z-index: 2;
+}
+
+#capture.standard .text {
+	display: grid;
+	justify-content: center;
+}
+
+#capture.standard .title {
+	font-size: 85px;
+	-webkit-text-stroke: .03em #797979;
+	display: block;
+}
+
+#capture.standard .subtitle,
+#capture.standard .date {
+	font-family: Graduate;
+	text-transform: none;
+
+	display: flex;
+	place-items: center;
+}
+
+#capture.standard .subtitle {
+	width: 100%;
+	color: #797979;
+}
+
+#capture.standard .date {
+	position: absolute;
+	top: 20px;
+	width: 50%;
+
+	color: #797979;
+	text-shadow: #0008 0 0 15px;
+
+	z-index: 2;
+}
+
+#capture.standard .subtitle::before,
+#capture.standard .date::before {
+  content: '';
+  flex: 1;
+  margin-right: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.standard .subtitle::after,
+#capture.standard .date::after {
+  content: '';
+  flex: 1;
+  margin-left: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+
+/* SCORE */
+#capture.score::after {
+	content: "AHU!AHU!AHU!";
+
+	font-size: 290px;
+	color: #0000;
+	-webkit-text-stroke: 7.5px #000;
+	text-align: center;
+	opacity: .5;
+
+	position: absolute;
+	bottom: -115px;
+	width: 2160px;
+
+	z-index: 1;
+}
+
+#capture.score .logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 125px;
+
+	z-index: 2;
+}
+
+#capture.score div,
+#capture.score::before {
+	z-index: 2;
+	position: absolute;
+	--distance: 60px;
+	text-shadow: #000 0 0 15px;
+}
+
+#capture.score #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.score #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.score .score-1,
+#capture.score .score-2,
+#capture.score::before {
+	bottom: 25px;
+	font-size: 150px;
+	-webkit-text-stroke: .03em #797979;
+}
+
+#capture.score::before {
+	content: ":";
+	bottom: 40px;
+}
+
+#capture.score .team-1,
+#capture.score .team-2 {
+	width: calc(50% - 10px - var(--distance));
+	font-size: 45px;
+	bottom: 230px;
+	color: transparent;
+	text-shadow: unset;
+	-webkit-text-stroke: 2px #fdfdfd;
+}
+
+#capture.score .winner {
+	text-shadow: #000 0 0 15px;
+	color: inherit;
+	-webkit-text-stroke: unset;
+}
+
+#capture.score .team-1,
+#capture.score .score-1 {
+	text-align: right;
+	right: calc(50% + var(--distance));
+}
+
+#capture.score .team-2,
+#capture.score .score-2 {
+	text-align: left;
+	left: calc(50% + var(--distance));
+}
+
+
+/* SCHEDULE */
+#capture.schedule {
+	font-size: 30px;
+}
+
+#capture.schedule .decoration {
+	position: absolute;
+	right: -110px;
+	bottom: 125px;
+	width: 55%;
+
+	opacity: .5;
+
+	z-index: 1;
+}
+
+#capture.schedule #bgimage {
+	position: relative;
+	left: -20%;
+}
+
+#capture.schedule #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.schedule #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.schedule .box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+
+	background: radial-gradient(circle at 0% 60%, #171f3500, #171f3500 33%, #171f35 50%);
+}
+
+#capture.schedule .head {
+	position: absolute;
+	right: 80px;
+	top: 80px;
+	max-width: 67%;
+
+	text-align: right;
+	text-shadow: #000 0 0 15px;
+
+	z-index: 3;
+}
+
+#capture.schedule .title {
+	font-size: 120px;
+
+	-webkit-text-stroke: .03em #797979;
+}
+
+#capture.schedule .subtitle,
+#capture.schedule .date,
+#capture.schedule .location {
+	font-family: Graduate;
+	text-transform: none;
+	color: #797979;
+}
+
+#capture.schedule .subtitle {
+	text-align: left;
+	display: flex;
+	align-items: center;
+	text-shadow: none;
+}
+
+#capture.schedule .subtitle::after {
+  content: '';
+  flex: 1;
+  margin-left: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.schedule .date,
+#capture.schedule .location {
+	display: inline;
+}
+
+#capture.schedule .date::after {
+	content: '';
+	margin: 0 1em;
+	border: 1px solid;
+}
+
+#capture.schedule .content {
+	display: grid;
+	place-items: center end;
+
+	position: absolute;
+	right: 80px;
+	bottom: 80px;
+	width: 50%;
+	height: 23em;
+
+	text-shadow: #000 0 0 15px;
+	text-align: right;
+	overflow: hidden;
+
+	z-index: 2;
+}
+
+#capture.schedule .match {
+	margin-bottom: 20px;
+}
+
+#capture.schedule .team {
+	font-size: 40px;
+}
+
+#capture.schedule .team::after {
+	content: ' vs.';
+
+	font-size: 30px;
+}
+
+#capture.schedule .opponent {
+	font-size: 30px;
+}
+
+#capture.schedule .time {
+	font-family: Graduate;
+	color: #797979;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+}
+
+#capture.schedule .time::before {
+  content: '';
+  flex: 1;
+  margin-right: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.schedule .livestream {
+	text-align: center;
+	margin-top: 10px;
+	color: transparent;
+	-webkit-text-stroke: 1.5px #fdfdfd;
+}
+
+
+/* ANNOUNCEMENT */
+#capture.announcement-gen {
+	font-size: 30px;
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+}
+
+#capture.announcement-gen .logo {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 125px;
+
+	z-index: 2;
+}
+
+#capture.announcement-gen #bgimage {
+	position: relative;
+	top: -20%;
+}
+
+#capture.announcement-gen #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.announcement-gen #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.announcement-gen svg {
+	z-index: 1;
+}
+
+#capture.announcement-gen .text-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 80px);
+	min-height: calc(40% - 120px);
+	max-height: calc(80% - 120px);
+	padding: calc(20% + 40px) 40px 80px;
+	overflow: hidden;
+
+	background: linear-gradient(#171f3500, #171f35 50%);
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+
+	display: grid;
+	place-items: center center;
+
+	z-index: 0;
+}
+
+#capture.announcement-gen .head {
+	display: grid;
+	justify-content: center;
+}
+
+#capture.announcement-gen .title {
+	font-size: 125px;
+	text-shadow: .04em .04em #171f35, .08em .08em #797979, #000 0 0 15px;
+	margin-bottom: .04em;
+	display: block;
+}
+
+#capture.announcement-gen .subtitle {
+	font-family: Graduate;
+	text-transform: none;
+
+	display: flex;
+	place-items: center;
+
+	width: 100%;
+	color: #797979;
+}
+
+#capture.announcement-gen .subtitle::before,
+#capture.announcement-gen .subtitle::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.announcement-gen .subtitle::before {
+  margin-right: 1em;
+}
+
+#capture.announcement-gen .subtitle::after {
+  margin-left: 1em;
+}
+
+#capture.announcement-gen .secondary-title {
+	margin-top: 40px;
+	font-size: 60px;
+}
+
+#capture.announcement-gen .details {
+	font-family: Graduate;
+	text-transform: none;
+}

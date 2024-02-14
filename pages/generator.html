@@ -9,53 +9,8 @@ permalink: /generator
 				<p>
 					Willkommen beim Rheinos-Social-Media-Sharepic-Generator!
 				</p>
-				<p>
-					<mark>Schritt 1</mark>: Wähle ein Design aus. Die meisten Designs gibt es mit den Seitenverhältnissen 16:9 (Breitbild) und 1:1 (Quadrat). Verwende für einen Post immer das gleiche Bildformat, weil das besser aussieht! Bei eher breiten Fotos oder bei Fotos, bei denen oben und unten etwas abgeschnitten werden darf (z.B. Teamfotos), ist es sinnvoll, das Bildformat 16:9 zu verwenden. Bei anderen Fotos oder wenn das Foto nur im Hintergrund ist (z.B. bei Ligaspieltagankündigungsposts) ist auch das quadratische Format sinnvoll.
-				</p>
-				<p>
-					<mark>Schritt 2</mark>: Trage alle Daten ein. Das sollte mehr oder weniger selbst erklärend sein.
-				</p>
-				<p>
-					<mark>Schritt 3</mark>: Guck nochmal drüber. Rechtschreibfeler sehen echt kacke aus und inhaltliche Fehler (z.B. falsches Datum) sind auch wirklich doof.
-				</p>
-				<p>
-					<mark>Schritt 4</mark>: Lade das Foto hoch. Lade erst das Foto hoch, wenn du die Daten alle eingetragen hast! Sobald das Foto hochgeladen wurde, wird das Sharepic generiert. Wenn du an den Daten oder am Bild nochmal etwas verändern möchtest, musst du die Seite einfach nochmal aktualisieren und alles neu machen.<br>
-				</p>
-				<p>
-					<mark>Schritt 5</mark>: Drücke auf Runterladen und guck dir das Foto vor dem Posten nochmal an, ob alles stimmt!
-				</p>
-				<p>
-					Fertig!!!
-				</p>
-				<label for="designSelector">Wähle ein Design aus:</label>
-				<select id="designSelector" onchange="designSelector()">
-  				<option value="standard_instagram">normaler Post (Instagram) (1:1)</option>
-					<option value="standard_facebook">normaler Post (Facebook) (16:9)</option>
-  				<option value="league_instagram">Spieltag (Instagram) (1:1)</option>
-					<option value="league_facebook">Spieltag (Facebook) (16:9)</option>
-				</select>
-				<form>
-					<label for="textInput1">Hauptüberschrift:</label>
-		      <input type="text" id="textInput1" value="Überschrift">
-
-					<label for="bonn">Rheinos Bonn</label>
-		      <input type="radio" id="bonn" name="team" value="bonn" checked>
-		      <label for="bonn2">RheinIIs</label>
-		      <input type="radio" id="bonn2" name="team" value="bonn2">
-					<label for="none">kein Logo</label>
-		      <input type="radio" id="none" name="team" value="none">
-
-		      <img src="images/bonn.png" />
-		      <img src="images/bonn2.png" />
-		      <img src="images/rheinos_kontur.png" />
-
-		      <input type="file" id="imageInputLoad" accept = "image/*">
-
-		      <canvas width="1080px" height="1080px">
-		        Dein Browser unterstützt das HTML-Canva-Tag nicht. Probiere bitte einen anderen Browser.
-		      </canvas>
-				</form>
-				<img id="preview" src="" />
-
-				<script src="../js/generator.js"></script>
+				<button><a href="/generator-standard">Standard Post</a></button>
+				<button><a href="/generator-score">Score Post</a></button>
+				<button><a href="/generator-schedule">Schedule Post</a></button>
+				<button><a href="/generator-announcement">Announcement Post</a></button>
 			</div>
