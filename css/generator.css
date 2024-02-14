@@ -402,10 +402,10 @@ main .wrapper #capture [enabled="false"] {
 #capture.announcement-gen .text-wrapper {
 	position: absolute;
 	bottom: 0;
-	width: calc(100% - 80px);
+	width: calc(100% - 120px);
 	min-height: calc(40% - 120px);
 	max-height: calc(80% - 120px);
-	padding: calc(20% + 40px) 40px 80px;
+	padding: calc(20% + 40px) 60px 80px;
 	overflow: hidden;
 
 	background: linear-gradient(#171f3500, #171f35 50%);
