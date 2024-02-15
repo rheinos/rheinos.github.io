@@ -6,7 +6,10 @@ function handleTitle() {
 }
 
 function handleSubtitle() {
-  document.getElementsByClassName('subtitle')[0].innerHTML = document.getElementById('subtitle').value;
+  let value = document.getElementById('subtitle').value;
+  let subtitle = document.getElementsByClassName('subtitle')[0]
+  subtitle.innerHTML = value;
+  subtitle.setAttribute('enabled', (value != '').toString());
 }
 
 function handleDate() {
