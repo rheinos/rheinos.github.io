@@ -18,6 +18,20 @@ function handleImage(e) {
   }
 }
 
+function handleTournamentLogo(e) {
+  if(e.target.files) {
+    let imageFile = e.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(imageFile);
+    reader.onloadend = function (e) {
+      let logo = new Image();
+      logo.src = e.target.result;
+      imgContainer = document.getElementsByClassName('tournamentlogo')[0];
+      imgContainer.src = logo.src;
+    }
+  }
+}
+
 function handleLogo() {
   document.getElementById('logo').src = 'images/rhein' + document.querySelectorAll('input[name="logo"]:checked')[0].value + 's-bonn-300px.webp';
 }
@@ -39,6 +53,7 @@ function handleDownload() {
 
 
 document.getElementById('imageInputLoad').addEventListener('change', handleImage);
+document.getElementById('tournamentlogo').addEventListener('change', handleTournamentLogo);
 
 document.querySelectorAll('input[name="logo"]').forEach((item, i) => {
   item.addEventListener('change', handleLogo);

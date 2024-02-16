@@ -30,6 +30,8 @@ permalink: /generator-score
 
 					<label for="imageInputLoad">Background Image</label>
 					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					<label for="tournamentlogo">Tournament logo</label>
+					<input type="file" id="tournamentlogo" accept = "image/*" />
 
 					<button type="submit" name="button">Submit</button>
 					<a id="download" download>Herunterladen</a>
@@ -37,7 +39,10 @@ permalink: /generator-score
 
 
 				<div id="capture" class="score" style="width: 1080px; height: 1080px; overflow: hidden;">
-					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
+					<div class="logos">
+						<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
+						<img class="tournamentlogo" src="" />
+					</div>
 					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
 					<div class="team-1">
 						Rheinos Bonn

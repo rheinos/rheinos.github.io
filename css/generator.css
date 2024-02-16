@@ -46,13 +46,21 @@ main .wrapper #capture [enabled="false"] {
 	text-align: center;
 }
 
-#capture.standard .logo {
+#capture.standard .logo,
+#capture.standard .tournamentlogo {
 	position: absolute;
 	top: 10px;
-	left: 10px;
-	width: 125px;
+	height: 150px;
 
 	z-index: 2;
+}
+
+#capture.standard .logo {
+	left: 10px;
+}
+
+#capture.standard .tournamentlogo {
+	right: 10px;
 }
 
 #capture.standard #bgimage.horizontal {
@@ -148,13 +156,18 @@ main .wrapper #capture [enabled="false"] {
 	z-index: 1;
 }
 
-#capture.score .logo {
+#capture.score .logos {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	width: 125px;
+	height: 150px;
 
 	z-index: 2;
+}
+
+#capture.score .logos img {
+	height: 150px;
+	margin-right: 10px;
 }
 
 #capture.score div,
@@ -218,6 +231,15 @@ main .wrapper #capture [enabled="false"] {
 /* SCHEDULE */
 #capture.schedule {
 	font-size: 30px;
+}
+
+#capture.schedule .tournamentlogo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+
+	z-index: 2;
 }
 
 #capture.schedule .decoration {
@@ -373,13 +395,21 @@ main .wrapper #capture [enabled="false"] {
 	text-align: center;
 }
 
-#capture.announcement-gen .logo {
+#capture.announcement-gen .logo,
+#capture.announcement-gen .tournamentlogo {
 	position: absolute;
 	top: 10px;
-	right: 10px;
-	width: 125px;
+	height: 150px;
 
 	z-index: 2;
+}
+
+#capture.announcement-gen .logo {
+	right: 10px;
+}
+
+#capture.announcement-gen .tournamentlogo {
+	left: 10px;
 }
 
 #capture.announcement-gen #bgimage {
