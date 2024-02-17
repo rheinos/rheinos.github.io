@@ -6,21 +6,21 @@ function handleTitle() {
 }
 
 function handleSubtitle() {
-  let value = document.getElementById('subtitle').value
+  let value = document.getElementById('subtitle').value;
   let subtitle = document.getElementsByClassName('subtitle')[0];
   subtitle.innerHTML = value;
   subtitle.setAttribute('enabled', (value != '').toString());
 }
 
 function handleSecondaryTitle() {
-  let value = document.getElementById('secondary-title').value
+  let value = document.getElementById('secondary-title').value;
   let secondaryTitle = document.getElementsByClassName('secondary-title')[0];
   secondaryTitle.innerHTML = value;
   secondaryTitle.setAttribute('enabled', (value != '').toString());
 }
 
 function handleDetails() {
-  let value = document.getElementById('details').value
+  let value = document.getElementById('details').value;
   let details = document.getElementsByClassName('details')[0];
   details.innerHTML = value;
   details.setAttribute('enabled', (value != '').toString());

@@ -496,3 +496,105 @@ main .wrapper #capture [enabled="false"] {
 	font-family: Graduate;
 	text-transform: none;
 }
+
+
+/* INFORMATIONAL */
+#capture.informational {
+	font-size: 30px;
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+}
+
+#capture.informational .logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+
+	z-index: 2;
+}
+
+#capture.informational #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.informational #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.informational svg {
+	z-index: 1;
+}
+
+#capture.informational .text-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 120px);
+	min-height: 40px;
+	max-height: calc(80% - 120px);
+	padding: calc(20% + 40px) 60px 80px;
+	overflow: hidden;
+
+	background: linear-gradient(#171f3500, #171f35 67%);
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+
+	display: grid;
+	place-items: center center;
+
+	z-index: 0;
+}
+
+#capture.informational .title {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+#capture.informational .details {
+	font-family: Graduate;
+	text-transform: none;
+}
+
+
+/* MEDAL */
+#capture.medal {
+	font-size: 30px;
+	text-align: center;
+}
+
+#capture.medal .logo,
+#capture.medal .tournamentlogo {
+	position: absolute;
+	top: 10px;
+	height: 150px;
+
+	z-index: 2;
+}
+
+#capture.medal .logo {
+	left: 10px;
+}
+
+#capture.medal .tournamentlogo {
+	right: 10px;
+}
+
+#capture.medal #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.medal #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.medal svg {
+	z-index: 1;
+}
+
+#capture.medal .f ~ svg {
+	background-color: #171f3588;
+}
+
+#capture.medal .e ~ svg {
+	background: linear-gradient(#171f3500 80%, #171f35);
+}

@@ -53,7 +53,10 @@ function handleDownload() {
 
 
 document.getElementById('imageInputLoad').addEventListener('change', handleImage);
-document.getElementById('tournamentlogo').addEventListener('change', handleTournamentLogo);
+
+document.querySelectorAll('input[id="tournamentlogo"]').forEach((item, i) => {
+  item.addEventListener('change', handleTournamentLogo);
+});
 
 document.querySelectorAll('input[name="logo"]').forEach((item, i) => {
   item.addEventListener('change', handleLogo);

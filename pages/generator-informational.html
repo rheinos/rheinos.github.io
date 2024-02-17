@@ -1,0 +1,51 @@
+---
+layout: internal
+title: Bildgenerator
+permalink: /generator-informational
+---
+
+			<div class="wrapper">
+				<h1>Bildgenerator</h1>
+				<p><a href="/generator">zurück</a></p>
+				<form id="form">
+					<label for="title">Title</label>
+					<input type="text" id="title" placeholder="Inklusion queerer Menschen" />
+					<label for="details">Details</label>
+					<textarea id="details" name="details" rows="8" cols="80" placeholder="Neben den binären Geschlechtern gibt es im Rulebook außerdem eine Kategorie für nicht-binäre Menschen, sodass niemand gezwungen wird sich einem Geschlecht zu zuordnen." required></textarea>
+
+					<label for="imageInputLoad">Background Image</label>
+					<input type="file" id="imageInputLoad" accept = "image/*" required />
+
+					<button type="submit" name="button">Submit</button>
+					<a id="download" download>Herunterladen</a>
+				</form>
+
+
+				<div id="capture" class="informational" style="width: 1080px; height: 1080px; overflow: hidden;">
+					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
+					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img class="tournamentlogo" src="" />
+					<div class="text-wrapper">
+						<div class="title" enabled="false">Inklusion queerer Menschen</div>
+						<div class="details">Neben den binären Geschlechtern gibt es im Rulebook außerdem eine Kategorie für nicht-binäre Menschen, sodass niemand gezwungen wird sich einem Geschlecht zu zuordnen.</div>
+					</div>
+					<svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1080 1080">
+					  <defs>
+							<linearGradient id="grey_gradient" x1="0" x2=".75" y1="0" y2="1">
+					      <stop offset="70%" stop-color="#797979" />
+					      <stop offset="75%" stop-color="#d6d6d6" />
+					      <stop offset="80%" stop-color="#797979" />
+					    </linearGradient>
+					  </defs>
+
+					  <g>
+							<path stroke="url(#grey_gradient)" stroke-width="5px" fill="#0000" d="M 1040,0 V 960 l -80,80 H 0" />
+					  </g>
+					</svg>
+
+				</div>
+
+				<script src="../js/html2canvas/html2canvas.js"></script>
+				<script src="../js/generator.js"></script>
+				<script src="../js/generator-informational.js"></script>
+			</div>
