@@ -1,0 +1,85 @@
+/* READ ME */
+/* If you haven't worked with CSS or HTML before, please copy this file before doing any changes! If you only want to do minor changes, e.g. change the color scheme or the fonts, you can do so in the variable part which starts around line 50 */
+
+.wrapper form {
+	position: relative;
+	width: 75%;
+	padding: 2rem 12.5%;
+
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+}
+
+form * {
+	margin: 1rem;
+}
+
+form label {
+	text-align: right;
+	user-select: none;
+}
+
+form input:invalid {
+	border-color: #f00;
+}
+
+form fieldset {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+
+	padding: .5em;
+	margin: .5em;
+	border: 1px solid;
+}
+
+form legend {
+	position: relative;
+	padding: 0 .5em;
+}
+
+form.roster fieldset,
+form.roster .position-input {
+  grid-column: 1 / span 2;
+}
+
+form.roster .position-input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+form.roster .position-input input {
+	margin-left: .5em;
+}
+
+form.roster [for^="chaser"] {
+  background-color: #fff;
+	color: #000;
+}
+
+form.roster [for^="keeper"] {
+  background-color: #0f09;
+}
+
+form.roster [for^="beater"] {
+  background-color: #000;
+	color: #fff;
+}
+
+form.roster [for^="seeker"] {
+  background-color: #ff09;
+}
+
+@media screen and (max-width: 1080px) {
+	form {
+		width: 100%;
+		padding: 2rem 0;
+	}
+
+	form.roster .position-input {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+}

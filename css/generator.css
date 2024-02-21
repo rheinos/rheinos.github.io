@@ -274,7 +274,7 @@ main .wrapper #capture [enabled="false"] {
 	width: 100%;
 	z-index: 0;
 
-	background: radial-gradient(circle at 0% 60%, #171f3500, #171f3500 33%, #171f35 50%);
+	background: radial-gradient(90% 100% at 0% 62.5%, transparent, transparent 33%, #171f35 67%);
 }
 
 #capture.schedule .head {
@@ -597,4 +597,156 @@ main .wrapper #capture [enabled="false"] {
 
 #capture.medal .e ~ svg {
 	background: linear-gradient(#171f3500 80%, #171f35);
+}
+
+
+/* ROSTER */
+#capture.roster {
+	font-size: 25px;
+}
+
+#capture.roster .logos {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+
+	z-index: 2;
+}
+
+#capture.roster .logos img {
+	height: 150px;
+	margin-right: 10px;
+}
+
+
+
+#capture.roster .decoration {
+	font-size: 290px;
+	color: #0000;
+	-webkit-text-stroke: 7.5px #000;
+	text-align: center;
+	opacity: .5;
+
+	position: absolute;
+	bottom: 50%;
+	left: -102px;
+	width: 2160px;
+	transform: rotate(-90deg);
+
+	z-index: 1;
+}
+
+#capture.roster #bgimage {
+	position: relative;
+	left: -20%;
+}
+
+#capture.roster #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.roster #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.roster .box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+
+	background: radial-gradient(95% 125% at 0% 67%, transparent, transparent 33%, #171f35 67%);
+}
+
+#capture.roster .head {
+	position: absolute;
+	right: 60px;
+	top: 60px;
+	max-width: 67%;
+
+	text-align: right;
+	text-shadow: #000 0 0 15px;
+
+	z-index: 3;
+}
+
+#capture.roster .title {
+	font-size: 120px;
+	text-shadow: .04em .04em #171f35, .08em .08em #797979, #000 0 0 15px;
+	margin-bottom: .04em;
+}
+
+#capture.roster .subtitle,
+#capture.roster .date,
+#capture.roster .location {
+	font-family: Graduate;
+	text-transform: none;
+	color: #797979;
+}
+
+#capture.roster .subtitle {
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+
+#capture.roster .subtitle::after {
+  content: '';
+  flex: 1;
+  margin-left: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.roster .date,
+#capture.roster .location {
+	display: inline;
+}
+
+#capture.roster .date::after {
+	content: '';
+	margin: 0 1em;
+	border: 1px solid;
+}
+
+#capture.roster .content {
+	display: grid;
+	place-items: center end;
+
+	position: absolute;
+	right: 60px;
+	bottom: 60px;
+	width: 40%;
+	height: calc(21 * (1.25em + 5px));
+
+	text-shadow: #000 0 0 15px;
+	text-align: right;
+	overflow: hidden;
+
+	z-index: 2;
+}
+
+#capture.roster .player {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+#capture.roster .positions img {
+	height: 1em;
+	margin-right: .5em;
+}
+
+#capture.roster .name {
+	font-family: Graduate;
+	text-align: left;
+	text-transform: none;
+
+	margin-left: .5em;
 }
