@@ -18,6 +18,10 @@ function handleImage(e) {
   }
 }
 
+function handleCredit(e) {
+  document.getElementsByClassName('credit')[0].innerHTML = e.currentTarget.value;
+}
+
 function handleTournamentLogo(e) {
   if(e.target.files) {
     let imageFile = e.target.files[0];
@@ -32,8 +36,8 @@ function handleTournamentLogo(e) {
   }
 }
 
-function handleLogo() {
-  document.getElementById('logo').src = 'images/rhein' + document.querySelectorAll('input[name="logo"]:checked')[0].value + 's-bonn-300px.webp';
+function handleLogo(e) {
+  document.getElementById('logo').src = 'images/rhein' + e.currentTarget.value + 's-bonn-300px.webp';
 }
 
 function handleSubmit(e) {
@@ -53,10 +57,9 @@ function handleDownload() {
 
 
 document.getElementById('imageInputLoad').addEventListener('change', handleImage);
+document.getElementById('credit').addEventListener('change', handleCredit);
 
-document.querySelectorAll('input[id="tournamentlogo"]').forEach((item, i) => {
-  item.addEventListener('change', handleTournamentLogo);
-});
+document.getElementById('tournamentlogo').addEventListener('change', handleTournamentLogo);
 
 document.querySelectorAll('input[name="logo"]').forEach((item, i) => {
   item.addEventListener('change', handleLogo);

@@ -39,6 +39,15 @@ main .wrapper #capture [enabled="false"] {
 	z-index: -1;
 }
 
+#capture .credit {
+	position: absolute;
+	padding: 10px;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	text-transform: none;
+	z-index: 100;
+}
+
 
 /* STANDARD */
 #capture.standard {
@@ -70,6 +79,11 @@ main .wrapper #capture [enabled="false"] {
 
 #capture.standard #bgimage.portrait {
 	width: 100%;
+}
+
+#capture.standard .credit {
+	left: 0;
+	bottom: 0;
 }
 
 #capture.standard .text-wrapper {
@@ -187,6 +201,11 @@ main .wrapper #capture [enabled="false"] {
 	width: 100%;
 }
 
+#capture.score .credit {
+	left: 0;
+	bottom: 0;
+}
+
 #capture.score .score-1,
 #capture.score .score-2,
 #capture.score::before {
@@ -265,6 +284,11 @@ main .wrapper #capture [enabled="false"] {
 
 #capture.schedule #bgimage.portrait {
 	width: 100%;
+}
+
+#capture.schedule .credit {
+	right: 0;
+	bottom: 0;
 }
 
 #capture.schedule .box {
@@ -426,6 +450,11 @@ main .wrapper #capture [enabled="false"] {
 	width: 100%;
 }
 
+#capture.announcement-gen .credit {
+	right: 0;
+	bottom: 0;
+}
+
 #capture.announcement-gen svg {
 	z-index: 1;
 }
@@ -523,6 +552,11 @@ main .wrapper #capture [enabled="false"] {
 	width: 100%;
 }
 
+#capture.informational .credit {
+	left: 0;
+	bottom: 0;
+}
+
 #capture.informational svg {
 	z-index: 1;
 }
@@ -588,6 +622,11 @@ main .wrapper #capture [enabled="false"] {
 	width: 100%;
 }
 
+#capture.medal .credit {
+	left: 0;
+	bottom: 0;
+}
+
 #capture.medal svg {
 	z-index: 1;
 }
@@ -649,6 +688,11 @@ main .wrapper #capture [enabled="false"] {
 
 #capture.roster #bgimage.portrait {
 	width: 100%;
+}
+
+#capture.roster .credit {
+	right: 0;
+	bottom: 0;
 }
 
 #capture.roster .box {

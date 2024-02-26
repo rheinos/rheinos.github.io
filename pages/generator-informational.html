@@ -15,6 +15,8 @@ permalink: /generator-informational
 
 					<label for="imageInputLoad">Background Image</label>
 					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					<label for="credit">Photo Credit</label>
+					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
 
 					<button type="submit" name="button">Submit</button>
 					<a id="download" download>Herunterladen</a>
@@ -24,7 +26,7 @@ permalink: /generator-informational
 				<div id="capture" class="informational" style="width: 1080px; height: 1080px; overflow: hidden;">
 					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
 					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
-					<img class="tournamentlogo" src="" />
+					<div class="credit"></div>
 					<div class="text-wrapper">
 						<div class="title" enabled="false">Inklusion queerer Menschen</div>
 						<div class="details">Neben den binären Geschlechtern gibt es im Rulebook außerdem eine Kategorie für nicht-binäre Menschen, sodass niemand gezwungen wird sich einem Geschlecht zu zuordnen.</div>
