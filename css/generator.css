@@ -11,6 +11,7 @@
 	font-family: "RheinosBonnCollegiate", Graduate;
 	font-size: 12px;
 	text-transform: uppercase;
+	color: #fdfdfd;
 
 	z-index: -2;
 
@@ -22,10 +23,6 @@
 
 main .wrapper #capture [enabled="false"] {
 	display: none;
-}
-
-#capture div {
-	color: #fdfdfd;
 }
 
 #capture svg {
@@ -794,4 +791,83 @@ main .wrapper #capture [enabled="false"] {
 	text-transform: none;
 
 	margin-left: .5em;
+}
+
+
+/* MESSAGE */
+#capture.message {
+	font-size: 105px;
+}
+
+#capture.message .tournamentlogo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+
+	z-index: 2;
+}
+
+#capture.message .logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+
+	z-index: 2;
+}
+
+#capture.message #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.message #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.message .credit {
+	left: 0;
+	bottom: 0;
+}
+
+#capture.message .text-wrapper-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 120px);
+	min-height: 105px;
+	max-height: calc(67% - 120px);
+	padding: calc(33% + 40px) 60px 80px;
+	overflow: hidden;
+
+	background: linear-gradient(#171f3500, #171f35 80%);
+
+	display: grid;
+	place-items: center center;
+
+	z-index: 3;
+}
+
+#capture.message .text-wrapper {
+	text-align: left;
+
+	color: transparent;
+	-webkit-text-stroke: .03em #fdfdfd;
+
+	display: flex;
+	justify-items: end;
+
+	z-index: 3;
+}
+
+/* umständlich um sicher zu stellen, dass der has-Selektor vorhanden ist */
+#capture.message .text-wrapper:not(:has(em)) {
+	text-align: center;
+}
+
+#capture.message em {
+	text-align: right;
+	color: #fdfdfd;
+	-webkit-text-stroke: 0;
+	text-shadow: #000 0 0 15px;
+	display: block;
 }

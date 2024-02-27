@@ -59,7 +59,9 @@ function handleDownload() {
 document.getElementById('imageInputLoad').addEventListener('change', handleImage);
 document.getElementById('credit').addEventListener('change', handleCredit);
 
-document.getElementById('tournamentlogo').addEventListener('change', handleTournamentLogo);
+if (document.getElementById('tournamentlogo')) {
+  document.getElementById('tournamentlogo').addEventListener('change', handleTournamentLogo);
+}
 
 document.querySelectorAll('input[name="logo"]').forEach((item, i) => {
   item.addEventListener('change', handleLogo);
