@@ -871,3 +871,117 @@ main .wrapper #capture [enabled="false"] {
 	text-shadow: #000 0 0 15px;
 	display: block;
 }
+
+
+/* OPEN TRAINING INFO */
+#capture.ot-info {
+	font-size: 35px;
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+}
+
+#capture.ot-info .logo {
+	position: absolute;
+	top: 10px;
+	height: 150px;
+
+	z-index: 2;
+}
+
+#capture.ot-info .logo {
+	right: 10px;
+}
+
+#capture.ot-info #bgimage {
+	position: relative;
+	top: -20%;
+}
+
+#capture.ot-info #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.ot-info #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.ot-info .credit {
+	right: 0;
+	bottom: 0;
+}
+
+#capture.ot-info svg {
+	z-index: 1;
+}
+
+#capture.ot-info .text-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 120px);
+	min-height: calc(40% - 120px);
+	max-height: calc(80% - 160px);
+	padding: calc(20% + 40px) 60px 120px;
+	overflow: hidden;
+
+	background: linear-gradient(transparent, #171f35 67%);
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+
+	display: grid;
+	place-items: center center;
+
+	z-index: 0;
+}
+
+#capture.ot-info .head {
+	display: grid;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+#capture.ot-info .title {
+	font-size: 140px;
+	text-shadow: .04em .04em #171f35, .08em .08em #797979, #000 0 0 15px;
+	margin-bottom: .04em;
+	display: block;
+}
+
+#capture.ot-info .subtitle {
+	font-family: Graduate;
+	text-transform: none;
+
+	display: flex;
+	place-items: center;
+
+	width: 100%;
+	color: #797979;
+}
+
+#capture.ot-info .subtitle::before,
+#capture.ot-info .subtitle::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.ot-info .subtitle::before {
+  margin-right: 1em;
+}
+
+#capture.ot-info .subtitle::after {
+  margin-left: 1em;
+}
+
+#capture.ot-info .secondary-title {
+	font-size: 2.25em;
+}
+
+#capture.ot-info .details {
+	font-family: Graduate;
+	text-transform: none;
+}
+
+#capture.ot-info .paragraph {
+	margin-top: .5em;
+}
