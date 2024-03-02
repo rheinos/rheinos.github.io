@@ -1,0 +1,71 @@
+---
+layout: internal
+title: Bildgenerator
+permalink: /generator-announcement
+---
+
+			<div class="wrapper">
+				<h1>Bildgenerator</h1>
+				<p><a href="/generator">zurück</a></p>
+				<form id="form">
+					<label for="title">Title</label>
+					<input type="text" id="title" placeholder="Finale" required />
+					<label for="subtitle">Subtitle</label>
+					<input type="text" id="subtitle" placeholder="DQM 2022" />
+					<label for="secondary-title">Secondary title</label>
+					<input type="text" id="secondary-title" placeholder="Rheinos Bonn vs. Münchner Wolpertinger" />
+					<label for="details">Details</label>
+					<textarea id="details" name="details" rows="8" cols="80" placeholder="15 Uhr im Livestream"></textarea>
+
+					<label for="rheinos">Rheinos Bonn</label>
+		      <input type="radio" id="rheinos" name="logo" value="o" required />
+		      <label for="rheiniis">RheinIIs</label>
+		      <input type="radio" id="rheiniis" name="logo" value="ii" required />
+
+					<label for="imageInputLoad">Background Image</label>
+					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					<label for="credit">Photo Credit</label>
+					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<label for="tournamentlogo">Tournament logo</label>
+					<input type="file" id="tournamentlogo" accept = "image/*" />
+
+					<button type="submit" name="button">Submit</button>
+					<a id="download" download>Herunterladen</a>
+				</form>
+
+
+				<div id="capture" class="announcement-gen" style="width: 1080px; height: 1080px; overflow: hidden;">
+					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
+					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<div class="credit"></div>
+					<img class="tournamentlogo" src="" />
+					<div class="text-wrapper">
+						<div class="head">
+							<div class="title">Finale</div>
+							<div class="subtitle" enabled="false">DQM 2022</div>
+						</div>
+						<div class="body">
+							<div class="secondary-title" enabled="false">Rheinos Bonn vs. Münchner Wolpertinger</div>
+							<div class="details" enabled="false">15 Uhr im Livestream</div>
+						</div>
+					</div>
+					<svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1080 1080">
+					  <defs>
+							<linearGradient id="grey_gradient" x1=".6" x2="0" y1="0" y2="1">
+					      <stop offset="70%" stop-color="#797979" />
+					      <stop offset="75%" stop-color="#d6d6d6" />
+					      <stop offset="80%" stop-color="#797979" />
+					    </linearGradient>
+					  </defs>
+
+					  <g>
+							<path stroke="url(#grey_gradient)" stroke-width="5px" fill="#0000" d="M 40,0 V 960 l 80,80 H 1080" />
+					  </g>
+					</svg>
+
+				</div>
+
+				<script src="../js/html2canvas/html2canvas.js"></script>
+				<script src="../js/generator.js"></script>
+				<script src="../js/generator-announcement.js"></script>
+			</div>

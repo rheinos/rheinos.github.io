@@ -5,57 +5,134 @@ permalink: /generator
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>Sharepic generator</h1>
+				<h2>Welcome to the Rheinos-and-RheinIIs-Social-Media-Sharepic-Generator-Overview-Page</h2>
 				<p>
-					Willkommen beim Rheinos-Social-Media-Sharepic-Generator!
+					I couldn't make this word any longer. Here's an overview over out templates :)
 				</p>
-				<p>
-					<mark>Schritt 1</mark>: Wähle ein Design aus. Die meisten Designs gibt es mit den Seitenverhältnissen 16:9 (Breitbild) und 1:1 (Quadrat). Verwende für einen Post immer das gleiche Bildformat, weil das besser aussieht! Bei eher breiten Fotos oder bei Fotos, bei denen oben und unten etwas abgeschnitten werden darf (z.B. Teamfotos), ist es sinnvoll, das Bildformat 16:9 zu verwenden. Bei anderen Fotos oder wenn das Foto nur im Hintergrund ist (z.B. bei Ligaspieltagankündigungsposts) ist auch das quadratische Format sinnvoll.
-				</p>
-				<p>
-					<mark>Schritt 2</mark>: Trage alle Daten ein. Das sollte mehr oder weniger selbst erklärend sein.
-				</p>
-				<p>
-					<mark>Schritt 3</mark>: Guck nochmal drüber. Rechtschreibfeler sehen echt kacke aus und inhaltliche Fehler (z.B. falsches Datum) sind auch wirklich doof.
-				</p>
-				<p>
-					<mark>Schritt 4</mark>: Lade das Foto hoch. Lade erst das Foto hoch, wenn du die Daten alle eingetragen hast! Sobald das Foto hochgeladen wurde, wird das Sharepic generiert. Wenn du an den Daten oder am Bild nochmal etwas verändern möchtest, musst du die Seite einfach nochmal aktualisieren und alles neu machen.<br>
-				</p>
-				<p>
-					<mark>Schritt 5</mark>: Drücke auf Runterladen und guck dir das Foto vor dem Posten nochmal an, ob alles stimmt!
-				</p>
-				<p>
-					Fertig!!!
-				</p>
-				<label for="designSelector">Wähle ein Design aus:</label>
-				<select id="designSelector" onchange="designSelector()">
-  				<option value="standard_instagram">normaler Post (Instagram) (1:1)</option>
-					<option value="standard_facebook">normaler Post (Facebook) (16:9)</option>
-  				<option value="league_instagram">Spieltag (Instagram) (1:1)</option>
-					<option value="league_facebook">Spieltag (Facebook) (16:9)</option>
-				</select>
-				<form>
-					<label for="textInput1">Hauptüberschrift:</label>
-		      <input type="text" id="textInput1" value="Überschrift">
-
-					<label for="bonn">Rheinos Bonn</label>
-		      <input type="radio" id="bonn" name="team" value="bonn" checked>
-		      <label for="bonn2">RheinIIs</label>
-		      <input type="radio" id="bonn2" name="team" value="bonn2">
-					<label for="none">kein Logo</label>
-		      <input type="radio" id="none" name="team" value="none">
-
-		      <img src="images/bonn.png" />
-		      <img src="images/bonn2.png" />
-		      <img src="images/rheinos_kontur.png" />
-
-		      <input type="file" id="imageInputLoad" accept = "image/*">
-
-		      <canvas width="1080px" height="1080px">
-		        Dein Browser unterstützt das HTML-Canva-Tag nicht. Probiere bitte einen anderen Browser.
-		      </canvas>
-				</form>
-				<img id="preview" src="" />
-
-				<script src="../js/generator.js"></script>
+				<section>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-standard.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Standard Post</h2>
+							<p>
+								Template for everything that hasn't a template. Use this for the post after a (fantasy) tournament or after a training camp or everything else. If you use it for the post after a non-fantasy tournament, you can put score posts behind this in the post!
+							</p>
+							<button><a href="/generator-standard">Standard Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-score.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Score Post</h2>
+							<p>
+								Template to post the result of a game after a game. Please don't make a post for every single group stage game! You can either put all results from group stage in a single post with multiple pictures or just put the result in the story after a game.
+							</p>
+							<button><a href="/generator-score">Score Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-schedule.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Schedule Post</h2>
+							<p>
+								Template to announce league gamedays and other events with a schedule (e.g. tournament group stages). If there are more than five games scheduled, split the schedule equally on multiple pictures, which should be posted in a single post. You can leave out games without one of our teams! But please don't use this template to announce a single game (e.g. a knockout stage game)! In this case you can use the <mark>announcement</mark> template instead!
+							</p>
+							<button><a href="/generator-schedule">Schedule Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-announcement.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Announcement Post</h2>
+							<p>
+								Template for all kinds of announcements (except open trainings). Whenever there are great news or just normal news, use this template, e.g. when we're about to play a game in knockout stage.
+							</p>
+							<p>
+								If you use this template to post about a game (e.g. to say that we're playing the quarter finals vs Team X at Y o'clock in the livestream), please use this as announcement only (prior to game) and use the score template for results afterwards. Also please don't announce every single group stage game :)
+							</p>
+							<button><a href="/generator-announcement">Announcement Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-roster.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Roster Post</h2>
+							<p>
+								Template to post our rosters, should be self-explaining.
+							</p>
+							<button><a href="/generator-roster">Roster Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-medal.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Medal Post</h2>
+							<p>
+								Template when we've reached a top 3 placement on a bigger tournament, e.g. ODSC isn't big. For lower placements, use the standard template and put the placement in the caption.
+							</p>
+							<button><a href="/generator-medal">Medal Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-ot-announcement.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Open Training Announcement Post</h2>
+							<p>
+								Template to announce open trainings. Please use it only once per open training and pin the post in our instagram profile.
+							</p>
+							<button><a href="/generator-ot-announcement">Open Training Announcement Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-ot-info.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Open Training Info Picture</h2>
+							<p>
+								Put this template at the end of recruitment posts. It should contain details about the open training.
+							</p>
+							<button><a href="/generator-ot-info">Open Training Info Picture</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-message.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Message Post</h2>
+							<p>
+								Template to spread a message we want to spread. Use this for things like the PSD Vereinspreis or the first picture on a informational recruitment posts (e.g. "Quadball is mixed Gender").
+							</p>
+							<button><a href="/generator-message">Message Post</a></button>
+						</div>
+					</article>
+					<article>
+						<picture>
+							<img loading="lazy" src="images/sharepic-informational.jpg" alt="">
+						</picture>
+						<div class="article-content">
+							<h2>Informational Post</h2>
+							<p>
+								Use this template for informational content, e.g. to explain the rules of Quadball. In most cases it makes sense to use a <mark>message</mark> template picture for the first picture of the post, then multiple <mark>informational</mark> pictures and at the end an <mark>open training info</mark> picture.
+							</p>
+							<button><a href="/generator-informational">Informational Post</a></button>
+						</div>
+					</article>
+				</section>
 			</div>

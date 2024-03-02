@@ -1,0 +1,133 @@
+---
+layout: internal
+title: Bildgenerator
+permalink: /generator-medal
+---
+
+			<div class="wrapper">
+				<h1>Bildgenerator</h1>
+				<p><a href="/generator">zurück</a></p>
+				<form id="form">
+					<label for="placement">Placement</label>
+					<select id="placement">
+						<option value="1">1st place</option>
+						<option value="2">2nd place</option>
+						<option value="3">3rd place</option>
+					</select>
+
+					<label for="filled">Good picture available</label>
+		      <input type="radio" id="filled" name="style" value="e" required />
+		      <label for="empty">Good picture not available</label>
+		      <input type="radio" id="empty" name="style" value="f" required />
+
+					<label for="rheinos">Rheinos Bonn</label>
+		      <input type="radio" id="rheinos" name="logo" value="o" required />
+		      <label for="rheiniis">RheinIIs</label>
+		      <input type="radio" id="rheiniis" name="logo" value="ii" required />
+
+					<label for="imageInputLoad">Background Image</label>
+					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					<label for="credit">Photo Credit</label>
+					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<label for="tournamentlogo">Tournament logo</label>
+					<input type="file" id="tournamentlogo" accept = "image/*" />
+
+					<button type="submit" name="button">Submit</button>
+					<a id="download" download>Herunterladen</a>
+				</form>
+
+
+				<div id="capture" class="medal" style="width: 1080px; height: 1080px; overflow: hidden;">
+					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
+					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<div class="credit"></div>
+					<img class="tournamentlogo" src="" />
+					<svg id="svg_image" class="f" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1080 1080">
+						<style>
+					    text {
+					      font-family: 'RheinosBonnCollegiate', sans-serif;
+					      text-transform: uppercase;
+					      font-size: 1250px;
+					      text-anchor: middle;
+					      dominant-baseline: middle;
+					    }
+
+					    [mask="url(#1f)"]+.number,
+					    [mask="url(#2f)"]+.number,
+					    [mask="url(#3f)"]+.number {
+					    	display: none;
+					    }
+					  </style>
+
+						<defs>
+					    <linearGradient id="grey_gradient" x1="0" x2=".75" y1="0" y2="1">
+					      <stop offset="70%" stop-color="#797979" />
+					      <stop offset="75%" stop-color="#d6d6d6" />
+					      <stop offset="80%" stop-color="#797979" />
+					    </linearGradient>
+
+					    <mask id="1f">
+					      <path fill="#000" d="M 0,0 v 1080 h 1080 v -1080 z" />
+					      <text fill="#fff0" stroke="#fff" stroke-width="60px" x="540" y = "600">1</text>
+					      <text fill="#0000" stroke="#000" stroke-width="30px" x="540" y = "600">1</text>
+					      <text fill="#fff" x="540" y = "600">1</text>
+					    </mask>
+					    <mask id="2f">
+					      <path fill="#000" d="M 0,0 v 1080 h 1080 v -1080 z" />
+					      <text fill="#fff0" stroke="#fff" stroke-width="60px" x="540" y = "600">2</text>
+					      <text fill="#fff0" stroke="#000" stroke-width="30px" x="540" y = "600">2</text>
+					      <text fill="#fff" x="540" y = "600">2</text>
+					    </mask>
+					    <mask id="3f">
+					      <path fill="#000" d="M 0,0 v 1080 h 1080 v -1080 z" />
+					      <text fill="#fff0" stroke="#fff" stroke-width="60px" x="540" y = "600">3</text>
+					      <text fill="#fff0" stroke="#000" stroke-width="30px" x="540" y = "600">3</text>
+					      <text fill="#fff" x="540" y = "600">3</text>
+					    </mask>
+
+					    <mask id="1e">
+					      <path fill="#000" d="M 0,0 v 1080 h 1080 v -1080 z" />
+					      <text fill="#fff0" stroke="#fff" stroke-width="45px" x="540" y = "600">1</text>
+					      <text fill="#fff0" stroke="#000" stroke-width="15px" x="540" y = "600">1</text>
+					    </mask>
+					    <mask id="2e">
+					      <path fill="#000" d="M 0,0 v 1080 h 1080 v -1080 z" />
+					      <text fill="#fff0" stroke="#fff" stroke-width="45px" x="540" y = "600">2</text>
+					      <text fill="#fff0" stroke="#000" stroke-width="15px" x="540" y = "600">2</text>
+					    </mask>
+					    <mask id="3e">
+					      <path fill="#000" d="M 0,0 v 1080 h 1080 v -1080 z" />
+					      <text fill="#fff0" stroke="#fff" stroke-width="45px" x="540" y = "600">3</text>
+					      <text fill="#fff0" stroke="#000" stroke-width="15px" x="540" y = "600">3</text>
+					    </mask>
+
+					    <linearGradient id="gradient1" x1="0" x2="1" y1="0" y2=".6">
+					      <stop offset="47.5%" stop-color="#957a56" />
+					      <stop offset="55%" stop-color="#c7b69e" />
+					      <stop offset="62.5%" stop-color="#957a56" />
+					    </linearGradient>
+					    <linearGradient id="gradient2" x1="0" x2="1" y1="0" y2=".6">
+					      <stop offset="47.5%" stop-color="#8F8F8F" />
+					      <stop offset="55%" stop-color="#d9d9d9" />
+					      <stop offset="62.5%" stop-color="#8F8F8F" />
+					    </linearGradient>
+					    <linearGradient id="gradient3" x1="0" x2="1" y1="0" y2=".6">
+					      <stop offset="47.5%" stop-color="#5f4632" />
+					      <stop offset="55%" stop-color="#a77c58" />
+					      <stop offset="62.5%" stop-color="#5f4632" />
+					    </linearGradient>
+					  </defs>
+
+						<g>
+					    <path stroke="url(#grey_gradient)" stroke-width="5px" fill="#0000" d="M 1040,0 V 960 l -80,80 H 0" />
+					    <path id="number_masked" fill="url(#gradient1)" mask="url(#1f)" d="M 0,0 v 1080 h 1080 v -1080 z" />
+					    <text id="number_empty" class="number" fill="#fff0" stroke="#171f35" stroke-width="15px" x="540" y = "600">1</text>
+					  </g>
+					</svg>
+
+				</div>
+
+				<script src="../js/html2canvas/html2canvas.js"></script>
+				<script src="../js/generator.js"></script>
+				<script src="../js/generator-medal.js"></script>
+			</div>

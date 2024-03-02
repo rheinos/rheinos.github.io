@@ -2,6 +2,8 @@
 /* If you haven't worked with CSS or HTML before, please copy this file before doing any changes! If you only want to do minor changes, e.g. change the color scheme or the fonts, you can do so in the variable part which starts around line 50 */
 
 @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('generator-form.css');
+@import url('generator.css');
 
 @font-face{
 	font-family: 'RheinosBonnCollegiate';
@@ -1262,40 +1264,4 @@ button *::after {
 
 address {
 	line-height: 1.5rem;
-}
-
-form {
-	padding: 2rem 0;
-	display: grid;
-	width: 50%;
-	left: 25%;
-	grid-template-columns: 50% 50%;
-	position: relative;
-}
-
-form * {
-	margin: 1rem;
-}
-
-form label {
-	text-align: right;
-}
-
-form img {
-	display: none;
-}
-
-form canvas {
-	position: relative;
-	left: -100%;
-	top: 3rem;
-	height: 0;
-	margin: 0 0 3rem;
-}
-
-@media screen and (max-width: 1080px) {
-	form {
-		width: 100%;
-		left: 0;
-	}
 }

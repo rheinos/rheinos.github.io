@@ -1,0 +1,60 @@
+---
+layout: internal
+title: Bildgenerator
+permalink: /generator-ot-announcement
+---
+
+			<div class="wrapper">
+				<h1>Bildgenerator</h1>
+				<p><a href="/generator">zurück</a></p>
+				<form id="form">
+					<label for="title">Title (wrap emphasized text with &lt;em&gt; and &lt;/em&gt; as shown in the placeholder)<br/>You can emphasize text, but you definitely don't have to<br/>Please make sure the title takes exactly two lines in the design (insert linebreaks using &lt;br/&gt; if necessary)</label>
+					<input type="text" id="title" placeholder="Bock auf<em>Quidditch?</em>" required />
+					<label for="subtitle">Subtitle</label>
+					<input type="text" id="subtitle" placeholder="Komm zum Probetraining!" required />
+					<label for="content">Content (insert linebreaks using &lt;br/&gt; as shown in the placeholder)</label>
+					<textarea id="content" name="content" rows="8" cols="80" placeholder="1. April 2024<br/>18-20 Uhr<br/>Hofgarten" required></textarea>
+
+					<label for="imageInputLoad">Background Image</label>
+					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					<label for="credit">Photo Credit</label>
+					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+
+					<button type="submit" name="button">Submit</button>
+					<a id="download" download>Herunterladen</a>
+				</form>
+
+
+				<div id="capture" class="ot-announcement" style="width: 1080px; height: 1080px; overflow: hidden;">
+					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
+					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<div class="credit"></div>
+					<div class="text-wrapper">
+						<div class="title">Bock auf<em>Quidditch?</em></div>
+						<div class="content">
+							<div class="subtitle">Komm zum Probetraining!</div>
+							<div class="text-body">
+								1. April 2024<br/>18-20 Uhr<br/>Hofgarten
+							</div>
+						</div>
+					</div>
+					<svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1080 1080">
+					  <defs>
+							<linearGradient id="grey_gradient" x1=".25" x2="0" y1="0" y2="1">
+					      <stop offset="5%" stop-color="#797979" />
+					      <stop offset="10%" stop-color="#d6d6d6" />
+					      <stop offset="15%" stop-color="#797979" />
+					    </linearGradient>
+					  </defs>
+
+					  <g>
+							<path stroke="url(#grey_gradient)" stroke-width="5px" fill="#0000" d="M 40,1080 V 120 l 80,-80 H 960 l 80,80 V 1080" />
+					  </g>
+					</svg>
+
+				</div>
+
+				<script src="../js/html2canvas/html2canvas.js"></script>
+				<script src="../js/generator.js"></script>
+				<script src="../js/generator-ot-announcement.js"></script>
+			</div>
