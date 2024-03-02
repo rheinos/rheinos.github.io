@@ -59,7 +59,7 @@ main .wrapper #capture [enabled="false"] {
 	top: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.standard .logo {
@@ -174,7 +174,7 @@ main .wrapper #capture [enabled="false"] {
 	left: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.score .logos img {
@@ -256,7 +256,7 @@ main .wrapper #capture [enabled="false"] {
 	left: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.schedule .decoration {
@@ -423,7 +423,7 @@ main .wrapper #capture [enabled="false"] {
 	top: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.announcement-gen .logo {
@@ -538,7 +538,7 @@ main .wrapper #capture [enabled="false"] {
 	left: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.informational #bgimage.horizontal {
@@ -600,7 +600,7 @@ main .wrapper #capture [enabled="false"] {
 	top: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.medal .logo {
@@ -648,7 +648,7 @@ main .wrapper #capture [enabled="false"] {
 	left: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.roster .logos img {
@@ -799,22 +799,13 @@ main .wrapper #capture [enabled="false"] {
 	font-size: 105px;
 }
 
-#capture.message .tournamentlogo {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	height: 150px;
-
-	z-index: 2;
-}
-
 #capture.message .logo {
 	position: absolute;
 	top: 10px;
 	left: 10px;
 	height: 150px;
 
-	z-index: 2;
+	z-index: 5;
 }
 
 #capture.message #bgimage.horizontal {
@@ -883,13 +874,10 @@ main .wrapper #capture [enabled="false"] {
 #capture.ot-info .logo {
 	position: absolute;
 	top: 10px;
+	right: 10px;
 	height: 150px;
 
-	z-index: 2;
-}
-
-#capture.ot-info .logo {
-	right: 10px;
+	z-index: 5;
 }
 
 #capture.ot-info #bgimage {
@@ -984,4 +972,97 @@ main .wrapper #capture [enabled="false"] {
 
 #capture.ot-info .paragraph {
 	margin-top: .5em;
+}
+
+
+/* OPEN TRAINING ANNOUNCEMENT */
+#capture.ot-announcement {
+	font-size: 35px;
+}
+
+#capture.ot-announcement .logo {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 150px;
+
+	z-index: 5;
+}
+
+#capture.ot-announcement #bgimage {
+	position: relative;
+	bottom: 20%;
+}
+
+#capture.ot-announcement #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.ot-announcement #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.ot-announcement svg {
+	z-index: 4;
+}
+
+#capture.ot-announcement .credit {
+	right: 0;
+	bottom: 0;
+}
+
+#capture.ot-announcement .text-wrapper {
+	--padding-top: 120px;
+	--head-font-size: 140px;
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 120px);
+	height: calc(50% - 120px - var(--head-font-size));
+	padding: calc(var(--padding-top) + 2 * var(--head-font-size)) 60px 60px;
+	overflow: hidden;
+
+	background: linear-gradient(#171f3500, #171f35 50%);
+
+	display: grid;
+	place-items: center center;
+
+	z-index: 3;
+}
+
+#capture.ot-announcement .title {
+	font-size: var(--head-font-size);
+	text-align: left;
+
+	color: transparent;
+	-webkit-text-stroke: .03em #fdfdfd;
+
+	position: absolute;
+	top: var(--padding-top);
+}
+
+/* umständlich um sicher zu stellen, dass der has-Selektor vorhanden ist */
+#capture.ot-announcement .title:not(:has(em)) {
+	text-align: center;
+}
+
+#capture.ot-announcement em {
+	text-align: right;
+	color: #fdfdfd;
+	-webkit-text-stroke: 0;
+	text-shadow: #000 0 0 15px;
+	display: block;
+}
+
+#capture.ot-announcement .subtitle {
+	font-family: "RheinosBonnCollegiate", Graduate;
+	font-size: 1.25em;
+	max-width: 75%;
+	padding: 0 12.5%;
+}
+
+#capture.ot-announcement .content {
+	text-shadow: #000 0 0 15px;
+	font-family: Graduate;
+	text-align: center;
+	line-height: 1.25em;
 }
