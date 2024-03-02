@@ -982,8 +982,8 @@ main .wrapper #capture [enabled="false"] {
 
 #capture.ot-announcement .logo {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	bottom: 10px;
+	left: 10px;
 	height: 150px;
 
 	z-index: 5;
@@ -1002,12 +1002,7 @@ main .wrapper #capture [enabled="false"] {
 	width: 100%;
 }
 
-#capture.ot-announcement svg {
-	z-index: 4;
-}
-
 #capture.ot-announcement .credit {
-	right: 0;
 	bottom: 0;
 }
 
