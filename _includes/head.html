@@ -15,19 +15,91 @@
 
     <script src="js/menu.js"></script>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsOrganization",
+    {% if page.structured_data == "info" %}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsOrganization",
         "name": "Rheinos Bonn",
-  "url": "https://rheinos-bonn.de",
-  "logo": "https://rheinos-bonn.de/images/rheinos-bonn.png",
+        "url": "https://rheinos-bonn.de",
+        "logo": "https://rheinos-bonn.de/images/rheinos-bonn.png",
         "legalName": "Rheinos Bonn e.V.",
         "email": "mailto:info@rheinos-bonn.de",
         "award": "Deutscher Meister 2016 & 2022",
-        "sport": "Quadball"
-    }
-</script>
+        "sport": "Quadball",
+        "foundingDate": "2016",
+        "memberOf": [
+          {
+            "@type": "SportsOrganization",
+            "name": "Deutscher Quadballbund",
+            "logo": "https://dqbsport.de/wp-content/uploads/2020/11/cropped-DQBIcon-1-192x192.png",
+            "legalName": "Deutscher Quadballbund e.V."
+          },
+          {
+            "@type": "SportsOrganization",
+            "name": "SSB Bonn",
+            "legalName": "Stadtsportbund Bonn e.V."
+          }
+        ]
+      }
+      </script>
+    {% endif %}
+    {% if page.structured_data == "rules" %}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "Wie viele Punkte ist ein Tor beim Quidditch wert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Tor beim Quidditch ist zehn Punkte wert und kann durch beide Seiten der Ringe erzielt werden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Punkte ist ein Tor beim Quadball wert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Tor beim Quadball ist zehn Punkte wert und kann durch beide Seiten der Ringe erzielt werden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Positionen gibt es beim Quidditch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beim Quidditch gibt es vier Positionen: Chaser, Keeper, Beater und Seeker."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Positionen gibt es beim Quadball?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beim Quadball gibt es vier Positionen: Chaser, Keeper, Beater und Seeker."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was sind die vier Positionen in einem Quidditchteam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beim Quidditch gibt es folgende vier Positionen: Chaser, Keeper, Beater und Seeker."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was sind die vier Positionen in einem Quadballteam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beim Quadball gibt es folgende vier Positionen: Chaser, Keeper, Beater und Seeker."
+          }
+        }]
+      }
+      </script>
+    {% endif %}
 
     <link rel="canonical" href="https://rheinos-bonn.de{% if page.permalink %}{{ page.permalink }}{% endif %}" />
     <link rel="stylesheet" href="css/main.css" />
