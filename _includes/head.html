@@ -15,18 +15,37 @@
 
     <script src="js/menu.js"></script>
 
-    {% if page.structured_data == "info" %}
+    {% if page.structured_data == "index" %}
+      <script type="application/ld+json">
+      {
+        "@context" : "https://schema.org",
+        "@type" : "WebSite",
+        "name" : "Rheinos Bonn",
+        "alternateName": ["Quadball Bonn", "Quidditch Bonn"],
+        "url": "https://rheinos-bonn.de"
+      }
+      </script>
       <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SportsOrganization",
         "name": "Rheinos Bonn",
-        "url": "https://rheinos-bonn.de",
-        "logo": "https://rheinos-bonn.de/images/rheinos-bonn.png",
+        "alternateName": ["Quadball Bonn", "Quidditch Bonn"],
         "legalName": "Rheinos Bonn e.V.",
-        "email": "mailto:info@rheinos-bonn.de",
-        "award": "Deutscher Meister 2016 & 2022",
+        "description": "Wir spielen Quadball (früher Quidditch) in Bonn! Gegründet 2015, gehören wir zu den ältesten und erfolgreichsten Quadballteams Deutschlands.",
+        "logo": "https://rheinos-bonn.de/images/rheinos-bonn.png",
+        "url": "https://rheinos-bonn.de",
+        "sameAs": ["https://www.facebook.com/RheinosBonn", "https://www.instagram.com/rheinos_bonn"],
+        "email": "info@rheinos-bonn.de",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sebastianstraße 15",
+          "addressLocality": "Bonn",
+          "addressCountry": "DE",
+          "postalCode": "53115"
+        },
         "sport": "Quadball",
+        "award": "Deutscher Meister 2016 & 2022",
         "foundingDate": "2016",
         "memberOf": [
           {
