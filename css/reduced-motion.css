@@ -1,0 +1,76 @@
+/* READ ME */
+/* If you haven't worked with CSS or HTML before, please copy this file before doing any changes! If you only want to do minor changes, e.g. change the color scheme or the fonts, you can do so in the variable part which starts around line 50 */
+
+/* Navigation */
+
+li.drop-down-item {
+  transition: none;
+}
+
+/* History Page */
+section.history article {
+	left: 0;
+	transition: none;
+}
+
+section.history article:nth-of-type(even) {
+	left: calc(50% + 1.1rem);
+}
+
+section.history article::before {
+	left: calc(100% + 0.675rem);
+}
+
+section.history article:nth-of-type(even)::before {
+	left: calc(-1.525rem);
+}
+
+section.history article::after {
+	left: calc(100% + 1.1rem);
+	transition: none;
+}
+
+section.history article:nth-of-type(even)::after {
+	left: calc(-1.1rem);
+}
+
+section.history .article-content time {
+	left: calc(100% + 2.2rem);
+	transition: none;
+}
+
+section.history article:nth-of-type(even) time {
+	right: calc(100% + 2.2rem);
+}
+
+
+/* Page Content */
+section.introduction .article-content {
+	transition: none;
+}
+
+section.introduction article h3 {
+	transition: none;
+}
+
+@media screen and (max-width: 500px) {
+	section.history article {
+		left: 0;
+	}
+
+	section.history article:nth-of-type(even) {
+		left: 0;
+	}
+
+	section.history article:nth-of-type(even)::before {
+		left: calc(100% + 0.675rem);
+	}
+
+	section.history article::after {
+		left: calc(100% + 1.1rem);
+	}
+
+	section.history article:nth-of-type(even)::after {
+		left: calc(100% + 1.1rem);
+	}
+}

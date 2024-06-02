@@ -1,0 +1,22 @@
+<head>
+    <title>Rheinos Bonn{% if page.title %} | {{ page.title }}{% endif %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex">
+
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% endif %}{% unless page.description %}Wir sind die Rheinos Bonn, das Bonner Quidditchteam! Gegründet 2015, gehören wir zu den ältesten und erfolgreichsten Quidditchteams Deutschlands.{% endunless %}">
+    <meta name="theme-color" content="#171f35">
+
+    <meta property="og:title" content="Rheinos Bonn e.V.">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% endif %}{% unless page.description %}Wir sind die Rheinos Bonn, das Bonner Quidditchteam! Gegründet 2015, gehören wir zu den ältesten und erfolgreichsten Quidditchteams Deutschlands.{% endunless %}">
+    <meta property="og:url" content="https://rheinos-bonn.de/">
+
+    <script src="js/menu.js"></script>
+
+    <link rel="canonical" href="https://rheinos-bonn.de{% if page.permalink %}{{ page.permalink }}{% endif %}" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" media="(prefers-reduced-motion)" href="css/reduced-motion.css" />
+    <link rel="icon" href="images/icon.webp" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+</head>

@@ -1,0 +1,87 @@
+/* READ ME */
+/* If you haven't worked with CSS or HTML before, please copy this file before doing any changes! If you only want to do minor changes, e.g. change the color scheme or the fonts, you can do so in the variable part which starts around line 50 */
+
+/* Navigation, Header, Wrapper and Footer for mobile Devices */
+/* not perfect, but the best solution I can think of, because I don't want to have an anchor with href="#menu" in li.open-menu in the HTML-file. It is ugly and a disadvantage for everyone who has Javascript enabled, because the anchor in li-close-menu have to have href="#" */
+@media only screen and (max-width: 1080px) {
+	nav:hover {
+		overflow: scroll;
+		height: 100vh;
+		height: 100svh;
+		background-color : var(--translucent-color);
+	}
+
+	nav:hover li.open-menu {
+		display: none;
+	}
+
+	nav:hover li {
+		display: block;
+	}
+
+	nav:hover li.close-menu {
+		display: none; /* to leave the menu, you have to click an anchor in it (only if you have Javascript disabled of course) */
+	}
+}
+
+/* History Page */
+section.history article {
+	left: 0;
+	transition: none;
+}
+
+section.history article:nth-of-type(even) {
+	left: calc(50% + 1.1rem);
+}
+
+section.history article::before {
+	left: calc(100% + 0.675rem);
+}
+
+section.history article:nth-of-type(even)::before {
+	left: calc(-1.525rem);
+}
+
+section.history article::after {
+	left: calc(100% + 1.1rem);
+	transition: none;
+}
+
+section.history article:nth-of-type(even)::after {
+	left: calc(-1.1rem);
+}
+
+section.history .article-content time {
+	left: calc(100% + 2.2rem);
+	transition: none;
+}
+
+section.history article:nth-of-type(even) time {
+	right: calc(100% + 2.2rem);
+}
+
+@media screen and (max-width: 500px) {
+	section.history article {
+		left: 0;
+	}
+
+	section.history article:nth-of-type(even) {
+		left: 0;
+	}
+
+	section.history article:nth-of-type(even)::before {
+		left: calc(100% + 0.675rem);
+	}
+
+	section.history article::after {
+		left: calc(100% + 1.1rem);
+	}
+
+	section.history article:nth-of-type(even)::after {
+		left: calc(100% + 1.1rem);
+	}
+
+	section.history .article-content time {
+		left: 0;
+	}
+}
