@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="{% if page.language %}{{ page.language }}{% endif %}{% unless page.language %}de{% endunless %}">
   {% include head.html %}
   <body>
-    {% include nav.html %}
+    {% if page.language == "de" %}
+      {% include nav.html %}
+    {% endif %}
+    {% if page.language == "en" %}
+      {% include nav-en.html %}
+    {% endif %}
     <main>
       {% include header.html %}
       {{ content }}

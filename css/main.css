@@ -276,18 +276,28 @@ header.start picture img {
 	height: inherit;
 }
 
-header ul.socialmedia {
+header .socialmedia,
+header .lang {
 	position: fixed;
 	z-index: 9999;
-	top: 0;
 	right: 0;
-	margin-top: 7rem;
 	padding: 0 1rem;
 	background-color: var(--secondary-background-color);
 	color: var(--secondary-font-color);
 }
 
-header ul.socialmedia::before {
+header .socialmedia {
+	top: 0;
+	margin-top: 7rem;
+}
+
+header .lang {
+	bottom: 0;
+	margin-bottom: 5rem;
+}
+
+header .socialmedia::before,
+header .lang::before {
 	content: '';
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -300,12 +310,18 @@ header ul.socialmedia::before {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='100' viewBox='0 0 500 100' preserveAspectRatio='xMinYMid slice'%3E%3Cpolygon points='0,100 100,0 550,0 550,100' style='fill:%23171f35%3B' /%3E%3C/svg%3E");
 }
 
-header ul.socialmedia li {
-	width: 3rem;
-	height: 3rem;
+header .socialmedia li,
+header .lang li {
 	padding-bottom: 1rem;
 	display: block;
 	color: var(--secondary-font-color);
+}
+
+header .socialmedia img,
+header .lang img {
+	width: 3rem;
+	height: 3rem;
+	object-fit: cover;
 }
 
 header .photo-credit {
@@ -403,11 +419,11 @@ footer {
 	text-align: center;
 }
 
-footer ul.socialmedia {
+footer .socialmedia {
 	align-self: center;
 }
 
-footer ul.socialmedia li {
+footer .socialmedia li {
 	display: inline-block;
 	height: 2rem;
 	width: 2rem;
@@ -625,8 +641,12 @@ ul.legal li:last-of-type::after {
 		height: 19rem;
 	}
 
-	header ul.socialmedia {
+	header .socialmedia {
 		margin-top: 10rem;
+	}
+
+	header .lang {
+		margin-bottom: 1rem;
 	}
 }
 
