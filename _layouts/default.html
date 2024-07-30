@@ -2,12 +2,17 @@
 <html lang="{% if page.language %}{{ page.language }}{% endif %}{% unless page.language %}de{% endunless %}">
   {% include head.html %}
   <body>
-    {% if page.language == "de" %}
+    {% if page.language %}
+      {% if page.language == "de" %}
+        {% include nav.html %}
+      {% endif %}
+      {% if page.language == "en" %}
+        {% include nav-en.html %}
+      {% endif %}
+    {% endif %}
+    {% unless page.language %}
       {% include nav.html %}
-    {% endif %}
-    {% if page.language == "en" %}
-      {% include nav-en.html %}
-    {% endif %}
+    {% endunless %}
     <main>
       {% include header.html %}
       {{ content }}
