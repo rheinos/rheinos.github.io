@@ -39,6 +39,10 @@ form legend {
 	padding: 0 .5em;
 }
 
+form button {
+	color: inherit;
+}
+
 form.roster fieldset,
 form.roster .position-input {
   grid-column: 1 / span 2;
