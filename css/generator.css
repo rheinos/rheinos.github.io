@@ -303,7 +303,7 @@ main .wrapper #capture [enabled="false"] {
 	position: absolute;
 	right: 80px;
 	top: 80px;
-	max-width: 67%;
+	max-width: 90%;
 
 	text-align: right;
 	text-shadow: #000 0 0 15px;
@@ -707,7 +707,7 @@ main .wrapper #capture [enabled="false"] {
 	position: absolute;
 	right: 60px;
 	top: 60px;
-	max-width: 67%;
+	max-width: 90%;
 
 	text-align: right;
 	text-shadow: #000 0 0 15px;
