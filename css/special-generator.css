@@ -1,0 +1,504 @@
+/* READ ME */
+/* If you haven't worked with CSS or HTML before, please copy this file before doing any changes! If you only want to do minor changes, e.g. change the color scheme or the fonts, you can do so in the variable part which starts around line 50 */
+
+#capture {
+	position: relative;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	background-color: #9f1717;
+
+	font-family: "RheinosBonnCollegiate", Graduate;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #fff;
+
+	z-index: -2;
+
+	width: 1080px;
+	height: 1080px;
+	overflow: hidden;
+	user-select: none;
+}
+
+main .wrapper #capture [enabled="false"] {
+	display: none;
+}
+
+#capture svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#capture #bgimage {
+	z-index: -1;
+}
+
+#capture .credit {
+	position: absolute;
+	padding: 10px;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	text-transform: none;
+	z-index: 100;
+}
+
+
+/* STANDARD */
+#capture.standard {
+	font-size: 30px;
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+}
+
+#capture.standard .logo,
+#capture.standard .tournamentlogo {
+	position: absolute;
+	top: 10px;
+	height: 150px;
+
+	z-index: 5;
+}
+
+#capture.standard .logo {
+	left: 10px;
+}
+
+#capture.standard .tournamentlogo {
+	right: 10px;
+}
+
+#capture.standard #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.standard #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.standard .credit {
+	left: 0;
+	bottom: 0;
+}
+
+#capture.standard .text-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 80px);
+	padding: 80px 40px 40px;
+
+	background: linear-gradient(#9f171700, #9f1717 70%);
+	text-shadow: #000 0 0 15px;
+	text-align: center;
+
+	z-index: 2;
+}
+
+#capture.standard .text {
+	display: grid;
+	justify-content: center;
+}
+
+#capture.standard .title {
+	font-size: 85px;
+	-webkit-text-stroke: .03em #797979;
+	display: block;
+}
+
+#capture.standard .subtitle,
+#capture.standard .date {
+	font-family: Graduate;
+	text-transform: none;
+
+	display: flex;
+	place-items: center;
+}
+
+#capture.standard .subtitle {
+	width: 100%;
+	color: #797979;
+}
+
+#capture.standard .date {
+	position: absolute;
+	top: 20px;
+	width: 50%;
+
+	color: #797979;
+	text-shadow: #0008 0 0 15px;
+
+	z-index: 2;
+}
+
+#capture.standard .subtitle::before,
+#capture.standard .date::before {
+  content: '';
+  flex: 1;
+  margin-right: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.standard .subtitle::after,
+#capture.standard .date::after {
+  content: '';
+  flex: 1;
+  margin-left: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+
+/* SCORE */
+#capture.score::after {
+	content: "AHU!AHU!AHU!";
+
+	font-size: 290px;
+	color: #0000;
+	-webkit-text-stroke: 7.5px #fff;
+	text-align: center;
+	opacity: .3333;
+
+	position: absolute;
+	bottom: -115px;
+	width: max-content;
+
+	z-index: 1;
+}
+
+#capture.score.story::after {
+	content: "AHI! AHI!";
+
+	font-size: 400px;
+
+	width: min-content;
+	bottom: -.4em;
+}
+
+#capture.score .logos {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+
+	z-index: 5;
+}
+
+#capture.score.story .logos {
+	display: flex;
+	justify-content: center;
+	
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	height: 225px;
+}
+
+#capture.score .logos img {
+	height: 150px;
+	margin-left: 10px;
+}
+
+#capture.score.story .logos img {
+	height: 225px;
+	margin-left: 20px;
+}
+
+#capture.score .logos img:first-child {
+	margin-left: 0;
+}
+
+#capture.score div,
+#capture.score::before {
+	z-index: 2;
+	position: absolute;
+	--distance: 60px;
+	text-shadow: #000 0 0 15px;
+}
+
+#capture.score.story #bgimage {
+	height: 100%;
+}
+
+#capture.score #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.score #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.score .credit {
+	left: 0;
+	bottom: 0;
+}
+
+#capture.score.story .credit {
+	font-size: 2em;
+}
+
+#capture.score .score-1,
+#capture.score .score-2,
+#capture.score::before {
+	bottom: 25px;
+	font-size: 150px;
+	-webkit-text-stroke: .03em #797979;
+}
+
+#capture.score.story .score-1,
+#capture.score.story .score-2,
+#capture.score.story::before {
+	bottom: 205px;
+	font-size: 195px;
+}
+
+#capture.score::before {
+	content: ":";
+	bottom: 40px;
+}
+
+#capture.score.story::before {
+	content: ":";
+	bottom: 225px;
+}
+
+#capture.score .team-1,
+#capture.score .team-2 {
+	width: calc(50% - 10px - var(--distance));
+	font-size: 45px;
+	bottom: 230px;
+	color: transparent;
+	text-shadow: unset;
+	-webkit-text-stroke: 2px #fdfdfd;
+}
+
+#capture.score.story .team-1,
+#capture.score.story .team-2 {
+	bottom: calc(400px + 1em);
+}
+
+#capture.score .winner {
+	text-shadow: #000 0 0 15px;
+	color: inherit;
+	-webkit-text-stroke: unset;
+}
+
+#capture.score .team-1,
+#capture.score .score-1 {
+	text-align: right;
+	right: calc(50% + var(--distance));
+}
+
+#capture.score .team-2,
+#capture.score .score-2 {
+	text-align: left;
+	left: calc(50% + var(--distance));
+}
+
+
+/* MEDAL */
+#capture.medal {
+	font-size: 30px;
+	text-align: center;
+}
+
+#capture.medal .logo,
+#capture.medal .tournamentlogo {
+	position: absolute;
+	top: 10px;
+	height: 150px;
+
+	z-index: 5;
+}
+
+#capture.medal .logo {
+	left: 10px;
+}
+
+#capture.medal .tournamentlogo {
+	right: 10px;
+}
+
+#capture.medal #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.medal #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.medal .credit {
+	left: 0;
+	bottom: 0;
+}
+
+#capture.medal svg {
+	z-index: 1;
+}
+
+#capture.medal .f ~ svg {
+	background-color: #9f171788;
+}
+
+#capture.medal .e ~ svg {
+	background: linear-gradient(transparent 80%, #9f1717);
+}
+
+
+/* ROSTER */
+#capture.roster {
+	font-size: 25px;
+}
+
+#capture.roster .logos {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+
+	z-index: 5;
+}
+
+#capture.roster .logos img {
+	height: 150px;
+	margin-right: 10px;
+}
+
+
+
+#capture.roster .decoration {
+	font-size: 290px;
+	color: #0000;
+	-webkit-text-stroke: 7.5px #fff;
+	text-align: center;
+	opacity: .3333;
+
+	position: absolute;
+	bottom: 50%;
+	left: -102px;
+	width: 2160px;
+	transform: rotate(-90deg);
+
+	z-index: 1;
+}
+
+#capture.roster #bgimage {
+	position: relative;
+	left: -20%;
+}
+
+#capture.roster #bgimage.horizontal {
+	height: 100%;
+}
+
+#capture.roster #bgimage.portrait {
+	width: 100%;
+}
+
+#capture.roster .credit {
+	right: 0;
+	bottom: 0;
+}
+
+#capture.roster .box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+
+	background: radial-gradient(95% 125% at 0% 67%, transparent, transparent 33%, #9f1717 67%);
+}
+
+#capture.roster .head {
+	position: absolute;
+	right: 60px;
+	top: 60px;
+	max-width: 90%;
+
+	text-align: right;
+	text-shadow: #000 0 0 15px;
+
+	z-index: 3;
+}
+
+#capture.roster .title {
+	font-size: 120px;
+	text-shadow: .04em .04em #9f1717, .08em .08em #797979, #000 0 0 15px;
+	margin-bottom: .04em;
+}
+
+#capture.roster .subtitle,
+#capture.roster .date,
+#capture.roster .location {
+	font-family: Graduate;
+	text-transform: none;
+	color: #797979;
+}
+
+#capture.roster .subtitle {
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+
+#capture.roster .subtitle::after {
+  content: '';
+  flex: 1;
+  margin-left: 1em;
+  height: 2px;
+  background-color: #797979;
+}
+
+#capture.roster .date,
+#capture.roster .location {
+	display: inline;
+}
+
+#capture.roster .date::after {
+	content: '';
+	margin: 0 1em;
+	border: 1px solid;
+}
+
+#capture.roster .content {
+	display: grid;
+	place-items: center end;
+
+	position: absolute;
+	right: 60px;
+	bottom: 60px;
+	width: 40%;
+	height: calc(21 * (1.25em + 5px));
+
+	text-shadow: #000 0 0 15px;
+	text-align: right;
+	overflow: hidden;
+
+	z-index: 2;
+}
+
+#capture.roster .player {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+#capture.roster .positions img {
+	height: 1em;
+	margin-right: .5em;
+}
+
+#capture.roster .name {
+	font-family: Graduate;
+	text-align: left;
+	text-transform: none;
+
+	margin-left: .5em;
+}
