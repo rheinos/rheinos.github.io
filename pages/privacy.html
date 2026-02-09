@@ -24,12 +24,15 @@ obj_position: 50% 50%
 				<p style="text-align: justify">
 					Der Verantwortliche im Sinne der Datenschutz-Grundverordnung und anderer nationaler Datenschutzgesetze der Mitgliedstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist der:<br>
 					Rheinos Bonn e.V.<br>
-					Sebastianstraße 15<br>
-					53115 Bonn
+					{{ site.data.adresse.street }}<br>
+					{{ site.data.adresse.postal }}
 				</p>
 				<p>
 					Vertreten durch:<br>
-					Svenja Dobbert, Julian Velling, Anja Gaugigl, Lorenz Posch<br>
+					{% for person in site.data.vorstand %}
+						{{ person.firstname }} {{ person.lastname }}{% unless forloop.last %}, {% endunless %}
+					{% endfor %}
+					<br>
 					E-Mail: <a href="mailto:vorstand@rheinos-bonn.de">vorstand@rheinos-bonn.de</a>
 				</p>
 
