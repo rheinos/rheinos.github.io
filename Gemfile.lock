@@ -278,7 +278,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-sitemap
+  jemoji
   webrick (~> 1.7)
 
 BUNDLED WITH
-   1.17.2
+   2.4.19
