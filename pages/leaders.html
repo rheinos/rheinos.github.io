@@ -99,83 +99,30 @@ obj_position: 50% 50%
 						Der Vorstand repräsentiert die Rheinos nach außen und ist für die Organisation des Vereins zuständig.<br>
 						Außerdem ist der Vorstand Ansprechpartner für alles was den Verein betrifft, wie beispielsweise Fragen zur Mitgliedschaft.
 					</p>
-					<article>
-						<picture>
-							<source srcset="images/lorenz-500px.webp" media="(max-width: 1080px)">
-							<source srcset="images/lorenz-1080px.webp" media="(max-width: 1920px)">
-							<source srcset="images/lorenz-1920px.webp" media="(max-width: 4096px)">
-							<img loading="lazy" src="images/lorenz.webp" alt="Lorenz mit Rhine">
-						</picture>
-						<div class="article-content">
-							<h3>Lorenz</h3>
-							<p>
-								Vorstandsvorsitzender<br>
-								Position: Chaser, Keeper und Seeker<br>
-								Pronomen: er/ihm<br>
-								Seit 2019 ein Rheino und seit 2024 im Vorstand aktiv. Wenn es etwas ruhiger sein soll als Quadball gerne auch wandernd unterwegs - oder mit lieben Menschen Brett&shy;spiele spielend.
-							</p>
-						</div>
-						<div class="photo-credit">
-							<a href="https://www.instagram.com/lisadoernerphotography/" target="_blank">Foto: Lisa Dörner Photography</a>
-						</div>
-					</article>
-					<article>
-						<picture>
-							<source srcset="images/Jonas1.jpg" media="(max-width: 1080px)">
-							<img loading="lazy" src="images/Jonas1.jpg" alt="Lorenz mit Rhine">
-						</picture>
-						<div class="article-content">
-							<h3>Jonas</h3>
-							<p>
-								Stellvertretender Vorstandsvorsitzender<br>
-								Position: Chaser, Keeper<br>
-								Pronomen: er/ihm<br>
-								Die Pausen zwischen Trainings und Turnieren werden bei mir auch mit der Organisation rund um den Verein ver&shy;bracht. Kümmere mich hier, zusammen mit den anderen Vorstands&shy;menschen um alles, was gerade so anfällt, sodass wir uns beim nächsten Turnier wieder voll auf die Her&shy;aus&shy;forderungen auf dem Platz fokus&shy;sieren können.
-							</p>
-						</div>
-						<div class="photo-credit">
-							<a href="https://www.instagram.com/lisadoernerphotography/" target="_blank">Foto: Lisa Dörner Photography</a>
-						</div>
-					</article>
-					<article>
-						<picture>
-							<source srcset="images/anja-500px.webp" media="(max-width: 1080px)">
-							<source srcset="images/anja-1080px.webp" media="(max-width: 1920px)">
-							<source srcset="images/anja-1920px.webp" media="(max-width: 4096px)">
-							<img loading="lazy" src="images/anja.webp" alt="Bild von Anja">
-						</picture>
-						<div class="article-content">
-							<h3>Anja</h3>
-							<p>
-								Schatzmeisterin<br>
-								Position: Chaserin<br>
-								Pronomen: sie/ihr<br>
-								Zu den Rheinos bin ich im Juli 2021 gestoßen und bin seit Sommer 2022 Schatz­meisterin. Mit Quadball habe ich 2017 ge­startet und bin seit­dem be­geistert: vom Sport, der Komplexität, der Community. Abseits vom Feld bin ich gern reisend, wandernd, lachend unter­wegs.
-							</p>
-						</div>
-						<div class="photo-credit">
-							<a href="https://www.instagram.com/lisadoernerphotography/" target="_blank">Foto: Lisa Dörner Photography</a>
-						</div>
-					</article>
+					{% for person in site.data.vorstand %}
 						<article>
-						<picture>
-							<source srcset="images/svenja-500px.webp" media="(max-width: 1080px)">
-							<source srcset="images/svenja-1080px.webp" media="(max-width: 1920px)">
-							<source srcset="images/svenja-1920px.webp" media="(max-width: 4096px)">
-							<img loading="lazy" src="images/svenja.webp" alt="Svenja als Chaserin">
-						</picture>
-						<div class="article-content">
-							<h3>Svenja</h3>
-							<p>
-								Vorstandsvorsitzende<br>
-								Position: Chaserin<br>
-								Pronomen: sie/ihr<br>
-								Im Vorstand seit 2020 und bei den Rheinos aktiv seit 2018. Ist unter anderem für neue Mit&shy;glieder zu&shy;ständig und immer für eure Fragen rund um den Verein offen! Außer beim Quad&shy;ball auch an&shy;sonsten oft draußen zu finden, zum Laufen, Wandern, Back&shy;packing, oder Kanu fahren.
-							</p>
-						</div>
-						<div class="photo-credit">
-							<a href="https://www.instagram.com/lisadoernerphotography/" target="_blank">Foto: Lisa Dörner Photography</a>
-						</div>
-					</article>					
+							<picture>
+								<img loading="lazy" src="{{ person.photo | relative_url }}" alt="Bild von {{ person.firstname }}">
+							</picture>
+							<div class="article-content">
+								<h3>{{ person.firstname }}</h3>
+								<p>
+									{{ person.function }}<br>
+									Position: {{ person.positions }}<br>
+									Pronomen: {{ person.pronouns }}<br>
+									{{ person.text }}
+								</p>
+							</div>
+							{% if person.photo-credit %}
+								<div class="photo-credit">
+								{% if person.photo-credit-url %}
+									<a href="{{ person.photo-credit-url }}" target="_blank">Foto: {{ person.photo-credit }}</a>
+								{% else %}
+									Foto: {{ person.photo-credit }}
+								{% endif %}
+								</div>
+							{% endif %}
+						</article>
+					{% endfor %}
 				</section>
 			</div>

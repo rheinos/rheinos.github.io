@@ -18,15 +18,17 @@ obj_position: 50% 50%
 				<h2>Addresse</h2>
 				<address>
 					Rheinos Bonn e.V.<br>
-					Mozartstraße 49<br>
-					53115 Bonn<br>
+					{{ site.data.adresse.street }}<br>
+					{{ site.data.adresse.postal }}
 				</address>
 				<p>
 					E-Mail: <a href="mailto:vorstand@rheinos-bonn.de">vorstand@rheinos-bonn.de</a>
 				</p>
 				<h2>Vertreten durch:</h2>
 				<p>
-					Svenja Dobbert, Julian Velling, Anja Gaugigl, Lorenz Posch
+					{% for person in site.data.vorstand %}
+						{{ person.firstname }} {{ person.lastname }}{% unless forloop.last %}, {% endunless %}
+					{% endfor %}
 				</p>
 				<h2>Registereintrag:</h2>
 				<p>

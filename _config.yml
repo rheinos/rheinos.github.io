@@ -2,7 +2,8 @@
 url: "https://rheinos-bonn.de" # the base hostname & protocol for your site
 
 # Plugins
-gems:
+plugins:
+  - jekyll-sitemap
   - jemoji
 
 # Outputting
