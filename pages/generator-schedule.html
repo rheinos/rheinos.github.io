@@ -96,10 +96,9 @@ description: Template to announce league gamedays and other events with a schedu
 
 					</div>
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 					<label for="tournamentlogo">Tournament logo</label>
 					<input type="file" id="tournamentlogo" accept = "image/*" />
 
@@ -110,7 +109,7 @@ description: Template to announce league gamedays and other events with a schedu
 
 				<div id="capture" class="schedule">
 					<img class="decoration" src="images/rheinos_kontur.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<img class="tournamentlogo" src="" />
 					<div class="head">

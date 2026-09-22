@@ -22,10 +22,9 @@ description: Template for when we've reached a top 3 placement on a bigger tourn
 					<label for="empty">Good picture not available</label>
 					<input type="radio" id="empty" name="style" value="f" required />
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 
 					<button type="submit" name="button">Submit</button>
 					<a id="download" download>Herunterladen</a>
@@ -35,7 +34,7 @@ description: Template for when we've reached a top 3 placement on a bigger tourn
 				<div id="capture" class="medal" style="width: 1080px; height: 1080px; overflow: hidden;">
 					<img class="logo" id="logo" src="images/Darmstadt Bthenas-Logo-300px.webp" />
 					<img class="tournamentlogo" src="images/rheiniis-bonn-300px.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<svg id="svg_image" class="f" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1080 1080">
 						<style>

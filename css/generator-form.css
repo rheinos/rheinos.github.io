@@ -39,6 +39,89 @@ form legend {
 	padding: 0 .5em;
 }
 
+form .background-picker {
+	grid-column: 1 / -1;
+	display: block;
+}
+
+form .background-picker * {
+	margin: 0;
+}
+
+form .photo-options {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+	gap: .75rem;
+}
+
+form .more-photos {
+	margin-top: 1rem;
+}
+
+form .more-photos summary {
+	cursor: pointer;
+	margin-bottom: .75rem;
+}
+
+form .photo-option {
+	position: relative;
+}
+
+form .photo-option input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	top: 0;
+	left: 0;
+	clip-path: inset(50%);
+}
+
+form .photo-option label {
+	display: block;
+	padding: .25rem;
+	border: 3px solid transparent;
+	border-radius: .5rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+form .photo-option img {
+	display: block;
+	width: 100%;
+	height: 90px;
+	object-fit: cover;
+	border-radius: .25rem;
+}
+
+form .photo-option span {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	clip-path: inset(50%);
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+form .photo-option input:checked + label {
+	border-color: currentColor;
+}
+
+form .photo-option input:focus-visible + label {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+form .background-image-status {
+	grid-column: 1 / -1;
+	text-align: center;
+}
+
+form .background-image-status:empty {
+	display: none;
+}
+
+
 form button {
 	color: inherit;
 }

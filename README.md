@@ -1,5 +1,9 @@
 # Contributing
 
+## Pull request workflow
+
+Open pull requests against the `develop` branch first. After the changes have been merged into `develop`, merge `develop` into the main branch (currently named `master`) through a separate pull request.
+
 ## Build page on local machine
 
 1. Install [jekyll](https://jekyllrb.com/)
