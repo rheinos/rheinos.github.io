@@ -1,0 +1,140 @@
+- id: lisa3
+  label: Teamzusammenhalt
+  thumbnail: /images/lisa3-500px.webp
+  image: /images/lisa3-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: brooms
+  label: Spiel mit Besen
+  thumbnail: /images/brooms-500px.webp
+  image: /images/brooms-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: anneke4
+  label: Rheinos-Flagge
+  thumbnail: /images/anneke4-500px.webp
+  image: /images/anneke4-1920px.webp
+  credit: "Foto: Anneke Müller"
+- id: beater_innen
+  label: Beaterin mit Bludger
+  thumbnail: /images/beater_innen-500px.webp
+  image: /images/beater_innen-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: hofgarten
+  label: Quadballfeld im Hofgarten
+  thumbnail: /images/hofgarten-500px.webp
+  image: /images/hofgarten-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: lisa9
+  label: Regenbogensocken
+  thumbnail: /images/lisa9-500px.webp
+  image: /images/lisa9-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: anicaneumann3
+  label: Tackle beim Turnier
+  thumbnail: /images/anicaneumann3-500px.webp
+  image: /images/anicaneumann3-1920px.webp
+  credit: "Foto: Anica Neumann"
+- id: fullcontact
+  label: Tackle im Spiel
+  thumbnail: /images/fullcontact-500px.webp
+  image: /images/fullcontact-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: anneke3
+  label: Start eines Spiels
+  thumbnail: /images/anneke3-500px.webp
+  image: /images/anneke3-1920px.webp
+  credit: "Foto: Anneke Müller"
+- id: honeybadgerqp1
+  label: Verteidigung
+  thumbnail: /images/honeybadgerqp1-500px.webp
+  image: /images/honeybadgerqp1-1920px.webp
+  credit: "Foto: Honeybadger Quidditch Pictures"
+- id: anicaneumann2
+  label: Team mit Silbermedaillen
+  thumbnail: /images/anicaneumann2-500px.webp
+  image: /images/anicaneumann2-1920px.webp
+  credit: "Foto: Anica Neumann"
+- id: annika
+  label: Beaterin Annika
+  thumbnail: /images/annika-500px.webp
+  image: /images/annika-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: anja
+  label: Anja
+  thumbnail: /images/anja-500px.webp
+  image: /images/anja-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: chaser_innen
+  label: Chaserin im Spiel
+  thumbnail: /images/chaser_innen-500px.webp
+  image: /images/chaser_innen-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: deutschemeisterschaft
+  label: Deutscher Meister 2022
+  thumbnail: /images/deutschemeisterschaft-500px.webp
+  image: /images/deutschemeisterschaft-1920px.webp
+  credit: "Foto: Deutscher Quadballbund"
+- id: felixkalb
+  label: Snitch Catch
+  thumbnail: /images/felixkalb-500px.webp
+  image: /images/felixkalb-1920px.webp
+  credit: "Foto: Felix Kalb/Darmstadt Athenas"
+- id: keeper_innen
+  label: Keeperin mit Quaffle
+  thumbnail: /images/keeper_innen-500px.webp
+  image: /images/keeper_innen-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: ligafinale2017
+  label: Ligafinale 2017
+  thumbnail: /images/ligafinale2017-500px.webp
+  image: /images/ligafinale2017-1920px.webp
+  credit: "Foto: Van Klaveren Quidditch Photography"
+- id: lisa12
+  label: Beaterin im Spiel
+  thumbnail: /images/lisa12-500px.webp
+  image: /images/lisa12-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: lisa4
+  label: Training auf dem Feld
+  thumbnail: /images/lisa4-500px.webp
+  image: /images/lisa4-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: lisa5
+  label: Jubel nach dem Sieg
+  thumbnail: /images/lisa5-500px.webp
+  image: /images/lisa5-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: lisa6
+  label: Gemeinsam auf dem Feld
+  thumbnail: /images/lisa6-500px.webp
+  image: /images/lisa6-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: lisa7
+  label: Training
+  thumbnail: /images/lisa7-500px.webp
+  image: /images/lisa7-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: lorenz
+  label: Lorenz
+  thumbnail: /images/lorenz-500px.webp
+  image: /images/lorenz-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: natio
+  label: Nationalteam und England
+  thumbnail: /images/natio-500px.webp
+  image: /images/natio-1920px.webp
+  credit: "Foto: Ajantha Abey Quidditch Photography"
+- id: nrw
+  label: Teams der NRW-Liga
+  thumbnail: /images/nrw-500px.webp
+  image: /images/nrw-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: svenja
+  label: Svenja
+  thumbnail: /images/svenja-500px.webp
+  image: /images/svenja-1920px.webp
+  credit: "Foto: Lisa Dörner Photography"
+- id: vanklaveren
+  label: Rheinos im Teamkreis
+  thumbnail: /images/vanklaveren-500px.webp
+  image: /images/vanklaveren-1920px.webp
+  credit: "Foto: Van Klaveren Quidditch Photography"

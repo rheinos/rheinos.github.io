@@ -45,7 +45,6 @@ main .wrapper #capture [enabled="false"] {
 	z-index: 100;
 }
 
-
 /* STANDARD */
 #capture.standard {
 	font-size: 30px;

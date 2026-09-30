@@ -1,0 +1,31 @@
+<fieldset class="background-picker">
+  <legend>Background Image</legend>
+  <div class="photo-options">
+    {% for photo in site.data.sharepic_photos limit:6 %}
+      <div class="photo-option">
+        <input type="radio" id="background-{{ photo.id }}" name="background-image" value="{{ photo.id }}" data-image="{{ photo.image }}" data-credit="{{ photo.credit }}" {% if forloop.first %}checked{% endif %} />
+        <label for="background-{{ photo.id }}">
+          <img src="{{ photo.thumbnail }}" alt="" loading="lazy" />
+          <span>{{ photo.label }}</span>
+        </label>
+      </div>
+    {% endfor %}
+  </div>
+  <details class="more-photos">
+    <summary>More photos</summary>
+    <div class="photo-options">
+      {% for photo in site.data.sharepic_photos offset:6 %}
+        <div class="photo-option">
+          <input type="radio" id="background-{{ photo.id }}" name="background-image" value="{{ photo.id }}" data-image="{{ photo.image }}" data-credit="{{ photo.credit }}" />
+          <label for="background-{{ photo.id }}">
+            <img src="{{ photo.thumbnail }}" alt="" loading="lazy" />
+            <span>{{ photo.label }}</span>
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+  </details>
+</fieldset>
+<label for="imageInputLoad">Or upload your own image</label>
+<input type="file" id="imageInputLoad" accept="image/*" />
+<p id="background-image-status" class="background-image-status" role="status" aria-live="polite"></p>
