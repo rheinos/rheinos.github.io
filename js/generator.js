@@ -113,8 +113,10 @@ function handleTournamentLogo(e) {
     reader.onloadend = function (e) {
       let logo = new Image();
       logo.src = e.target.result;
-      imgContainer = document.getElementsByClassName('tournamentlogo')[0];
+      const imgContainer = document.getElementsByClassName('tournamentlogo')[0];
+      imgContainer.onload = invalidateRenderedCanvas;
       imgContainer.src = logo.src;
+      invalidateRenderedCanvas();
     }
   }
 }
