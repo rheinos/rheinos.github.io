@@ -713,6 +713,33 @@ section {
 	border-top: 0.15rem solid;
 }
 
+.starter-weeks-content {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 2rem;
+	align-items: start;
+	padding-bottom: 2rem;
+}
+
+.starter-weeks-content p {
+	text-align: left;
+}
+
+.starter-weeks-content img {
+	display: block;
+	width: 100%;
+	max-width: 540px;
+	height: auto;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+	.starter-weeks-content {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+}
+
 article {
 	width: 100%;
 	padding-bottom: 3rem;
