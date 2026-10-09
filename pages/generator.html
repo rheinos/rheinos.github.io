@@ -14,182 +14,205 @@ description: This is our sharepic generator for all kinds of social media posts!
 				</p>
 				<section class="sharepic-overview">
 					<h2>Standard posts</h2>
+					{% assign generator = site.pages | where: "permalink", "/generator-standard" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-standard.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Short post (with subtitle)</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								A short post with a title, optional subtitle, and date.
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-standard">Short post (with subtitle)</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-announcement" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-announcement.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Announcement Post</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template for all kinds of announcements.
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-announcement">Announcement Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-ot-announcement" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-ot-announcement.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Open Training Announcement Post</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template to announce open trainings.
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-ot-announcement">Open Training Announcement Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-message" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-message.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Message Post</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template to spread a message we want to spread. Can be used as the first picture on an informational recruitment post (e.g. "Quadball is mixed Gender").
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-message">Message Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-informational" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-informational.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Informational Post</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Use this template for informational content, e.g. to explain the rules of Quadball. In most cases it makes sense to use a <mark>message</mark> template picture for the first picture of the post, then multiple <mark>informational</mark> pictures and at the end an <mark>open training info</mark> picture.
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-informational">Informational Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-ot-info" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-ot-info.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Open Training Info Picture</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Put this template at the end of recruitment posts. It should contain details about the open training.
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-ot-info">Open Training Info Picture</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
 				</section>
 				<section class="sharepic-overview">
 					<h2>Tournament posts</h2>
+					{% assign generator = site.pages | where: "permalink", "/generator-score" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-score.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Score Post (square) </h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template to post the result of a game after a game (square format).
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-score">Score Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-score-story" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-score.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Score Story (vertical)</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template to post the result of a game after a game (vertical format for story).
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-score-story">Score Story</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-schedule" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-schedule.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Schedule Post</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template to announce league gamedays and other events with a schedule (e.g. tournament group stages). If there are more than five games scheduled, split the schedule equally on multiple pictures, which should be posted in a single post. To announce a single game (e.g. a knockout stage game), use the <mark>announcement</mark> template instead!
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-schedule">Schedule Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-roster" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-roster.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Roster Post</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template to post our rosters, should be self-explaining.
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-roster">Roster Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/generator-medal" | first %}
 					<article>
 						<picture>
 							<img loading="lazy" src="images/sharepic-medal.jpg" alt="">
 						</picture>
 						<div class="article-content">
-							<h3>Medal Post</h3>
+							<h3>{{ generator.title | escape }}</h3>
 							<p>
-								Template for when we've reached a top 3 placement on a bigger tournament. For lower placements or less relevant tournaments, use the standard template and put the placement in the caption.
+								{{ generator.description }}
 							</p>
-							<button><a href="/generator-medal">Medal Post</a></button>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
 				</section>
 				<section class="sharepic-overview">
 					<h2>SG Bonnthenas</h2>
+					{% assign generator = site.pages | where: "permalink", "/special-generator-standard" | first %}
 					<article>
 						<picture>
-							<img loading="lazy" src="images/sharepic-standard.jpg" alt="Illustrative example of Special Standard Post" />
+							<img loading="lazy" src="images/sharepic-standard.jpg" alt="Illustrative example of {{ generator.title | escape }}" />
 						</picture>
 						<div class="article-content">
-							<h3>Special Standard Post</h3>
-							<p>Alternate special design for a general post.</p>
-							<button><a href="/special-generator-standard">Special Standard Post</a></button>
+							<h3>{{ generator.title | escape }}</h3>
+							<p>
+								{{ generator.description }}
+							</p>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/special-generator-score-story" | first %}
 					<article>
 						<picture>
-							<img loading="lazy" src="images/sharepic-score.jpg" alt="Illustrative example of Special Score Story" />
+							<img loading="lazy" src="images/sharepic-score.jpg" alt="Illustrative example of {{ generator.title | escape }}" />
 						</picture>
 						<div class="article-content">
-							<h3>Special Score Story</h3>
-							<p>Alternate special design for a vertical game result.</p>
-							<button><a href="/special-generator-score-story">Special Score Story</a></button>
+							<h3>{{ generator.title | escape }}</h3>
+							<p>
+								{{ generator.description }}
+							</p>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/special-generator-roster" | first %}
 					<article>
 						<picture>
-							<img loading="lazy" src="images/sharepic-roster.jpg" alt="Illustrative example of Special Roster Post" />
+							<img loading="lazy" src="images/sharepic-roster.jpg" alt="Illustrative example of {{ generator.title | escape }}" />
 						</picture>
 						<div class="article-content">
-							<h3>Special Roster Post</h3>
-							<p>Alternate special design for a team lineup.</p>
-							<button><a href="/special-generator-roster">Special Roster Post</a></button>
+							<h3>{{ generator.title | escape }}</h3>
+							<p>
+								{{ generator.description }}
+							</p>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
+					{% assign generator = site.pages | where: "permalink", "/special-generator-medal" | first %}
 					<article>
 						<picture>
-							<img loading="lazy" src="images/sharepic-medal.jpg" alt="Illustrative example of Special Medal Post" />
+							<img loading="lazy" src="images/sharepic-medal.jpg" alt="Illustrative example of {{ generator.title | escape }}" />
 						</picture>
 						<div class="article-content">
-							<h3>Special Medal Post</h3>
-							<p>Alternate special design for a tournament placement.</p>
-							<button><a href="/special-generator-medal">Special Medal Post</a></button>
+							<h3>{{ generator.title | escape }}</h3>
+							<p>
+								{{ generator.description }}
+							</p>
+							<button><a href="{{ generator.url | relative_url }}">{{ generator.title | escape }}</a></button>
 						</div>
 					</article>
 				</section>
