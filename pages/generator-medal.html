@@ -1,13 +1,13 @@
 ---
 layout: internal
-title: Bildgenerator
+title: "Medal Post"
 permalink: /generator-medal
 
-description: Template for when we've reached a top 3 placement on a bigger tournament, e.g. ODSC isn't big. For lower placements, use the standard template and put the placement in the caption.
+description: "Template for when we've reached a top 3 placement on a bigger tournament. For lower placements or less relevant tournaments, use the standard template and put the placement in the caption."
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>{{ page.title | escape }}</h1>
 				<p><a href="/generator">zurück</a></p>
 				<form id="form">
 					<label for="placement">Placement</label>
@@ -26,11 +26,12 @@ description: Template for when we've reached a top 3 placement on a bigger tourn
 		      <input type="radio" id="rheinos" name="logo" value="o" required />
 		      <label for="rheiniis">RheinIIs</label>
 		      <input type="radio" id="rheiniis" name="logo" value="ii" required />
+		      <label for="no-logo">No logo</label>
+		      <input type="radio" id="no-logo" name="logo" value="none" />
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 					<label for="tournamentlogo">Tournament logo</label>
 					<input type="file" id="tournamentlogo" accept = "image/*" />
 
@@ -41,7 +42,7 @@ description: Template for when we've reached a top 3 placement on a bigger tourn
 
 				<div id="capture" class="medal" style="width: 1080px; height: 1080px; overflow: hidden;">
 					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<img class="tournamentlogo" src="" />
 					<svg id="svg_image" class="f" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1080 1080">

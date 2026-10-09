@@ -1,13 +1,13 @@
 ---
 layout: internal
-title: Bildgenerator
+title: "Schedule Post"
 permalink: /generator-schedule
 
-description: Template to announce league gamedays and other events with a schedule (e.g. tournament group stages). If there are more than five games scheduled, split the schedule equally on multiple pictures, which should be posted in a single post. You can leave out games without one of our teams! But please don't use this template to announce a single game (e.g. a knockout stage game)! In this case you can use the announcement template instead!
+description: "Template to announce league gamedays and other events with a schedule (e.g. tournament group stages). If there are more than five games scheduled, split the schedule equally on multiple pictures, which should be posted in a single post. To announce a single game (e.g. a knockout stage game), use the <mark>announcement</mark> template instead!"
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>{{ page.title | escape }}</h1>
 				<p><a href="/generator">zurück</a></p>
 				<form id="form">
 					<label for="title">Title</label>
@@ -96,10 +96,9 @@ description: Template to announce league gamedays and other events with a schedu
 
 					</div>
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 					<label for="tournamentlogo">Tournament logo</label>
 					<input type="file" id="tournamentlogo" accept = "image/*" />
 
@@ -110,7 +109,7 @@ description: Template to announce league gamedays and other events with a schedu
 
 				<div id="capture" class="schedule">
 					<img class="decoration" src="images/rheinos_kontur.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<img class="tournamentlogo" src="" />
 					<div class="head">

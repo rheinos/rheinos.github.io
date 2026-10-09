@@ -1,13 +1,13 @@
 ---
 layout: internal
-title: Bildgenerator
+title: "Open Training Announcement Post"
 permalink: /generator-ot-announcement
 
-description: Template to announce open trainings. Please use it only once per open training and pin the post in our instagram profile.
+description: "Template to announce open trainings. Use it once per open training and pin the post in our instagram profile."
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>{{ page.title | escape }}</h1>
 				<p><a href="/generator">zurück</a></p>
 				<form id="form">
 					<label for="title">Title (wrap emphasized text with &lt;em&gt; and &lt;/em&gt; as shown in the placeholder)<br/>You can emphasize text, but you definitely don't have to<br/>Please make sure the title takes exactly two lines in the design (insert linebreaks using &lt;br/&gt; if necessary)</label>
@@ -17,10 +17,9 @@ description: Template to announce open trainings. Please use it only once per op
 					<label for="content">Content (insert linebreaks using &lt;br/&gt; as shown in the placeholder)</label>
 					<textarea id="content" name="content" rows="8" cols="80" placeholder="1. April 2024<br/>18-20 Uhr<br/>Hofgarten" required></textarea>
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 
 					<button type="submit" name="button">Submit</button>
 					<a id="download" download>Herunterladen</a>
@@ -29,7 +28,7 @@ description: Template to announce open trainings. Please use it only once per op
 
 				<div id="capture" class="ot-announcement" style="width: 1080px; height: 1080px; overflow: hidden;">
 					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<div class="text-wrapper">
 						<div class="title">Bock auf<em>Quidditch?</em></div>

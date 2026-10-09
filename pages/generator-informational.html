@@ -1,13 +1,13 @@
 ---
 layout: internal
-title: Bildgenerator
+title: "Informational Post"
 permalink: /generator-informational
 
-description: Use this template for informational content, e.g. to explain the rules of Quadball. In most cases it makes sense to use a message template picture for the first picture of the post, then multiple informational pictures and at the end an open training info picture.
+description: "Use this template for informational content, e.g. to explain the rules of Quadball. In most cases it makes sense to use a <mark>message</mark> template picture for the first picture of the post, then multiple <mark>informational</mark> pictures and at the end an <mark>open training info</mark> picture."
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>{{ page.title | escape }}</h1>
 				<p><a href="/generator">zurück</a></p>
 				<form id="form">
 					<label for="title">Title</label>
@@ -15,10 +15,9 @@ description: Use this template for informational content, e.g. to explain the ru
 					<label for="details">Details</label>
 					<textarea id="details" name="details" rows="8" cols="80" placeholder="Neben den binären Geschlechtern gibt es im Rulebook außerdem eine Kategorie für nicht-binäre Menschen, sodass niemand gezwungen wird sich einem Geschlecht zu zuordnen." required></textarea>
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 
 					<button type="submit" name="button">Submit</button>
 					<a id="download" download>Herunterladen</a>
@@ -27,7 +26,7 @@ description: Use this template for informational content, e.g. to explain the ru
 
 				<div id="capture" class="informational" style="width: 1080px; height: 1080px; overflow: hidden;">
 					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<div class="text-wrapper">
 						<div class="title" enabled="false">Inklusion queerer Menschen</div>
