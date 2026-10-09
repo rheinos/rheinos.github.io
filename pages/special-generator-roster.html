@@ -1,13 +1,13 @@
 ---
 layout: internal
-title: Bildgenerator
+title: "Special Roster Post"
 permalink: /special-generator-roster
 
-description: Template to post our rosters, should be self-explaining.
+description: "Alternate special design for a team lineup."
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>{{ page.title | escape }}</h1>
 				<p><a href="/special-generator">zurück</a></p>
 				<form id="form" class="roster">
 					<label for="title">Title</label>
@@ -336,10 +336,9 @@ description: Template to post our rosters, should be self-explaining.
 					</fieldset>
 
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 					<label for="tournamentlogo">Tournament logo</label>
 					<input type="file" id="tournamentlogo" accept = "image/*" />
 
@@ -358,7 +357,7 @@ description: Template to post our rosters, should be self-explaining.
 					<div class="decoration">
 						AHI!AHI!
 					</div>
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="head">
 						<div class="subtitle">
 							EQC 2024 Division 1

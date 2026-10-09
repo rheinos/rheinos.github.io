@@ -1,22 +1,21 @@
 ---
 layout: internal
-title: Bildgenerator
+title: "Message Post"
 permalink: /generator-message
 
-description: Template to spread a message we want to spread. Use this for things like the PSD Vereinspreis or the first picture on a informational recruitment posts (e.g. "Quadball is mixed Gender").
+description: "Template to spread a message we want to spread. Can be used as the first picture on an informational recruitment post (e.g. \"Quadball is mixed Gender\")."
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>{{ page.title | escape }}</h1>
 				<p><a href="/generator">zurück</a></p>
 				<form id="form">
 					<label for="content">Content (wrap emphasized text with &lt;em&gt; and &lt;/em&gt; as shown in the placeholder)<br/>You can emphasize text, but you definitely don't have to</label>
 					<textarea id="content" name="content" rows="8" cols="80" placeholder="Quadball is <em>Mixed Gender</em>" required></textarea>
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 
 					<button type="submit" name="button">Submit</button>
 					<a id="download" download>Herunterladen</a>
@@ -25,7 +24,7 @@ description: Template to spread a message we want to spread. Use this for things
 
 				<div id="capture" class="message" style="width: 1080px; height: 1080px; overflow: hidden;">
 					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<div class="text-wrapper-wrapper">
 						<div class="text-wrapper">

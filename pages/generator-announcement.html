@@ -1,13 +1,13 @@
 ---
 layout: internal
-title: Bildgenerator
+title: "Announcement Post"
 permalink: /generator-announcement
 
-description: Template for all kinds of announcements (except open trainings). Whenever there are great news or just normal news, use this template, e.g. when we're about to play a game in knockout stage.
+description: "Template for longer announcements. Use for example to preview a tournament game (see the specific template for open training announcements)."
 ---
 
 			<div class="wrapper">
-				<h1>Bildgenerator</h1>
+				<h1>{{ page.title | escape }}</h1>
 				<p><a href="/generator">zurück</a></p>
 				<form id="form">
 					<label for="title">Title</label>
@@ -23,11 +23,12 @@ description: Template for all kinds of announcements (except open trainings). Wh
 		      <input type="radio" id="rheinos" name="logo" value="o" required />
 		      <label for="rheiniis">RheinIIs</label>
 		      <input type="radio" id="rheiniis" name="logo" value="ii" required />
+		      <label for="no-logo">No logo</label>
+		      <input type="radio" id="no-logo" name="logo" value="none" />
 
-					<label for="imageInputLoad">Background Image</label>
-					<input type="file" id="imageInputLoad" accept = "image/*" required />
+					{% include sharepic_photo_picker.html %}
 					<label for="credit">Photo Credit</label>
-					<input type="text" id="credit" placeholder="Foto: Lisa Dörner Photography" />
+					<input type="text" id="credit" placeholder="Foto: Name" />
 					<label for="tournamentlogo">Tournament logo</label>
 					<input type="file" id="tournamentlogo" accept = "image/*" />
 
@@ -38,7 +39,7 @@ description: Template for all kinds of announcements (except open trainings). Wh
 
 				<div id="capture" class="announcement-gen" style="width: 1080px; height: 1080px; overflow: hidden;">
 					<img class="logo" id="logo" src="images/rheinos-bonn-300px.webp" />
-					<img id="bgimage" src="images/anicaneumann3-1920px.webp" />
+					<img id="bgimage" src="images/lisa3-1920px.webp" />
 					<div class="credit"></div>
 					<img class="tournamentlogo" src="" />
 					<div class="text-wrapper">
